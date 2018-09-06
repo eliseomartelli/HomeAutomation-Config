@@ -5,5 +5,6 @@
                         {{ now().strftime("%Y-%m-%d  %H:%M") }}
         who_cleans:
                 friendly_name: "Who Cleans?"
+                icon_template: mdi:broom
                 value_template: >
                         {{ states.calendar.house_cleaning.attributes.description }}

@@ -62,7 +62,6 @@ views:
                 - sensor.speedtest_download
                 - sensor.speedtest_ping
                 - sensor.speedtest_upload
-                - calendar.house_cleaning
       - type: entities
         title: Who Cleans?
         entities: 
