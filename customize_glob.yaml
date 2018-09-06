@@ -1,0 +1,4 @@
+switch.*_lamp:
+  icon: mdi:lightbulb
+switch.*_light:
+  icon: mdi:lightbulb

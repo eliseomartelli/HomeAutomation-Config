@@ -1,0 +1,6 @@
+switch.bedside_lamp:
+        friendly_name: Bedside Lamp
+switch.desk_lamp:
+        friendly_name: Desk Lamp
+switch.generic_door_plug:
+        friendly_name: Bookshelf Plug

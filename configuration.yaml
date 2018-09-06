@@ -1,0 +1,45 @@
+homeassistant:
+  name: Home
+  latitude: !secret kat
+  longitude: !secret long
+  elevation: !secret elev
+  unit_system: metric
+  time_zone: UTC
+  customize_glob: !include customize_glob.yaml
+  customize: !include customize.yaml
+  auth_providers:
+    - type: legacy_api_password
+frontend:
+config:
+http:
+  api_password: !secret apipass
+  ssl_certificate: !secret ssl_certif
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
+updater:
+discovery:
+conversation:
+history:
+logbook:
+map:
+sun:
+sensor:
+  - platform: yr
+tts:
+  - platform: google
+automation: !include_dir_merge_list includes/automations/
+mqtt:
+  password: !secret mqttpass
+script: !include scripts.yaml
+sensor: !include_dir_merge_list includes/sensor/
+switch: !include_dir_merge_list includes/switches/
+light: !include_dir_merge_list includes/light/
+ffmpeg:
+  ffmpeg_bin: /usr/bin/avconv
+camera: !include_dir_merge_list includes/camera
+weather:
+  - platform: darksky
+    api_key: !secret darkskyapikey
+google_assistant: !include includes/google_assistant.yaml
+device_tracker: !include includes/nmap_scanner.yaml
+
