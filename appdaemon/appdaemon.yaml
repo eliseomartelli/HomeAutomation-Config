@@ -5,11 +5,10 @@ appdaemon:
   plugins:
     HASS:
       type: hass
-      ha_url: https://eliseomartelli.duckdns.org
+      ha_url: !secret base_url
       ha_key: !secret apipass
 
 hadashboard:
   dash_url: http://192.168.1.88:5050
-  dash_dir: /home/homeassistant/appdaemon/dashboards
   dash_password: !secret apipass
 

@@ -1,6 +1,6 @@
 homeassistant:
   name: Home
-  latitude: !secret kat
+  latitude: !secret lat
   longitude: !secret long
   elevation: !secret elev
   unit_system: metric
@@ -41,5 +41,6 @@ weather:
   - platform: darksky
     api_key: !secret darkskyapikey
 google_assistant: !include includes/google_assistant.yaml
+google: !include includes/google.yaml
 device_tracker: !include includes/nmap_scanner.yaml
 

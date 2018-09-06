@@ -5,6 +5,7 @@ columns: 6
 global_parameters:
   use_comma: 0
   precision: 1
+  use_hass_icon: 1
 
 clock:
   widget_type: clock
@@ -12,6 +13,6 @@ clock:
 layout:
   - spacer, sensor.bedroom_temperature, clock(2x1), sensor.bedroom_humidity
   -
-  - sensor.waqi_rubino_torino_piemonte_italy
+  - sensor.waqi_rubino_torino_piemonte_italy, sensor.who_cleans(2x1)
   - switch.bedroom_light, switch.bedside_lamp, switch.desk_lamp, media_player.bedroom(3x2)
   - light.bed_light_strip, switch.generic_door_plug

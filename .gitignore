@@ -15,3 +15,6 @@ pyozw.sqlite
 .storage/*
 tts/
 appdaemon/compiled
+home-assistant_v2*
+google_calendars.yaml
+.google.token

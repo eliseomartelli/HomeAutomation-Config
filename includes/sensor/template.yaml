@@ -3,3 +3,7 @@
         time:
                 value_template: >
                         {{ now().strftime("%Y-%m-%d  %H:%M") }}
+        who_cleans:
+                friendly_name: "Who Cleans?"
+                value_template: >
+                        {{ states.calendar.house_cleaning.attributes.description }}
