@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+        time:
+                value_template: >
+                        {{ now().strftime("%Y-%m-%d  %H:%M") }}

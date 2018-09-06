@@ -1,0 +1,10 @@
+- alias: Wake Up Lights
+  trigger:
+          platform: template
+          value_template: '{{ states.sensor.next_google_home_alarm.state == states.sensor.time.state }}'
+  action:
+          service: homeassistant.turn_on
+          entity_id:
+                - switch.bedroom_light
+                - switch.bedside_lamp
+                - switch.desk_lamp

@@ -1,0 +1,11 @@
+- platform: rest
+  resource: http://192.168.1.67:8008/setup/assistant/alarms
+  name: Next Google Home Alarm
+  value_template: >
+          {% set minimumtime=value_json.alarm[0]["fire_time"] %}
+          {% for alarm in value_json.alarm %}
+                {% if alarm["fire_time"] < minimumtime %}
+                        {% set minimumtime=alarm["fire_time"] %}
+                {% endif %}
+          {% endfor %}
+          {{ ((minimumtime | int)/1000) | timestamp_custom("%Y-%m-%d  %H:%M") }}

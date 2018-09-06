@@ -1,0 +1,15 @@
+secrets: /home/homeassistant/.homeassistant/secrets.yaml
+appdaemon:
+  disable_apps: 1
+  threads: 16
+  plugins:
+    HASS:
+      type: hass
+      ha_url: https://eliseomartelli.duckdns.org
+      ha_key: !secret apipass
+
+hadashboard:
+  dash_url: http://192.168.1.88:5050
+  dash_dir: /home/homeassistant/appdaemon/dashboards
+  dash_password: !secret apipass
+

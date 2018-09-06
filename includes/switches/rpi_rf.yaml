@@ -1,0 +1,15 @@
+- platform: rpi_rf
+  gpio: 27
+  switches:
+    bedside_lamp:
+      code_on: 1394007
+      code_off: 1394004
+      signal_repetitions: 25 
+    desk_lamp:
+      code_on: 1381719
+      code_off: 1381716
+      signal_repetitions: 25 
+    generic_door_plug:
+      code_on: 1397079
+      code_off: 1397076
+      signal_repetitions: 25
