@@ -1,0 +1,3 @@
+body:before {
+	content: "<iframe src="https://clients3.google.com/cast/chromecast/home"></iframe>"
+}

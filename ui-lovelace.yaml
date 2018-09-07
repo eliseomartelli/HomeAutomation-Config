@@ -19,6 +19,8 @@ views:
                         - switch.generic_door_plug
                 - type: media-control
                   entity: media_player.bedroom
+                - type: media-control
+                  entity: media_player.kodi_mac_mini
                 - type: picture-entity
                   entity: camera.bedroom_camera
                   show_state: false
@@ -60,7 +62,7 @@ views:
                   title: Who Cleans?
                   entities: 
                         - sensor.who_cleans     
-                - type: entities
+                - type: history-graph
                   title: Speedtest
                   entities:
                         - sensor.speedtest_download
