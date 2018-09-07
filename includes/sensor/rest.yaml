@@ -8,4 +8,4 @@
                         {% set minimumtime=alarm["fire_time"] %}
                 {% endif %}
           {% endfor %}
-          {{ ((minimumtime | int)/1000) | timestamp_custom("%Y-%m-%d  %H:%M") }}
+          {{ ((minimumtime | int)/1000) }}

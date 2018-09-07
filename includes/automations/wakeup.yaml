@@ -1,10 +1,27 @@
-- alias: Wake Up Lights
+- alias: Wake Up Lights 10min before
   trigger:
           platform: template
-          value_template: '{{ states.sensor.next_google_home_alarm.state == states.sensor.time.state }}'
+          value_template: '{{ (((states("sensor.next_google_home_alarm") | int) - 10*60) | timestamp_custom("%Y-%m-%d  %H:%M"))  == states.sensor.time.state }}'
+  action:
+          service: homeassistant.turn_on
+          entity_id:
+                - switch.desk_lamp
+
+- alias: Wake Up Lights 5min before
+  trigger:
+          platform: template
+          value_template: '{{ (((states("sensor.next_google_home_alarm") | int) - 5*60) | timestamp_custom("%Y-%m-%d  %H:%M"))  == states.sensor.time.state }}'
+  action:
+          service: homeassistant.turn_on
+          entity_id:
+                - switch.bedside_lamp
+
+- alias: Wake Up Lights 
+  trigger:
+          platform: template
+          value_template: '{{ ((states("sensor.next_google_home_alarm") | int) | timestamp_custom("%Y-%m-%d  %H:%M"))  == states.sensor.time.state }}'
   action:
           service: homeassistant.turn_on
           entity_id:
                 - switch.bedroom_light
-                - switch.bedside_lamp
-                - switch.desk_lamp
+
