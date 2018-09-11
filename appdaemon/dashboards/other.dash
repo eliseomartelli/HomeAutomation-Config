@@ -18,10 +18,7 @@ clean:
   widget_type: sensor
   entity: sensor.who_cleans
   widget_style: "background: transparent;"
-  value_style: "color: white"
-  text_style: "color: white"
-  title_style: "color: white"
-  title2_style: "color: white"
+  value_style: "color: white;"
 
 layout:
   -
@@ -30,12 +27,12 @@ layout:
   -
   -
   -
-  -
-  -
-  -
   - 
   -
+  - 
+  - 
+  - media_player.bedroom(10x8)
   -
   -
   -
-  - spacer(17x1), back
+  - spacer(7x1), back

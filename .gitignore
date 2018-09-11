@@ -18,3 +18,5 @@ appdaemon/compiled
 home-assistant_v2*
 google_calendars.yaml
 .google.token
+.DS_Store
+._.DS_Store
