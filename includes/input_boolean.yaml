@@ -1,0 +1,4 @@
+bedroom_movie_mode:
+  name: Movie Mode Bedroom
+  initial: off
+  icon: mdi:filmstrip

@@ -1,0 +1,41 @@
+title: Main
+widget_dimensions: [28, 28]
+widget_margins: [0, 0]
+columns: 24
+rows: 22
+widget_size:  [4, 4]
+global_parameters:
+  use_comma: 0
+  precision: 1
+  use_hass_icon: 1
+
+back:
+  widget_type: navigate
+  title: Back
+  dashboard: bedroom
+
+clean:
+  widget_type: sensor
+  entity: sensor.who_cleans
+  widget_style: "background: transparent;"
+  value_style: "color: white"
+  text_style: "color: white"
+  title_style: "color: white"
+  title2_style: "color: white"
+
+layout:
+  -
+  -
+  - spacer(5x1), clean(14x2) 
+  -
+  -
+  -
+  -
+  -
+  -
+  - 
+  -
+  -
+  -
+  -
+  - spacer(17x1), back
