@@ -1,0 +1,62 @@
+- alias: Air Freshner Morning
+  trigger:
+    - platform: time
+      at: '9:00:00'
+  action:
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - switch.generic_door_plug
+
+- alias: Air Freshner Morning Off
+  trigger:
+    - platform: time
+      at: '10:00:00'
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - switch.generic_door_plug
+
+- alias: Air Freshner Lunch
+  trigger:
+    - platform: time
+      at: '12:00:00'
+  action:
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - switch.generic_door_plug
+
+- alias: Air Freshner Lunch Off
+  trigger:
+    - platform: time
+      at: '13:00:00'
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - switch.generic_door_plug
+
+
+- alias: Air Freshner Dinner
+  trigger:
+    - platform: time
+      at: '18:00:00'
+  action:
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - switch.generic_door_plug
+
+- alias: Air Freshner Dinner Off
+  trigger:
+    - platform: time
+      at: '19:00:00'
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - switch.generic_door_plug
+
+

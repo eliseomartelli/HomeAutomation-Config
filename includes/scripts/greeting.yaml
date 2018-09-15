@@ -1,0 +1,5 @@
+alias: Greeting
+sequence:
+  - service: tts.google_say
+    data:
+      message: Hello

@@ -61,6 +61,7 @@ gray_very_dark: "#333"
 gray_dark: "#444"
 gray_medium: "#666"
 gray_light: "#888"
+sensor_color: "#fff"
 
 #Page and widget defaults
 background_style: "background-color: #fff"
@@ -71,7 +72,7 @@ style_inactive: "color: $gray_light"
 style_active: "color: $orange"
 style_active_warn: "color: $red"
 style_info: "color: $blue"
-style_title: "color: $gray_very_dark"
+style_title: "color: $gray_medium"
 style_title2: "color: $gray_very_dark"
 
 # Widget Default Definitions
@@ -174,11 +175,11 @@ label_title2_style: $style_title2
 label_widget_style: $background_style
 label_container_style: ""
 
-sensor_title_style: $style_title
+sensor_title_style: "color: rgba(255,255,255,.8)"
 sensor_title2_style: $style_title2
-sensor_value_style: "color: $blue; font-size: 250%"
-sensor_unit_style: "color: $blue; font-size: 100%"
-sensor_widget_style: $background_style
+sensor_value_style: "color: $sensor_color; font-size: 250%"
+sensor_unit_style: "color: $sensor_color; font-size: 100%"
+sensor_widget_style: "background: transparent;"
 sensor_container_style: ""
 
 alarm_title_style: $style_title
@@ -219,10 +220,10 @@ media_player_title_style: $style_title
 media_player_media_title_style: $style_title2
 media_player_album_style: $style_title2
 media_player_artist_style: $style_title2
-media_player_icon_style_active: "color: $green"
+media_player_icon_style_active: "color: $orange"
 media_player_icon_style_inactive: "color: $gray_light"
-media_player_units_style: "color: $white"
-media_player_level_style: "color: $white"
+media_player_units_style: "color: $gray_light"
+media_player_level_style: "color: $gray_light"
 media_player_level_up_style: "color: $gray_light"
 media_player_level_down_style: "color: $gray_light"
 media_player_widget_style: $background_style

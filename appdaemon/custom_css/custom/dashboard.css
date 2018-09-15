@@ -10,6 +10,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   padding: 0;
+  padding-bottom: 32px;
 }
 
 body {
@@ -212,8 +213,10 @@ input {
 .modalDialogCloseButton:hover { background: #444; }
 
 #chromecastbg {
-	position: absolute;
+	position: fixed;
 	border: none;
 	width: 100%;
+	top: 0;
+	left: 0;
 	height: calc(100% + 192px);
 }
