@@ -37,6 +37,8 @@ views:
                   show_state: false
         
         - title: Outside
+          badges:
+                - sensor.air_quality
           cards:
                 
                 - type: weather-forecast

@@ -38,7 +38,7 @@ layout:
   -
   -
   -
-  - spacer(6x1), sensor.bedroom_temperature, spacer(1x1), sensor.bedroom_humidity, spacer(1x1), sensor.waqi_rubino_torino_piemonte_italy 
+  - spacer(6x1), sensor.bedroom_temperature, spacer(1x1), sensor.bedroom_humidity, spacer(1x1), sensor.air_quality
   -
   -
   -
