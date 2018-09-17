@@ -1,0 +1,8 @@
+- platform: min_max
+  entity_ids:
+    - sensor.waqi_grande_torino_leini_piemonte_italy
+    - sensor.waqi_lingotto_torino_piemonte_italy
+    - sensor.waqi_rebaudengo_torino_piemonte_italy
+    - sensor.waqi_rubino_torino_piemonte_italy
+  name: Air Quality
+  type: mean

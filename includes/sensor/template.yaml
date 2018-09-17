@@ -8,8 +8,3 @@
                 icon_template: mdi:broom
                 value_template: >
                         {{ states.calendar.house_cleaning.attributes.description }}
-        air_quality:
-                friendly_name: "Air Quality"
-                icon_template: mdi:airballoon
-                value_template: >
-                        {{ (float(states.sensor.waqi_grande_torino_leini_piemonte_italy.state) + float(states.sensor.waqi_lingotto_torino_piemonte_italy.state) + float(states.sensor.waqi_rebaudengo_torino_piemonte_italy.state) + float( states.sensor.waqi_rubino_torino_piemonte_italy.state))/4 }}
