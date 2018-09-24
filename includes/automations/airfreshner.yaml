@@ -1,62 +1,19 @@
-- alias: Air Freshner Morning
+- alias: Mirror Air Freshner Calendar ON
   trigger:
-    - platform: time
-      at: '9:00:00'
+    - platform: state
+      entity_id: calendar.airfreshnerschedule
+      to: 'on'
   action:
     - service: homeassistant.turn_on
-      data:
-        entity_id:
-          - switch.generic_door_plug
+      entity_id:
+        - switch.generic_door_plug
 
-- alias: Air Freshner Morning Off
+- alias: Mirror Air Freshner Calendar OFF
   trigger:
-    - platform: time
-      at: '10:00:00'
+    - platform: state
+      entity_id: calendar.airfreshnerschedule
+      to: 'off'
   action:
     - service: homeassistant.turn_off
-      data:
-        entity_id:
-          - switch.generic_door_plug
-
-- alias: Air Freshner Lunch
-  trigger:
-    - platform: time
-      at: '12:00:00'
-  action:
-    - service: homeassistant.turn_on
-      data:
-        entity_id:
-          - switch.generic_door_plug
-
-- alias: Air Freshner Lunch Off
-  trigger:
-    - platform: time
-      at: '13:00:00'
-  action:
-    - service: homeassistant.turn_off
-      data:
-        entity_id:
-          - switch.generic_door_plug
-
-
-- alias: Air Freshner Dinner
-  trigger:
-    - platform: time
-      at: '18:00:00'
-  action:
-    - service: homeassistant.turn_on
-      data:
-        entity_id:
-          - switch.generic_door_plug
-
-- alias: Air Freshner Dinner Off
-  trigger:
-    - platform: time
-      at: '19:00:00'
-  action:
-    - service: homeassistant.turn_off
-      data:
-        entity_id:
-          - switch.generic_door_plug
-
-
+      entity_id:
+        - switch.generic_door_plug

@@ -60,22 +60,18 @@ views:
         - title: Management 
           cards:
                 
-                - type: conditional
-                  conditions: 
-                        - entity: group.all_devices
-                          state: home
+                - type: entity-filter
+                  entities:
+                      - device_tracker.eliseo
+                      - device_tracker.daniele
+                      - device_tracker.furkan
+                  state_filter:
+                      - home
                   card:
-                        type: entity-filter
-                        entities:
-                                - device_tracker.eliseo
-                                - device_tracker.furkan
-                        state_filter:
-                                - home
-                        card:
-                                title: "Who's Home"
-                                type: glance
-                                show_name: false
-                                show_state: false
+                      title: "Who's Home"
+                      type: glance
+                      show_name: false
+                      show_state: false
                 
                 - type: entities
                   title: Who Cleans?
