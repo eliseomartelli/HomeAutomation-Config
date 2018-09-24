@@ -1,0 +1,12 @@
+- alias: Loved One Is Free
+  trigger:
+    - platform: state
+      entity_id: calendar.university_ilaria
+      from: 'on'
+  condition: 
+    - condition: state
+      entity_id: 'device_tracker.eliseo'
+      state: 'home'
+  action:
+    - service: script.turn_on
+      entity_id: script.blink_desk
