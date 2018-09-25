@@ -1,32 +1,30 @@
 alias: Blink Desk 
 sequence:
-  - service: homeassistant.turn_on
+  - service: homeassistant.toggle
     data:
       entity_id: switch.desk_lamp
   - delay:
       milliseconds: 500
-  - service: homeassistant.turn_off
+  - service: homeassistant.toggle
     data:
       entity_id: switch.desk_lamp
   - delay:
       milliseconds: 500
-  - service: homeassistant.turn_on
+  - service: homeassistant.toggle
     data:
       entity_id: switch.desk_lamp
   - delay:
       milliseconds: 500
-  - service: homeassistant.turn_off
+  - service: homeassistant.toggle
     data:
       entity_id: switch.desk_lamp
   - delay:
       milliseconds: 500
-  - service: homeassistant.turn_on
+  - service: homeassistant.toggle
     data:
       entity_id: switch.desk_lamp
   - delay:
       milliseconds: 500
-  - service: homeassistant.turn_off
+  - service: homeassistant.toggle
     data:
       entity_id: switch.desk_lamp
-  - delay:
-      milliseconds: 500

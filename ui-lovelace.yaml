@@ -2,7 +2,7 @@ title: Home
 views: 
         - title: Bedroom
           id: bedroom
-          
+          icon: mdi:hotel
           badges:
                 - sensor.bedroom_humidity
                 - sensor.bedroom_temperature
@@ -20,7 +20,15 @@ views:
                   title: Plugs
                   entities:
                         - switch.generic_door_plug
-                
+                   
+                - type: picture-entity
+                  entity: camera.bedroom_camera
+                  show_state: false
+        
+        - title: Media
+          icon: mdi:music
+          id: media
+          cards:
                 - type: entities
                   title: Movie Mode
                   entities: 
@@ -32,11 +40,11 @@ views:
                 - type: media-control
                   entity: media_player.kodi_mac_mini
                 
-                - type: picture-entity
-                  entity: camera.bedroom_camera
-                  show_state: false
-        
+
+
         - title: Outside
+          icon: mdi:tree
+          id: outside
           badges:
                 - sensor.air_quality
           cards:
@@ -57,7 +65,12 @@ views:
                   url: https://embed.windy.com/embed2.html
                   aspect_ratio: 100%
         
+
+
+
         - title: Management 
+          icon: mdi:gauge
+          id: management
           cards:
                 
                 - type: entity-filter
