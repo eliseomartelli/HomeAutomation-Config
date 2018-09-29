@@ -1,0 +1,6 @@
+title: Home
+
+views:
+  - !include views/bedroom.yaml
+  - !include views/outside.yaml
+  - !include views/management.yaml

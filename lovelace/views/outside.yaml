@@ -1,0 +1,19 @@
+title: Outside
+icon: mdi:tree
+id: outside
+badges:
+  - sensor.air_quality
+cards:
+  - type: weather-forecast
+    title: Weather
+    entity: weather.dark_sky
+  - type: entities
+    title: Air Quality
+    entities:
+      - sensor.waqi_grande_torino_leini_piemonte_italy
+      - sensor.waqi_lingotto_torino_piemonte_italy
+      - sensor.waqi_rebaudengo_torino_piemonte_italy
+      - sensor.waqi_rubino_torino_piemonte_italy
+  - type: iframe
+    url: https://embed.windy.com/embed2.html
+    aspect_ratio: 100%

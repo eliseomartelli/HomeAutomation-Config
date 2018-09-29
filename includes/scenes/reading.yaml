@@ -1,0 +1,8 @@
+- name: Reading
+  entities:
+    switch.bedroom_light: off
+    switch.desk_lamp: on
+    switch.bedside_lamp: on
+    light.bed_light_strip:
+      state: on
+      effect: colorfade_fast

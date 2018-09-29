@@ -1,5 +1,5 @@
 - platform: rest
-  resource: http://192.168.1.65:8008/setup/assistant/alarms
+  resource: http://192.168.1.66:8008/setup/assistant/alarms
   name: Next Google Home Alarm
   value_template: >
           {% set minimumtime=value_json.alarm[0]["fire_time"] %}

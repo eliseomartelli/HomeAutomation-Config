@@ -1,0 +1,28 @@
+title: Bedroom
+id: bedroom
+badges:
+  - sensor.bedroom_humidity
+  - sensor.bedroom_temperature
+cards:
+  - type: entities
+    title: Lights
+    entities:
+      - switch.bedroom_light
+      - switch.bedside_lamp
+      - switch.desk_lamp
+      - light.bed_light_strip
+
+  - type: entities
+    title: Plugs
+    entities:
+      - switch.generic_door_plug
+  - type: entities
+    title: Controller
+    entities:
+      - input_boolean.bedroom_movie_mode
+      - scene.reading
+  - type: media-control
+    entity: media_player.bedroom
+  - type: picture-entity
+    entity: camera.bedroom_camera
+    show_state: false
