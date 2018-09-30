@@ -19,6 +19,16 @@ views:
   - {entity: media_player.bedroom, type: media-control}
   - {entity: media_player.kodi_mac_mini, type: media-control}
   - {entity: camera.bedroom_camera, show_state: false, type: picture-entity}
+  - cards:
+    - column_width: calc(100% / 4)
+      entities: [sensor.epson_xp205_black_ink, sensor.epson_xp205_cyan_ink, sensor.epson_xp205_magenta_ink,
+        sensor.epson_xp205_yellow_ink]
+      show_name: false
+      title: Printer Status
+      type: glance
+    - entities: [sensor.epson_xp205_status]
+      type: entities
+    type: vertical-stack
   id: bedroom
   title: Bedroom
 - badges: [sensor.air_quality]

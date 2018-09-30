@@ -28,3 +28,17 @@ cards:
   - type: picture-entity
     entity: camera.bedroom_camera
     show_state: false
+  - type: vertical-stack
+    cards:
+      - type: glance
+        title: Printer Status
+        show_name: false
+        column_width: calc(100% / 4)
+        entities:
+          - sensor.epson_xp205_black_ink
+          - sensor.epson_xp205_cyan_ink
+          - sensor.epson_xp205_magenta_ink
+          - sensor.epson_xp205_yellow_ink
+      - type: entities
+        entities:
+          - sensor.epson_xp205_status

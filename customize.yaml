@@ -4,3 +4,14 @@ switch.desk_lamp:
         friendly_name: Desk Lamp
 switch.generic_door_plug:
         friendly_name: Air Freshner
+sensor.epson_xp205_black_ink:
+        entity_picture: /local/ink_k.png
+sensor.epson_xp205_cyan_ink:
+        entity_picture: /local/ink_c.png
+sensor.epson_xp205_magenta_ink:
+        entity_picture: /local/ink_m.png
+sensor.epson_xp205_yellow_ink:
+        entity_picture: /local/ink_y.png
+sensor.epson_xp205_status:
+        icon: mdi:printer
+

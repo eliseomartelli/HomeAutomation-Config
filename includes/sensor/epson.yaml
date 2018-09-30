@@ -1,0 +1,19 @@
+- platform: command_line
+  command: curl http://192.168.1.77/PRESENTATION/HTML/TOP/PRTINFO.HTML?from=top | awk '/Ink_K.PNG/ {getline; print $6; exit}' | awk -F "px" '{printf "%.0f\n", (50-$1)/50*100; exit}'
+  name: Epson XP-205 Black Ink
+  unit_of_measurement: '%'
+- platform: command_line
+  command: curl http://192.168.1.77/PRESENTATION/HTML/TOP/PRTINFO.HTML?from=top | awk '/Ink_Y.PNG/ {getline; print $6; exit}' | awk -F "px" '{printf "%.0f\n", (50-$1)/50*100; exit}'
+  name: Epson XP-205 Yellow Ink
+  unit_of_measurement: '%'
+- platform: command_line
+  command: curl http://192.168.1.77/PRESENTATION/HTML/TOP/PRTINFO.HTML?from=top | awk '/Ink_M.PNG/ {getline; print $6; exit}' | awk -F "px" '{printf "%.0f\n", (50-$1)/50*100; exit}'
+  name: Epson XP-205 Magenta Ink
+  unit_of_measurement: '%'
+- platform: command_line
+  command: curl http://192.168.1.77/PRESENTATION/HTML/TOP/PRTINFO.HTML?from=top | awk '/Ink_C.PNG/ {getline; print $6; exit}' | awk -F "px" '{printf "%.0f\n", (50-$1)/50*100; exit}'
+  name: Epson XP-205 Cyan Ink
+  unit_of_measurement: '%'
+- platform: command_line
+  command: curl http://192.168.1.77/PRESENTATION/HTML/TOP/PRTINFO.HTML?from=top | awk '/message_id/' | grep -oP '(?<=ride;'\''>).*(?=<\/div>)' | sed 's/&nbsp;/\ /g' | sed 's/.\///g'
+  name: Epson XP-205 Status
