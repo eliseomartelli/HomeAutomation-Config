@@ -23,6 +23,8 @@ cards:
       - scene.reading
   - type: media-control
     entity: media_player.bedroom
+  - type: media-control
+    entity: media_player.kodi_mac_mini
   - type: picture-entity
     entity: camera.bedroom_camera
     show_state: false

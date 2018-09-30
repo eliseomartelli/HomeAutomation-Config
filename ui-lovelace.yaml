@@ -17,6 +17,7 @@ views:
     title: Controller
     type: entities
   - {entity: media_player.bedroom, type: media-control}
+  - {entity: media_player.kodi_mac_mini, type: media-control}
   - {entity: camera.bedroom_camera, show_state: false, type: picture-entity}
   id: bedroom
   title: Bedroom
