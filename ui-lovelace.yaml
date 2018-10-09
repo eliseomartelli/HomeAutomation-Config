@@ -3,10 +3,16 @@
 # https://github.com/thomasloven/homeassistant-lovelace-gen
 # Any changes made to it will be overwritten the next time the script is run.
 
+resources:
+- {type: module, url: '/local/mini-graph-card/mini-graph-card.js?v=0.0.3'}
+- {type: js, url: '/local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2'}
 title: Home
 views:
-- badges: [sensor.bedroom_humidity, sensor.bedroom_temperature]
-  cards:
+- cards:
+  - cards:
+    - {entity: sensor.bedroom_temperature, name: Temperature, type: 'custom:mini-graph-card'}
+    - {entity: sensor.bedroom_humidity, name: Humidity, type: 'custom:mini-graph-card'}
+    type: horizontal-stack
   - entities: [switch.bedroom_light, switch.bedside_lamp, switch.desk_lamp, light.bed_light_strip]
     title: Lights
     type: entities
@@ -24,11 +30,11 @@ views:
       entities: [sensor.epson_xp205_black_ink, sensor.epson_xp205_cyan_ink, sensor.epson_xp205_magenta_ink,
         sensor.epson_xp205_yellow_ink]
       show_name: false
-      title: Printer Status
       type: glance
     - entities: [sensor.epson_xp205_status]
       type: entities
-    type: vertical-stack
+    title: Printer Status
+    type: custom:vertical-stack-in-card
   id: bedroom
   title: Bedroom
 - badges: [sensor.air_quality]

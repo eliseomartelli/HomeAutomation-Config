@@ -1,9 +1,14 @@
 title: Bedroom
 id: bedroom
-badges:
-  - sensor.bedroom_humidity
-  - sensor.bedroom_temperature
 cards:
+  - type: horizontal-stack
+    cards:
+      - type: "custom:mini-graph-card"
+        entity: sensor.bedroom_temperature
+        name: Temperature
+      - type: "custom:mini-graph-card"
+        entity: sensor.bedroom_humidity
+        name: Humidity
   - type: entities
     title: Lights
     entities:
@@ -28,10 +33,10 @@ cards:
   - type: picture-entity
     entity: camera.bedroom_camera
     show_state: false
-  - type: vertical-stack
+  - type: custom:vertical-stack-in-card
+    title: Printer Status
     cards:
       - type: glance
-        title: Printer Status
         show_name: false
         column_width: calc(100% / 4)
         entities:
