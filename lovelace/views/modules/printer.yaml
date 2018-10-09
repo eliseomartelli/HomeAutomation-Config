@@ -1,0 +1,14 @@
+type: custom:vertical-stack-in-card
+title: Printer Status
+cards:
+  - type: glance
+    show_name: false
+    column_width: calc(100% / 4)
+    entities:
+      - sensor.epson_xp205_black_ink
+      - sensor.epson_xp205_cyan_ink
+      - sensor.epson_xp205_magenta_ink
+      - sensor.epson_xp205_yellow_ink
+  - type: entities
+    entities:
+      - sensor.epson_xp205_status

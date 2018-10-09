@@ -6,9 +6,15 @@
 resources:
 - {type: module, url: '/local/mini-graph-card/mini-graph-card.js?v=0.0.3'}
 - {type: js, url: '/local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2'}
+- {type: module, url: /local/button-card/button-card.js}
 title: Home
 views:
 - cards:
+  - entities:
+    - {entity: input_boolean.home_vacation_mode, name: Vacation, tap_action: toggle}
+    - {entity: input_boolean.bedroom_reading_mode, name: Reading, tap_action: toggle}
+    - {entity: input_boolean.bedroom_movie_mode, name: Movie, tap_action: toggle}
+    type: glance
   - cards:
     - {entity: sensor.bedroom_temperature, name: Temperature, type: 'custom:mini-graph-card'}
     - {entity: sensor.bedroom_humidity, name: Humidity, type: 'custom:mini-graph-card'}
@@ -18,9 +24,6 @@ views:
     type: entities
   - entities: [switch.generic_door_plug]
     title: Plugs
-    type: entities
-  - entities: [input_boolean.bedroom_movie_mode, scene.reading]
-    title: Controller
     type: entities
   - {entity: media_player.bedroom, type: media-control}
   - {entity: media_player.kodi_mac_mini, type: media-control}

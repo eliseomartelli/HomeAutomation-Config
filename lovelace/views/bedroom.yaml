@@ -1,14 +1,7 @@
 title: Bedroom
 id: bedroom
 cards:
-  - type: horizontal-stack
-    cards:
-      - type: "custom:mini-graph-card"
-        entity: sensor.bedroom_temperature
-        name: Temperature
-      - type: "custom:mini-graph-card"
-        entity: sensor.bedroom_humidity
-        name: Humidity
+  - !include views/modules/bedroom_sensors.yaml
   - type: entities
     title: Lights
     entities:
@@ -16,16 +9,10 @@ cards:
       - switch.bedside_lamp
       - switch.desk_lamp
       - light.bed_light_strip
-
   - type: entities
     title: Plugs
     entities:
       - switch.generic_door_plug
-  - type: entities
-    title: Controller
-    entities:
-      - input_boolean.bedroom_movie_mode
-      - scene.reading
   - type: media-control
     entity: media_player.bedroom
   - type: media-control
@@ -33,17 +20,4 @@ cards:
   - type: picture-entity
     entity: camera.bedroom_camera
     show_state: false
-  - type: custom:vertical-stack-in-card
-    title: Printer Status
-    cards:
-      - type: glance
-        show_name: false
-        column_width: calc(100% / 4)
-        entities:
-          - sensor.epson_xp205_black_ink
-          - sensor.epson_xp205_cyan_ink
-          - sensor.epson_xp205_magenta_ink
-          - sensor.epson_xp205_yellow_ink
-      - type: entities
-        entities:
-          - sensor.epson_xp205_status
+  - !include views/modules/printer.yaml
