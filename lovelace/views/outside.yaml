@@ -1,8 +1,6 @@
 title: Outside
 icon: mdi:tree
 id: outside
-badges:
-  - sensor.air_quality
 cards:
   - type: weather-forecast
     title: Weather

@@ -1,3 +1,6 @@
+########
+# HOME #
+########
 - platform: mqtt
   name: At Home
   command_topic: home/configuration/mode/at_home
@@ -23,6 +26,12 @@
   icon: mdi:account-multiple
   retain: true
   
-  
-  
-  
+###########
+# BEDROOM #
+###########
+- platform: mqtt
+  name: Movie
+  command_topic: home/bedroom/configuration/movie
+  state_topic: home/bedroom/configuration/movie
+  icon: mdi:filmstrip
+  retain: true
