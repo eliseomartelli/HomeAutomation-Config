@@ -1,9 +1,12 @@
 type: glance
 show_state: false
+column_width: calc(100% / 4)
 entities:
-  - entity: input_boolean.bedroom_movie_mode
+  - entity: switch.at_home
     tap_action: toggle
-  - entity: switch.bedroom_light
+  - entity: switch.away
     tap_action: toggle
-  - entity: input_boolean.home_vacation_mode
+  - entity: switch.vacation
+    tap_action: toggle
+  - entity: switch.guests
     tap_action: toggle

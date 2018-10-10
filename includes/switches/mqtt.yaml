@@ -1,0 +1,28 @@
+- platform: mqtt
+  name: At Home
+  command_topic: home/configuration/mode/at_home
+  state_topic: home/configuration/mode/at_home
+  icon: mdi:home
+  retain: true
+- platform: mqtt
+  name: Away
+  state_topic: home/configuration/mode/away
+  command_topic: home/configuration/mode/away
+  icon: mdi:exit-to-app
+  retain: true
+- platform: mqtt
+  name: Vacation
+  command_topic: home/configuration/mode/vacation
+  state_topic: home/configuration/mode/vacation
+  icon: mdi:beach
+  retain: true
+- platform: mqtt
+  name: Guests
+  command_topic: home/configuration/mode/guests
+  state_topic: home/configuration/mode/guests
+  icon: mdi:account-multiple
+  retain: true
+  
+  
+  
+  

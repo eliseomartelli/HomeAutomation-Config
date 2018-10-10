@@ -1,0 +1,14 @@
+- alias: Turn off all the lights when away
+  trigger:
+    - platform: state
+      entity_id: switch.away
+      to: 'on'
+      for:
+        minutes: 5
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - switch.bedroom_light
+        - switch.bedside_lamp
+        - switch.desk_lamp
+        - light.bed_light_strip

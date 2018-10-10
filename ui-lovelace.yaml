@@ -11,10 +11,12 @@ resources:
 title: Home
 views:
 - cards:
-  - entities:
-    - {entity: input_boolean.bedroom_movie_mode, tap_action: toggle}
-    - {entity: switch.bedroom_light, tap_action: toggle}
-    - {entity: input_boolean.home_vacation_mode, tap_action: toggle}
+  - column_width: calc(100% / 4)
+    entities:
+    - {entity: switch.at_home, tap_action: toggle}
+    - {entity: switch.away, tap_action: toggle}
+    - {entity: switch.vacation, tap_action: toggle}
+    - {entity: switch.guests, tap_action: toggle}
     show_state: false
     type: glance
   - elements:

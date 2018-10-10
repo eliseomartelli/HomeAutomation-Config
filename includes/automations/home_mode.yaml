@@ -1,0 +1,58 @@
+- alias: At Home and Away Toggle
+  trigger:
+    - platform: state
+      entity_id: switch.at_home
+  condition:
+    - condition: state
+      entity_id: 'switch.vacation'
+      state: 'off'
+  action:
+    - service_template: >
+        {% if states('switch.at_home') == 'off' %}
+          homeassistant.turn_on
+        {% else %}
+          homeassistant.turn_off
+        {% endif %}
+      entity_id: switch.away
+- alias: Away and At Home toggle
+  trigger:
+    - platform: state
+      entity_id: switch.away
+  condition:
+    - condition: state
+      entity_id: 'switch.vacation'
+      state: 'off'
+  action:
+    - service_template: >
+        {% if states('switch.away') == 'off' %}
+          homeassistant.turn_on
+        {% else %}
+          homeassistant.turn_off
+        {% endif %}
+      entity_id: switch.at_home
+
+- alias: Vacation Turn Off Modes
+  trigger:
+    - platform: state
+      entity_id: switch.vacation
+  action:
+    - service: switch.turn_off
+      entity_id: 
+        - switch.at_home
+        - switch.away
+
+- alias: No Home or away when in vacation
+  trigger:
+    - platform: state
+      entity_id: switch.at_home
+    - platform: state
+      entity_id: switch.away
+  condition:
+    - condition: state
+      entity_id: 'switch.vacation'
+      state: 'on'
+  action:
+    - service: switch.turn_off
+      entity_id: 
+        - switch.at_home
+        - switch.away
