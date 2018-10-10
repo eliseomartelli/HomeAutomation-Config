@@ -2,3 +2,10 @@ switch.*_lamp:
   icon: mdi:lightbulb
 switch.*_light:
   icon: mdi:lightbulb
+input_boolean.*:
+  icon_color: >
+    if (state == "on") {
+      return [253, 210, 47];
+    } else {
+      return [59, 104, 148];
+    }

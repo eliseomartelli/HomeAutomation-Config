@@ -66,3 +66,5 @@ input_boolean: !include includes/input_boolean.yaml
 
 script: !include_dir_named includes/scripts
 
+shell_command:
+  lovelace_gen: '/home/homeassistant/.homeassistant/lovelage-gen.py'

@@ -7,14 +7,47 @@ resources:
 - {type: module, url: '/local/mini-graph-card/mini-graph-card.js?v=0.0.3'}
 - {type: js, url: '/local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2'}
 - {type: module, url: /local/button-card/button-card.js}
+- {type: js, url: '/local/custom-lovelace/monster-card/monster-card.js?v=1'}
 title: Home
 views:
 - cards:
   - entities:
-    - {entity: input_boolean.home_vacation_mode, name: Vacation, tap_action: toggle}
-    - {entity: input_boolean.bedroom_reading_mode, name: Reading, tap_action: toggle}
-    - {entity: input_boolean.bedroom_movie_mode, name: Movie, tap_action: toggle}
+    - {entity: input_boolean.bedroom_movie_mode, tap_action: toggle}
+    - {entity: switch.bedroom_light, tap_action: toggle}
+    - {entity: input_boolean.home_vacation_mode, tap_action: toggle}
+    show_state: false
     type: glance
+  - elements:
+    - entity: sensor.blank
+      prefix: Air Quality
+      style: {color: White, font-size: 14px, left: 25%, top: 42.5%}
+      type: state-label
+    - entity: sensor.air_quality
+      style: {color: White, font-size: 24px, font-weight: bold, left: 25%, top: 57.5%}
+      type: state-label
+    image: /local/header.png
+    type: picture-elements
+  - card: {show_state: false, title: People at home, type: glance}
+    filter:
+      include:
+      - {domain: device_tracker, state: home}
+    type: custom:monster-card
+  - elements:
+    - entity: sensor.blank
+      prefix: Cleaning Shifts
+      style: {color: White, font-size: 14px, left: 75%, top: 32.25%}
+      type: state-label
+    - entity: sensor.clean_shift_eliseo
+      style: {color: White, font-size: 18px, font-weight: bold, left: 75%, top: 47.5%}
+      type: state-label
+    - entity: sensor.clean_shift_daniele
+      style: {color: White, font-size: 18px, font-weight: bold, left: 75%, top: 57.5%}
+      type: state-label
+    - entity: sensor.clean_shift_lorenzo
+      style: {color: White, font-size: 18px, font-weight: bold, left: 75%, top: 67.5%}
+      type: state-label
+    image: /local/cleaning.png
+    type: picture-elements
   - cards:
     - {entity: sensor.bedroom_temperature, name: Temperature, type: 'custom:mini-graph-card'}
     - {entity: sensor.bedroom_humidity, name: Humidity, type: 'custom:mini-graph-card'}
@@ -23,7 +56,7 @@ views:
     title: Lights
     type: entities
   - entities: [switch.generic_door_plug]
-    title: Plugs
+    title: Palugs
     type: entities
   - {entity: media_player.bedroom, type: media-control}
   - {entity: media_player.kodi_mac_mini, type: media-control}
@@ -38,8 +71,8 @@ views:
       type: entities
     title: Printer Status
     type: custom:vertical-stack-in-card
-  id: bedroom
-  title: Bedroom
+  id: home
+  title: Home
 - badges: [sensor.air_quality]
   cards:
   - {entity: weather.dark_sky, title: Weather, type: weather-forecast}

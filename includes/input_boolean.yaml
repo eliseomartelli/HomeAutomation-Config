@@ -1,10 +1,7 @@
 bedroom_movie_mode:
   initial: off
-  icon: mdi:filmstrip
 bedroom_reading_mode:
   initial: off
-  icon: mdi:home
 home_vacation_mode:
   initial: off
-  icon: mdi:airballoon
 

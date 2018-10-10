@@ -1,6 +1,10 @@
-title: Bedroom
-id: bedroom
+title: Home
+id: home
 cards:
+  - !include views/modules/home_state.yaml
+  - !include views/modules/air_quality.yaml
+  - !include views/modules/people_at_home.yaml 
+  - !include views/modules/cleaning_schedule.yaml
   - !include views/modules/bedroom_sensors.yaml
   - type: entities
     title: Lights
@@ -10,7 +14,7 @@ cards:
       - switch.desk_lamp
       - light.bed_light_strip
   - type: entities
-    title: Plugs
+    title: Palugs
     entities:
       - switch.generic_door_plug
   - type: media-control

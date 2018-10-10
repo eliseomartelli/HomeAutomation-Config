@@ -6,8 +6,9 @@ resources:
     type: js
   - url: /local/button-card/button-card.js
     type: module
-
+  - url: /local/custom-lovelace/monster-card/monster-card.js?v=1
+    type: js
 views:
-  - !include views/bedroom.yaml
+  - !include views/home.yaml
   - !include views/outside.yaml
   - !include views/management.yaml

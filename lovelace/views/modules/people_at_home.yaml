@@ -1,0 +1,9 @@
+type: custom:monster-card
+card:
+  type: glance
+  title: People at home
+  show_state: false
+filter:
+  include:
+    - domain: device_tracker
+      state: 'home'

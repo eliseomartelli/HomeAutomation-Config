@@ -1,0 +1,19 @@
+type: picture-elements
+image: /local/header.png
+elements:
+  - type: state-label
+    entity: sensor.blank
+    prefix: 'Air Quality'
+    style:
+      color: 'White'
+      font-size: 14px
+      top: 42.5%
+      left: 25%
+  - type: state-label
+    entity: sensor.air_quality
+    style:
+      color: 'White'
+      font-weight: 'bold'
+      font-size: 24px
+      top: 57.5%
+      left: 25%
