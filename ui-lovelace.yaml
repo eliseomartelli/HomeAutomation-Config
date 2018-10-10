@@ -8,6 +8,7 @@ resources:
 - {type: js, url: '/local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2'}
 - {type: module, url: /local/button-card/button-card.js}
 - {type: js, url: '/local/custom-lovelace/monster-card/monster-card.js?v=1'}
+- {type: module, url: '/local/mini-media-player/mini-media-player.js?v=0.8.4'}
 title: Home
 views:
 - cards:
@@ -51,19 +52,6 @@ views:
     image: /local/cleaning.png
     type: picture-elements
   - cards:
-    - {entity: sensor.bedroom_temperature, name: Temperature, type: 'custom:mini-graph-card'}
-    - {entity: sensor.bedroom_humidity, name: Humidity, type: 'custom:mini-graph-card'}
-    type: horizontal-stack
-  - entities: [switch.bedroom_light, switch.bedside_lamp, switch.desk_lamp, light.bed_light_strip]
-    title: Lights
-    type: entities
-  - entities: [switch.generic_door_plug]
-    title: Palugs
-    type: entities
-  - {entity: media_player.bedroom, type: media-control}
-  - {entity: media_player.kodi_mac_mini, type: media-control}
-  - {entity: camera.bedroom_camera, show_state: false, type: picture-entity}
-  - cards:
     - column_width: calc(100% / 4)
       entities: [sensor.epson_xp205_black_ink, sensor.epson_xp205_cyan_ink, sensor.epson_xp205_magenta_ink,
         sensor.epson_xp205_yellow_ink]
@@ -73,8 +61,26 @@ views:
       type: entities
     title: Printer Status
     type: custom:vertical-stack-in-card
+  icon: mdi:home
   id: home
   title: Home
+- cards:
+  - cards:
+    - {entity: sensor.bedroom_temperature, name: Temperature, type: 'custom:mini-graph-card'}
+    - {entity: sensor.bedroom_humidity, name: Humidity, type: 'custom:mini-graph-card'}
+    type: horizontal-stack
+  - entities: [switch.bedroom_light, switch.bedside_lamp, switch.desk_lamp, light.bed_light_strip]
+    title: Lights
+    type: entities
+  - entities: [switch.generic_door_plug]
+    title: Palugs
+    type: entities
+  - {artwork: cover, entity: media_player.bedroom, type: 'custom:mini-media-player'}
+  - {artwork: cover, entity: media_player.kodi_mac_mini, type: 'custom:mini-media-player'}
+  - {entity: camera.bedroom_camera, show_state: false, type: picture-entity}
+  icon: mdi:hotel
+  id: bedroom
+  title: Bedroom
 - badges: [sensor.air_quality]
   cards:
   - {entity: weather.dark_sky, title: Weather, type: weather-forecast}

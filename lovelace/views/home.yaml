@@ -1,27 +1,9 @@
 title: Home
 id: home
+icon: mdi:home
 cards:
   - !include views/modules/home_state.yaml
   - !include views/modules/air_quality.yaml
   - !include views/modules/people_at_home.yaml 
   - !include views/modules/cleaning_schedule.yaml
-  - !include views/modules/bedroom_sensors.yaml
-  - type: entities
-    title: Lights
-    entities:
-      - switch.bedroom_light
-      - switch.bedside_lamp
-      - switch.desk_lamp
-      - light.bed_light_strip
-  - type: entities
-    title: Palugs
-    entities:
-      - switch.generic_door_plug
-  - type: media-control
-    entity: media_player.bedroom
-  - type: media-control
-    entity: media_player.kodi_mac_mini
-  - type: picture-entity
-    entity: camera.bedroom_camera
-    show_state: false
   - !include views/modules/printer.yaml

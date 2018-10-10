@@ -1,0 +1,25 @@
+title: Bedroom
+id: bedroom
+icon: mdi:hotel
+cards:
+  - !include views/modules/bedroom_sensors.yaml
+  - type: entities
+    title: Lights
+    entities:
+      - switch.bedroom_light
+      - switch.bedside_lamp
+      - switch.desk_lamp
+      - light.bed_light_strip
+  - type: entities
+    title: Palugs
+    entities:
+      - switch.generic_door_plug
+  - type: custom:mini-media-player
+    entity: media_player.bedroom
+    artwork: cover
+  - type: custom:mini-media-player
+    entity: media_player.kodi_mac_mini
+    artwork: cover
+  - type: picture-entity
+    entity: camera.bedroom_camera
+    show_state: false
