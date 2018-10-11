@@ -15,3 +15,21 @@
   action:
     - service: switch.turn_off
       entity_id: switch.at_home
+
+- alias: Back Home Message
+  trigger:
+    - platform: state
+      entity_id: switch.at_home
+      to: 'on'
+  action:
+    - service: tts.google_say
+      data_template:
+        message: >
+          {{ [
+            "Welcome home!",
+            "Nice to see you!",
+            "Hello!",
+            "Yo, What's up?",
+            "Hey!",
+            "How's going?"
+          ] | random }}  
