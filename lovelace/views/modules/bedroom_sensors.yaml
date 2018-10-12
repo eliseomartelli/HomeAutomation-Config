@@ -1,8 +1,8 @@
 type: horizontal-stack
 cards:
-  - type: "custom:mini-graph-card"
+  - type: sensor
     entity: sensor.bedroom_temperature
     name: Temperature
-  - type: "custom:mini-graph-card"
+  - type: sensor
     entity: sensor.bedroom_humidity
     name: Humidity

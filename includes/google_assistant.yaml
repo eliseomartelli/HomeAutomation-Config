@@ -1,6 +1,4 @@
 project_id: !secret ga_projectid
-client_id: !secret ga_clientid
-access_token: !secret ga_access_token
 api_key: !secret ga_api_key
 exposed_domains:
   - scene

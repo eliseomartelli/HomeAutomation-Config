@@ -7,11 +7,15 @@
   state_topic: home/configuration/mode/at_home
   icon: mdi:home
   retain: true
+  payload_on: 'true'
+  payload_off: 'false'
 - platform: mqtt
   name: Away
-  state_topic: home/configuration/mode/away
-  command_topic: home/configuration/mode/away
+  state_topic: home/configuration/mode/at_home
+  command_topic: home/configuration/mode/at_home
   icon: mdi:exit-to-app
+  payload_on: 'false'
+  payload_off: 'true'
   retain: true
 - platform: mqtt
   name: Vacation

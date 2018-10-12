@@ -1,7 +1,5 @@
 title: Home
 resources:
-  - url: /local/mini-graph-card/mini-graph-card.js?v=0.0.3
-    type: module
   - url: /local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2
     type: js
   - url: /local/button-card/button-card.js

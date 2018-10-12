@@ -4,7 +4,6 @@
 # Any changes made to it will be overwritten the next time the script is run.
 
 resources:
-- {type: module, url: '/local/mini-graph-card/mini-graph-card.js?v=0.0.3'}
 - {type: js, url: '/local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2'}
 - {type: module, url: /local/button-card/button-card.js}
 - {type: js, url: '/local/custom-lovelace/monster-card/monster-card.js?v=1'}
@@ -73,8 +72,8 @@ views:
     show_state: false
     type: glance
   - cards:
-    - {entity: sensor.bedroom_temperature, name: Temperature, type: 'custom:mini-graph-card'}
-    - {entity: sensor.bedroom_humidity, name: Humidity, type: 'custom:mini-graph-card'}
+    - {entity: sensor.bedroom_temperature, name: Temperature, type: sensor}
+    - {entity: sensor.bedroom_humidity, name: Humidity, type: sensor}
     type: horizontal-stack
   - entities: [switch.bedroom_light, switch.bedside_lamp, switch.desk_lamp, light.bed_light_strip]
     title: Lights
