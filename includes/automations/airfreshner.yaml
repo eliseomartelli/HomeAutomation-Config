@@ -6,7 +6,7 @@
   action:
     - service: homeassistant.turn_on
       entity_id:
-        - switch.generic_door_plug
+        - switch.bedroom_plug
 
 - alias: Mirror Air Freshner Calendar OFF
   trigger:
@@ -16,4 +16,4 @@
   action:
     - service: homeassistant.turn_off
       entity_id:
-        - switch.generic_door_plug
+        - switch.bedroom_plug

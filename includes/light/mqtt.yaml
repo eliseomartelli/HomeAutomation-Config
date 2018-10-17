@@ -1,7 +1,7 @@
 - platform: mqtt_json
   name: Bed Light Strip
-  state_topic: "home/bedroom/ESP_LED"
-  command_topic: "home/bedroom/ESP_LED/set"
+  state_topic: "home/bedroom/light/under_bed"
+  command_topic: "home/bedroom/lights/under_bed"
   brightness: true
   rgb: true
   effect: true

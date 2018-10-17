@@ -39,3 +39,23 @@
   state_topic: home/bedroom/configuration/movie
   icon: mdi:filmstrip
   retain: true
+
+##########
+# LIGHTS #
+##########
+- platform: mqtt
+  name: Bedroom Desk Light
+  command_topic: home/bedroom/switch/desk
+  state_topic: home/bedroom/switch/desk
+- platform: mqtt
+  name: Bedroom Bedside Light
+  command_topic: home/bedroom/switch/bedside
+  state_topic: home/bedroom/switch/bedside
+- platform: mqtt
+  name: Bedroom Ceiling Light
+  command_topic: home/bedroom/switch/ceiling
+  state_topic: home/bedroom/switch/ceiling
+- platform: mqtt
+  name: Bedroom Plug
+  command_topic: home/bedroom/switch/plug
+  state_topic: home/bedroom/switch/plug

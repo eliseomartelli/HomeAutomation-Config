@@ -23,5 +23,5 @@
   action:
           service: homeassistant.turn_on
           entity_id:
-                - switch.bedroom_light
+                - switch.bedroom_ceiling_light
 

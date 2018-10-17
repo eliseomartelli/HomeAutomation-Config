@@ -8,7 +8,7 @@
   action:
     - service: homeassistant.turn_off
       entity_id:
-        - switch.bedroom_light
-        - switch.bedside_lamp
-        - switch.desk_lamp
+        - switch.bedroom_ceiling_light
+        - switch.bedroom_bedside_light
+        - switch.bedroom_desk_light
         - light.bed_light_strip

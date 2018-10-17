@@ -1,0 +1,10 @@
+- platform: mqtt
+  name: Bedroom Temperature
+  device_class: humidity
+  state_topic: home/bedroom/sensor/dht_temperature/state
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: Bedroom Humidity
+  device_class: humidity
+  state_topic: home/bedroom/sensor/dht_humidity/state
+  unit_of_measurement: "%"

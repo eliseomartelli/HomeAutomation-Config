@@ -75,10 +75,11 @@ views:
     - {entity: sensor.bedroom_temperature, name: Temperature, type: sensor}
     - {entity: sensor.bedroom_humidity, name: Humidity, type: sensor}
     type: horizontal-stack
-  - entities: [switch.bedroom_light, switch.bedside_lamp, switch.desk_lamp, light.bed_light_strip]
+  - entities: [switch.bedroom_ceiling_light, switch.bedroom_bedside_light, switch.bedroom_desk_light,
+      light.bed_light_strip]
     title: Lights
     type: entities
-  - entities: [switch.generic_door_plug]
+  - entities: [switch.bedroom_plug]
     title: Plugs
     type: entities
   - cards:

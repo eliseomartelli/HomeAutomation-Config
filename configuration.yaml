@@ -12,10 +12,10 @@ homeassistant:
     - type: legacy_api_password
 
 http:
-  api_password: !secret apipass
-  ssl_certificate: !secret ssl_certif
-  ssl_key: !secret ssl_key
-  base_url: !secret base_url
+#  api_password: !secret apipass
+#  ssl_certificate: !secret ssl_certif
+#  ssl_key: !secret ssl_key
+#  base_url: !secret base_url
 
 frontend:
 
@@ -50,6 +50,7 @@ weather:
     api_key: !secret darkskyapikey
 
 google: !include includes/google.yaml
+cast: !include includes/cast.yaml
 
 device_tracker: !include includes/nmap_scanner.yaml
 
@@ -65,3 +66,17 @@ feedreader: !include includes/feedreader.yaml
 input_boolean: !include includes/input_boolean.yaml
 
 script: !include_dir_named includes/scripts
+
+mqtt_eventstream:
+  publish_topic: homeassistant/master/events
+
+panel_iframe:
+  motion:
+    title: Motion
+    url: 'http://192.168.1.235:8765/'
+    icon: mdi:camera
+
+binary_sensor:
+  - platform: mqtt
+    name: Bedroom Motion
+    state_topic: home/bedroom/sensor/motion

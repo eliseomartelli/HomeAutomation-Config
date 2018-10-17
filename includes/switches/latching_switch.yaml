@@ -1,3 +1,0 @@
-- platform: latching_switch
-  ports: 
-    26: Bedroom Light

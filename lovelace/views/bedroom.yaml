@@ -18,14 +18,14 @@ cards:
   - type: entities
     title: Lights
     entities:
-      - switch.bedroom_light
-      - switch.bedside_lamp
-      - switch.desk_lamp
+      - switch.bedroom_ceiling_light
+      - switch.bedroom_bedside_light
+      - switch.bedroom_desk_light
       - light.bed_light_strip
   - type: entities
     title: Plugs
     entities:
-      - switch.generic_door_plug
+      - switch.bedroom_plug
   - type: custom:vertical-stack-in-card
     title: Media
     cards:
