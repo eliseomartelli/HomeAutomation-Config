@@ -12,10 +12,10 @@ homeassistant:
     - type: legacy_api_password
 
 http:
-#  api_password: !secret apipass
-#  ssl_certificate: !secret ssl_certif
-#  ssl_key: !secret ssl_key
-#  base_url: !secret base_url
+  api_password: !secret apipass
+  ssl_certificate: !secret ssl_certif
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
 
 frontend:
 
@@ -73,7 +73,7 @@ mqtt_eventstream:
 panel_iframe:
   motion:
     title: Motion
-    url: 'http://192.168.1.235:8765/'
+    url: 'http://192.168.0.89:8765/'
     icon: mdi:camera
 
 binary_sensor:

@@ -47,15 +47,19 @@
   name: Bedroom Desk Light
   command_topic: home/bedroom/switch/desk
   state_topic: home/bedroom/switch/desk
+  retain: true
 - platform: mqtt
   name: Bedroom Bedside Light
+  retain: true
   command_topic: home/bedroom/switch/bedside
   state_topic: home/bedroom/switch/bedside
 - platform: mqtt
+  retain: true
   name: Bedroom Ceiling Light
   command_topic: home/bedroom/switch/ceiling
   state_topic: home/bedroom/switch/ceiling
 - platform: mqtt
   name: Bedroom Plug
+  retain: true
   command_topic: home/bedroom/switch/plug
   state_topic: home/bedroom/switch/plug

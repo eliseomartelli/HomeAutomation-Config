@@ -45,7 +45,7 @@ layout:
   -
   -
   -
-  - switch.bedroom_light, spacer(1x1), switch.bedside_lamp, spacer(1x1), switch.desk_lamp, spacer(1x1), light.bed_light_strip, spacer(1x1), switch.generic_door_plug
+  - switch.bedroom_ceiling_light, spacer(1x1), switch.bedroom_bedside_light, spacer(1x1), switch.bedroom_desk_light, spacer(1x1), light.bed_light_strip, spacer(1x1), switch.bedroom_plug
   -
   -
   - 

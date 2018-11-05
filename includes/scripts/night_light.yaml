@@ -1,13 +1,13 @@
 alias: Night Light
 sequence:
   - service_template: >
-      {% if is_state('switch.bedside_lamp', 'off') and is_state('switch.desk_lamp', 'off') and is_state('switch.bedroom_light', 'off') %}
+      {% if is_state('switch.bedroom_bedside_light', 'off') and is_state('switch.bedroom_desk_light', 'off') and is_state('switch.bedroom_ceiling_light', 'off') %}
         homeassistant.turn_on
       {% else %}
         homeassistant.turn_off
       {% endif %}
     entity_id: 
-      - switch.bedside_lamp
-      - switch.desk_lamp
+      - switch.bedroom_bedside_light
+      - switch.bedroom_desk_light
   - service: homeassistant.turn_off
-    entity_id: switch.bedroom_light
+    entity_id: switch.bedroom_ceiling_light

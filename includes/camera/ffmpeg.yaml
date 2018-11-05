@@ -1,4 +1,0 @@
-- platform: ffmpeg
-  input: -i /dev/video0
-  extra_arguments: -r 10 -input_format mjpeg -video_size 320x240
-  name: Bedroom Camera
