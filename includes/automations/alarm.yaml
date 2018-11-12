@@ -1,7 +1,7 @@
-- alias: Alarm
+- alias: Alarm Away
   trigger:
     - platform: state
-      entity_id: binary_sensor.bedroom_motion
+      entity_id: group.away_sensors
       to: 'on'
   condition:
     - condition: state

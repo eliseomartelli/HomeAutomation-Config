@@ -85,5 +85,4 @@ camera: !include_dir_merge_list includes/camera
 google_assistant: !include includes/google_assistant.yaml
 input_boolean: !include includes/input_boolean.yaml
 script: !include_dir_named includes/scripts
-
-
+group: !include_dir_merge_named includes/groups
