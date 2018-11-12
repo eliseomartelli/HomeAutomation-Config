@@ -1,3 +1,13 @@
+##
+# Time & Date Sensor
+##
+- platform: time_date
+  display_options:
+    - 'time_date'
+
+##
+# Sensor used to get the mean value of the air quality
+##
 - platform: min_max
   entity_ids:
     - sensor.waqi_grande_torino_leini_piemonte_italy

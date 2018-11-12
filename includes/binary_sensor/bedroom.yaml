@@ -1,0 +1,6 @@
+##
+# Sensor to get the motion inside my bedroom
+##
+- platform: mqtt
+  name: Bedroom Motion
+  state_topic: home/bedroom/sensor/motion

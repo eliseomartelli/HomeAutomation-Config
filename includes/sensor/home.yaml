@@ -1,7 +1,8 @@
+##
+# Template sensor for getting the various shifts of cleaning
+##
 - platform: template
   sensors:
-    time:
-      value_template: >
     clean_shift_eliseo:
       friendly_name: "Eliseo Cleaning Shift"
       icon_template: mdi:broom
@@ -22,3 +23,11 @@
       icon_template: mdi:broom
       value_template: >
         {{ states.calendar.house_cleaning.attributes.description }}
+##
+# Speedtest Sensor
+##
+- platform: speedtest
+  monitored_conditions:
+    - ping
+    - download
+    - upload

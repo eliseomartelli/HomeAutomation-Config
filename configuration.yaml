@@ -17,12 +17,12 @@ http:
   ssl_key: !secret ssl_key
   base_url: !secret base_url
 
+updater:
+  include_used_components: true
+
 frontend:
 
 config:
-
-updater:
-  include_used_components: true
 
 discovery:
 
@@ -49,24 +49,6 @@ weather:
   - platform: darksky
     api_key: !secret darkskyapikey
 
-google: !include includes/google.yaml
-cast: !include includes/cast.yaml
-
-device_tracker: !include includes/nmap_scanner.yaml
-
-sensor: !include_dir_merge_list includes/sensor
-media_player: !include_dir_merge_list includes/media_players
-automation: !include_dir_merge_list includes/automations/
-scene: !include_dir_merge_list includes/scenes/
-switch: !include_dir_merge_list includes/switches/
-light: !include_dir_merge_list includes/light/
-camera: !include_dir_merge_list includes/camera
-google_assistant: !include includes/google_assistant.yaml
-feedreader: !include includes/feedreader.yaml
-input_boolean: !include includes/input_boolean.yaml
-
-script: !include_dir_named includes/scripts
-
 mqtt_eventstream:
   publish_topic: homeassistant/master/events
 
@@ -76,21 +58,32 @@ panel_iframe:
     url: 'http://192.168.0.89:8765/'
     icon: mdi:camera
 
-binary_sensor:
-  - platform: mqtt
-    name: Bedroom Motion
-    state_topic: home/bedroom/sensor/motion
-
 alarm_control_panel:
   - platform: manual
     name: Test Alarm
     code: !secret alarm_code
     delay_time: 5
-    pending_time: 15
+    pending_time: 5
 
 notify:
   - platform: html5
     name: Html5 Notifier
     gcm_api_key: !secret gcm_server_key
     gcm_sender_id: !secret gcm_sender_id
+
+google: !include includes/google.yaml
+cast: !include includes/cast.yaml
+device_tracker: !include includes/nmap_scanner.yaml
+binary_sensor: !include_dir_merge_list includes/binary_sensor
+sensor: !include_dir_merge_list includes/sensor
+media_player: !include_dir_merge_list includes/media_players
+automation: !include_dir_merge_list includes/automations/
+scene: !include_dir_merge_list includes/scenes/
+switch: !include_dir_merge_list includes/switches/
+light: !include_dir_merge_list includes/light/
+camera: !include_dir_merge_list includes/camera
+google_assistant: !include includes/google_assistant.yaml
+input_boolean: !include includes/input_boolean.yaml
+script: !include_dir_named includes/scripts
+
 
