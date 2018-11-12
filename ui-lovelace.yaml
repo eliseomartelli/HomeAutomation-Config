@@ -5,7 +5,6 @@
 
 resources:
 - {type: js, url: '/local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2'}
-- {type: module, url: /local/button-card/button-card.js}
 - {type: js, url: '/local/custom-lovelace/monster-card/monster-card.js?v=1'}
 - {type: module, url: '/local/mini-media-player/mini-media-player.js?v=0.8.4'}
 title: Home
@@ -19,6 +18,7 @@ views:
     - {entity: switch.guests, tap_action: toggle}
     show_state: false
     type: glance
+  - {entity: alarm_control_panel.test_alarm, type: alarm-panel}
   - elements:
     - entity: sensor.blank
       prefix: Air Quality
@@ -93,6 +93,7 @@ views:
   title: Bedroom
 - cards:
   - {entity: weather.dark_sky, title: Weather, type: weather-forecast}
+  - {entity: camera.piazza_vittorio_veneto, show_state: false, type: picture-entity}
   - entities: [sensor.waqi_grande_torino_leini_piemonte_italy, sensor.waqi_lingotto_torino_piemonte_italy,
       sensor.waqi_rebaudengo_torino_piemonte_italy, sensor.waqi_rubino_torino_piemonte_italy]
     title: Air Quality
@@ -102,6 +103,8 @@ views:
   id: outside
   title: Outside
 - cards:
+  - {entity: script.reload_lovelace, service: script.turn_on, tap_action: call-service,
+    type: entity-button}
   - card: {show_name: false, show_state: false, title: 'Who''s home?', type: glance}
     entities: [device_tracker.eliseo, device_tracker.lorenzo, device_tracker.daniele]
     state_filter: [home]

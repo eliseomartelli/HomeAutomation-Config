@@ -3,6 +3,8 @@ id: home
 icon: mdi:home
 cards:
   - !include views/modules/home_state.yaml
+  - type: alarm-panel
+    entity: alarm_control_panel.test_alarm
   - !include views/modules/air_quality.yaml
   - !include views/modules/people_at_home.yaml 
   - !include views/modules/cleaning_schedule.yaml

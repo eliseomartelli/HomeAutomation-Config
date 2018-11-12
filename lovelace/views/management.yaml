@@ -2,6 +2,10 @@ title: Management
 icon: mdi:gauge
 id: management
 cards:
+  - type: entity-button
+    entity: script.reload_lovelace
+    tap_action: call-service
+    service: script.turn_on
   - type: entity-filter
     entities:
       - device_tracker.eliseo

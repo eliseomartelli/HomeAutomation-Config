@@ -1,0 +1,7 @@
+alias: Blink Bedroom Ceiling Loop
+sequence:
+  - delay: 
+      seconds: 1
+  - service: homeassistant.turn_on
+    data:
+      entity_id: script.blink_light

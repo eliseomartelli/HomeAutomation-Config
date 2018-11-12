@@ -2,8 +2,6 @@ title: Home
 resources:
   - url: /local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2
     type: js
-  - url: /local/button-card/button-card.js
-    type: module
   - url: /local/custom-lovelace/monster-card/monster-card.js?v=1
     type: js
   - url: /local/mini-media-player/mini-media-player.js?v=0.8.4

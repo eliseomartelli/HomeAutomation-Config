@@ -32,4 +32,17 @@
             "Yo, What's up?",
             "Hey!",
             "How's going?"
-          ] | random }}  
+          ] | random }} 
+    - service: media_player.select_source
+      data_template:
+        entity_id: media_player.spotify
+        source: "Bedroom"
+    - service: media_player.shuffle_set
+      data_template:
+        entity_id: media_player.spotify
+        shuffle: true
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.spotify
+        media_content_id: "spotify:user:spotify:playlist:37i9dQZF1DWXmlLSKkfdAk"
+        media_content_type: "playlist"

@@ -1,0 +1,6 @@
+- platform: mjpeg
+  name: Bedroom Camera
+  mjpeg_url: http://192.168.0.89:8081
+- platform: ffmpeg
+  input: https://hddn01.skylinewebcams.com/live.m3u8?a=5knet9cnus4n6m771mfcqo4e34
+  name: Piazza Vittorio Veneto
