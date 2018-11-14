@@ -1,3 +1,0 @@
-alias: Reload Lovelace
-sequence:
-  - service: shell_command.generate_lovelace_config 

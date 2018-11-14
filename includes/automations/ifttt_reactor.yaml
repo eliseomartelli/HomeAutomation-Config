@@ -1,0 +1,10 @@
+- alias: IFTTT Reactor
+  trigger:
+    platform: event
+    event_type: ifttt_webhook_received
+  action:
+    - service: script.ifttt_reactor
+      data_template:
+        args: "{{ trigger.event.data.data }}"
+        target: "{{ trigger.event.data.target }}"
+

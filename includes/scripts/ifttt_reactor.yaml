@@ -1,0 +1,23 @@
+ifttt_reactor:
+  sequence:
+    - service_template: >
+        {% if target == 'macmini' %}
+          script.ifttt_reactor_macmini
+        {% endif %}
+      data_template:
+        args: "{{ args | lower }}"
+
+ifttt_reactor_macmini:
+  sequence:
+    - service_template: shell_command.open_mac
+      data_template:
+        appname: >
+          {%- if 'open' in args -%}
+            {%- if 'netflix' in args -%}
+              Google\ Chrome https://netflix.com
+            {%- endif -%}
+          {%- elif 'search' in args -%}
+            {%- if 'netflix' in args -%}
+              Google\ Chrome https://www.netflix.com/search?q=
+            {%- endif -%}
+          {%- endif -%}
