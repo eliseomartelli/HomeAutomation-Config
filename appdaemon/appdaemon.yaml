@@ -6,7 +6,7 @@ appdaemon:
     HASS:
       type: hass
       ha_url: !secret base_url_w_protocol
-      ha_key: !secret apipass
+      token: !secret adtoken
 
 hadashboard:
   dash_url: http://192.168.0.88:5050

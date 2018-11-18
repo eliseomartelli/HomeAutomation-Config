@@ -6,7 +6,7 @@
 resources:
 - {type: js, url: '/local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2'}
 - {type: js, url: '/local/custom-lovelace/monster-card/monster-card.js?v=1'}
-- {type: module, url: '/local/mini-media-player/mini-media-player.js?v=0.8.4'}
+- {type: module, url: '/local/mini-media-player/mini-media-player.js?v=0.9.2'}
 title: Home
 views:
 - cards:
@@ -18,7 +18,11 @@ views:
     - {entity: switch.guests, tap_action: toggle}
     show_state: false
     type: glance
-  - {entity: alarm_control_panel.test_alarm, type: alarm-panel}
+  - card: {show_state: false, title: People at home, type: glance}
+    filter:
+      include:
+      - {domain: device_tracker, state: home}
+    type: custom:monster-card
   - elements:
     - entity: sensor.blank
       prefix: Air Quality
@@ -29,11 +33,6 @@ views:
       type: state-label
     image: /local/header.png
     type: picture-elements
-  - card: {show_state: false, title: People at home, type: glance}
-    filter:
-      include:
-      - {domain: device_tracker, state: home}
-    type: custom:monster-card
   - elements:
     - entity: sensor.blank
       prefix: Cleaning Shifts
@@ -50,23 +49,14 @@ views:
       type: state-label
     image: /local/cleaning.png
     type: picture-elements
-  - cards:
-    - column_width: calc(100% / 4)
-      entities: [sensor.epson_xp205_black_ink, sensor.epson_xp205_cyan_ink, sensor.epson_xp205_magenta_ink,
-        sensor.epson_xp205_yellow_ink]
-      show_name: false
-      type: glance
-    - entities: [sensor.epson_xp205_status]
-      type: entities
-    title: Printer Status
-    type: custom:vertical-stack-in-card
   icon: mdi:home
   id: home
   title: Home
 - cards:
-  - column_width: calc(100% / 3)
+  - column_width: calc(100% / 4)
     entities:
     - {entity: switch.movie, tap_action: toggle}
+    - {entity: switch.music_lights, tap_action: toggle}
     - {entity: scene.reading, service: scene.turn_on, tap_action: call-service}
     - {entity: scene.studying, service: scene.turn_on, tap_action: call-service}
     show_state: false
@@ -83,8 +73,8 @@ views:
     title: Plugs
     type: entities
   - cards:
-    - {artwork: cover, entity: media_player.bedroom, type: 'custom:mini-media-player'}
-    - {artwork: cover, entity: media_player.kodi_mac_mini, type: 'custom:mini-media-player'}
+    - {artwork: cover, entity: media_player.bedroom, show_progress: true, type: 'custom:mini-media-player'}
+    - {artwork: cover, entity: media_player.kodi_mac_mini, show_progress: true, type: 'custom:mini-media-player'}
     title: Media
     type: custom:vertical-stack-in-card
   - {entity: camera.bedroom_camera, show_state: false, type: picture-entity}
@@ -93,7 +83,6 @@ views:
   title: Bedroom
 - cards:
   - {entity: weather.dark_sky, title: Weather, type: weather-forecast}
-  - {entity: camera.piazza_vittorio_veneto, show_state: false, type: picture-entity}
   - entities: [sensor.waqi_grande_torino_leini_piemonte_italy, sensor.waqi_lingotto_torino_piemonte_italy,
       sensor.waqi_rebaudengo_torino_piemonte_italy, sensor.waqi_rubino_torino_piemonte_italy]
     title: Air Quality
@@ -103,19 +92,24 @@ views:
   id: outside
   title: Outside
 - cards:
-  - {entity: script.reload_lovelace, service: script.turn_on, tap_action: call-service,
-    type: entity-button}
-  - card: {show_name: false, show_state: false, title: 'Who''s home?', type: glance}
-    entities: [device_tracker.eliseo, device_tracker.lorenzo, device_tracker.daniele]
-    state_filter: [home]
-    type: entity-filter
-  - entities: [sensor.who_cleans]
-    show_name: false
-    title: Who Cleans?
-    type: entities
   - entities: [sensor.speedtest_download, sensor.speedtest_upload, sensor.speedtest_ping]
     title: Speedtest
     type: history-graph
+  - cards:
+    - column_width: calc(100% / 4)
+      entities: [sensor.epson_xp205_black_ink, sensor.epson_xp205_cyan_ink, sensor.epson_xp205_magenta_ink,
+        sensor.epson_xp205_yellow_ink]
+      show_name: false
+      type: glance
+    - entities: [sensor.epson_xp205_status]
+      type: entities
+    title: Printer Status
+    type: custom:vertical-stack-in-card
   icon: mdi:gauge
   id: management
   title: Management
+- cards:
+  - {entity: alarm_control_panel.test_alarm, type: alarm-panel}
+  icon: mdi:lock
+  id: security
+  name: Security

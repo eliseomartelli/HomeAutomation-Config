@@ -4,9 +4,11 @@ icon: mdi:hotel
 cards:
   - type: glance
     show_state: false
-    column_width: calc(100% / 3)
+    column_width: calc(100% / 4)
     entities:
       - entity: switch.movie
+        tap_action: toggle
+      - entity: switch.music_lights
         tap_action: toggle
       - entity: scene.reading
         tap_action: call-service
@@ -32,9 +34,11 @@ cards:
       - entity: media_player.bedroom
         type: "custom:mini-media-player"
         artwork: cover
+        show_progress: true
       - entity: media_player.kodi_mac_mini
         type: "custom:mini-media-player"
         artwork: cover
+        show_progress: true
   - type: picture-entity
     entity: camera.bedroom_camera
     show_state: false

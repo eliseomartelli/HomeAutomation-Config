@@ -1,0 +1,8 @@
+music_lights:
+  module: music_lights
+  class: MusicLights
+  ha_url: !secret base_url_w_protocol
+  switch: "switch.music_lights"
+  media_player: "media_player.bedroom"
+  photo_attribute: "entity_picture"
+  light: "light.bed_light_strip"

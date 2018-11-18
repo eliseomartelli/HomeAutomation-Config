@@ -4,10 +4,11 @@ resources:
     type: js
   - url: /local/custom-lovelace/monster-card/monster-card.js?v=1
     type: js
-  - url: /local/mini-media-player/mini-media-player.js?v=0.8.4
+  - url: /local/mini-media-player/mini-media-player.js?v=0.9.2
     type: module
 views:
   - !include views/home.yaml
   - !include views/bedroom.yaml
   - !include views/outside.yaml
   - !include views/management.yaml
+  - !include views/security.yaml

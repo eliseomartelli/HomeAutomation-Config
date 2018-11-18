@@ -1,4 +1,4 @@
 - name: Studying
   entities:
-    switch.bedroom_light: on
-    switch.desk_lamp: on
+    switch.bedroom_ceiling_light: on
+    switch.bedroom_desk_light: on

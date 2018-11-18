@@ -2,30 +2,10 @@ title: Management
 icon: mdi:gauge
 id: management
 cards:
-  - type: entity-button
-    entity: script.reload_lovelace
-    tap_action: call-service
-    service: script.turn_on
-  - type: entity-filter
-    entities:
-      - device_tracker.eliseo
-      - device_tracker.lorenzo
-      - device_tracker.daniele
-    state_filter:
-      - home
-    card:
-      title: Who's home?
-      type: glance
-      show_name: false
-      show_state: false
-  - type: entities
-    title: Who Cleans?
-    show_name: false
-    entities:
-      - sensor.who_cleans
   - type: history-graph
     title: Speedtest
     entities:
       - sensor.speedtest_download
       - sensor.speedtest_upload
       - sensor.speedtest_ping
+  - !include views/modules/printer.yaml

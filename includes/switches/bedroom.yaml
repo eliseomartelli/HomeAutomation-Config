@@ -7,6 +7,13 @@
   state_topic: home/bedroom/configuration/movie
   icon: mdi:filmstrip
   retain: true
+- platform: mqtt
+  name: Music Lights
+  command_topic: home/bedroom/configuration/music_lights
+  state_topic: home/bedroom/configuration/music_lights
+  icon: mdi:filmstrip
+  retain: true
+
 
 ##
 # LIGHTS

@@ -5,9 +5,6 @@ cards:
   - type: weather-forecast
     title: Weather
     entity: weather.dark_sky
-  - type: picture-entity
-    entity: camera.piazza_vittorio_veneto
-    show_state: false 
   - type: entities
     title: Air Quality
     entities:

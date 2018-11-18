@@ -18,7 +18,4 @@ scene.reading:
         icon: mdi:book-open-page-variant
 scene.studying:
         icon: mdi:school
-sensor.bedroom_temperature:
-        google_assistant: true
-        google_assistant_type: climate
-        google_assistant_name: bedroomtemp
+
