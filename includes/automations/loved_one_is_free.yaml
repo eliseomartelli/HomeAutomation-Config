@@ -1,12 +1,9 @@
 - alias: Loved One Is Free
   trigger:
     - platform: state
-      entity_id: calendar.university_ilaria
-      from: 'on'
-  condition: 
-    - condition: state
-      entity_id: 'device_tracker.eliseo'
-      state: 'home'
+      entity_id: calendar.ila_university
+      to: 'off'
   action:
-    - service: script.turn_on
-      entity_id: script.blink_desk
+    - service: notify.html5_notifier_nokia7_eliseo
+      data:
+        message: "Ilaria just got out of the University \U0001f389"
