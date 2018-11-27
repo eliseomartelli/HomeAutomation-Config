@@ -6,4 +6,4 @@
   action:
     - service: notify.html5_notifier_nokia7_eliseo
       data:
-        message: "Ilaria just got out of the University \U0001f389"
+        message: "Ilaria just got out of University \U0001f389"
