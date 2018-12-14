@@ -1,0 +1,6 @@
+platform: speedtest
+server_id: 1486
+monitored_conditions:
+  - ping
+  - download
+  - upload

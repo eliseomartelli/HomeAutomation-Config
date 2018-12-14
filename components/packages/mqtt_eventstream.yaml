@@ -1,0 +1,2 @@
+mqtt_eventstream:
+  publish_topic: homeassistant/master/events

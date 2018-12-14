@@ -1,0 +1,7 @@
+alias: Bed Button Reactor 
+trigger:
+        platform: event
+        event_type: bed_dash_button
+action:
+        service: script.night_light
+

@@ -1,3 +1,0 @@
-project_id: !secret ga_projectid
-api_key: !secret ga_api_key
-expose_by_default: true

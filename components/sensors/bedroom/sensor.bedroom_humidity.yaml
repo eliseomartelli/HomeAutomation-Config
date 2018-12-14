@@ -1,0 +1,9 @@
+
+##
+# Temperature Sensor for the bedroom
+##
+platform: mqtt
+name: Bedroom Humidity
+device_class: humidity
+state_topic: home/bedroom/sensor/dht_humidity/state
+unit_of_measurement: "%"

@@ -1,0 +1,4 @@
+mqtt:
+  broker: 127.0.0.1
+  username: homeassistant
+  password: !secret mqttpass

@@ -1,0 +1,14 @@
+alias: Alarm triggered response
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.test_alarm
+    to: 'triggered'
+action:
+  - service: notify.html5_notifier
+    data:
+      title: Alarm
+      message: The alarm was triggered
+  - service: tts.google_say
+    data:
+      message: Allarme attivato, notifica inviata.
+      language: "it"

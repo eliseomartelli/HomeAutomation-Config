@@ -1,0 +1,5 @@
+panel_iframe:
+  motion:
+    title: Motion
+    url: 'http://192.168.0.89:8765/'
+    icon: mdi:camera

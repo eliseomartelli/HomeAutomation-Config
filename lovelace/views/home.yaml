@@ -1,8 +1,0 @@
-title: Home
-id: home
-icon: mdi:home
-cards:
-  - !include views/modules/home_state.yaml
-  - !include views/modules/people_at_home.yaml
-  - !include views/modules/air_quality.yaml
-  - !include views/modules/cleaning_schedule.yaml

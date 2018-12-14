@@ -1,6 +1,0 @@
-- alias: Startup Speedtest
-  trigger:
-          platform: homeassistant
-          event: start
-  action:
-          service: sensor.update_speedtest

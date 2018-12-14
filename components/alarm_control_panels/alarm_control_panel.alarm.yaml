@@ -1,0 +1,5 @@
+platform: manual
+name: Alarm
+code: !secret alarm_code
+delay_time: 5
+pending_time: 5

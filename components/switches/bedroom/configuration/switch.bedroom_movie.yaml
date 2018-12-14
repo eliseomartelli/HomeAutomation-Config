@@ -1,0 +1,6 @@
+platform: mqtt
+name: Movie
+command_topic: home/bedroom/configuration/movie
+state_topic: home/bedroom/configuration/movie
+icon: mdi:filmstrip
+retain: true

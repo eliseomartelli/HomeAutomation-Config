@@ -1,0 +1,6 @@
+##
+# Bedroom Camera
+##
+platform: mjpeg
+name: Bedroom Camera
+mjpeg_url: http://192.168.0.89:8081

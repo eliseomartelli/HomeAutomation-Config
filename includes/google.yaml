@@ -1,3 +1,0 @@
-client_id: !secret google_cid
-client_secret: !secret google_secret
-track_new_calendar: false

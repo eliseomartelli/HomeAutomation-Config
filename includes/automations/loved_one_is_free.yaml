@@ -1,9 +1,0 @@
-- alias: Loved One Is Free
-  trigger:
-    - platform: state
-      entity_id: calendar.ila_university
-      to: 'off'
-  action:
-    - service: notify.html5_notifier_nokia7_eliseo
-      data:
-        message: "Ilaria just got out of University \U0001f389"
