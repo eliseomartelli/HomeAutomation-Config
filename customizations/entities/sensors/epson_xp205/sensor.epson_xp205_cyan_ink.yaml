@@ -1,0 +1,2 @@
+sensor.epson_xp205_cyan_ink:
+  entity_picture: /local/ink_c.png

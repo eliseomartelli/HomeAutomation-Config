@@ -2,7 +2,6 @@ title: Home
 id: home
 icon: mdi:home
 cards:
-  - !include modules/home_state.yaml
   - !include modules/people_at_home.yaml
   - !include modules/air_quality.yaml
   - !include modules/cleaning_schedule.yaml

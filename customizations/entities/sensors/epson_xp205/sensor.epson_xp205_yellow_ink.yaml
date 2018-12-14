@@ -1,0 +1,2 @@
+sensor.epson_xp205_yellow_ink:
+  entity_picture: /local/ink_y.png

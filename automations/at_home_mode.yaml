@@ -1,8 +1,0 @@
-alias: Set At Home Automatically
-trigger:
-  - platform: state
-    entity_id: device_tracker.eliseo
-    to: 'home'
-action:
-  - service: switch.turn_on
-    entity_id: switch.at_home

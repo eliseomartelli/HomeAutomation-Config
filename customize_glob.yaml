@@ -1,8 +1,0 @@
-switch.*_lamp:
-  icon: mdi:lightbulb
-switch.*_light:
-  icon: mdi:lightbulb
-input_boolean.*:
-  icon_color: >
-      if (state === 'on') return 'rgb(251, 210, 41)';
-      return 'rgb(54, 95, 140)';
