@@ -1,1 +1,1 @@
-script: !include_dir_list ../../scripts
+script: !include_dir_merge_named ../../scripts

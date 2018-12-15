@@ -9,3 +9,4 @@ cards:
       - sensor.speedtest_upload
       - sensor.speedtest_ping
   - !include modules/printer.yaml
+  - !include modules/torrent.yaml

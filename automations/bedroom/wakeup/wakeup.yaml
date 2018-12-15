@@ -1,0 +1,8 @@
+alias: Bedroom WakeUp
+trigger:
+        platform: template
+        value_template: '{{ ((states("sensor.next_google_home_alarm") | int) | timestamp_custom("%H:%M, %Y-%m-%d", true))  == states.sensor.time__date.state }}'
+action:
+        service: homeassistant.turn_on
+        entity_id:
+        - switch.bedroom_ceiling_light
