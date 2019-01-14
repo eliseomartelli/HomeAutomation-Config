@@ -12,6 +12,10 @@ cards:
       - sensor.waqi_lingotto_torino_piemonte_italy
       - sensor.waqi_rebaudengo_torino_piemonte_italy
       - sensor.waqi_rubino_torino_piemonte_italy
+  - type: entities
+    title: Next Bus
+    entities:
+      - sensor.stop_1680
   - type: iframe
     url: https://embed.windy.com/embed2.html
     aspect_ratio: 100%
