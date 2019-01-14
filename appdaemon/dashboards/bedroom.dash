@@ -19,12 +19,6 @@ clock:
     month: "long"
     day: "numeric"
 
-alarm:
-  widget_type: alarm
-  valye_style: "font-weight: bold;"
-  widget_style: "background: transparent;"
-  entity: alarm_control_panel.test_alarm
-
 who_cleans:
   widget_type: sensor
   entity: sensor.who_cleans
@@ -38,7 +32,7 @@ layout:
   -
   -
   -
-  - spacer(5x1), clock(19x4), alarm(5x2)
+  - spacer(5x1), clock(19x4)
   -
   -
   -
@@ -67,9 +61,9 @@ layout:
   -
   -
   -
+  - spacer(6x1), sensor.stop_1680, spacer(4x1), sensor.stop_209
   -
   -
-  - 
   -
   -
   -
