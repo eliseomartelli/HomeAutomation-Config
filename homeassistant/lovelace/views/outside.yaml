@@ -15,8 +15,9 @@ cards:
   - type: entities
     title: Next Bus
     entities:
-      - sensor.stop_1680
-      - sensor.stop_209
+      - entity: sensor.stop_1680
+        format: datetime
+      - entity: sensor.stop_209
   - type: iframe
     url: https://embed.windy.com/embed2.html
     aspect_ratio: 100%
