@@ -1,4 +1,4 @@
-secrets: /home/homeassistant/.homeassistant/secrets.yaml
+secrets: /home/homeassistant/homeassistant/homeassistant/secrets.yaml
 appdaemon:
   disable_apps: 1
   threads: 16
