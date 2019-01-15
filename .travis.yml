@@ -8,4 +8,9 @@ before_install:
 
 install: pip3 install homeassistant
 
-script: hass -c homeassistant/ --script check_config --info all
+jobs:
+  include:
+    - stage: test
+      script: hass -c homeassistant/ --script check_config --info all
+    - stage: test
+      script: hass -c homeassistant_rpi_rf_instance/ --script check_config --info all
