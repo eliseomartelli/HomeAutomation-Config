@@ -1,0 +1,2 @@
+platform: rest
+resource: https://api.travis-ci.org/eliseomartelli/HA-CONFIG.svg?branch=master

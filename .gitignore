@@ -14,7 +14,8 @@ __pycache__/
 .HA_VERSION
 OZW_Log.txt
 pyozw.sqlite
-.storage/*
+*.storage/*
+homeassistant/.storage
 tts/
 appdaemon/compiled
 home-assistant_v2*
