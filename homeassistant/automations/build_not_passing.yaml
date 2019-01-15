@@ -1,0 +1,9 @@
+alias: Build Not Passing
+trigger:
+  - platform: state
+    entity_id: sensor.configuration_build_status
+    from: 'passing'
+action:
+  - service: notify.html5_notifier_nokia7_eliseo
+    data:
+      message: "The configuration isn't passing. Check the config!"
