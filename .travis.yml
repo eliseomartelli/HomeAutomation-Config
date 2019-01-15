@@ -1,0 +1,11 @@
+language: python
+
+python: "3.6.4"
+
+before_install:
+  - touch fakekey.pem
+  - mv homeassistant/fake_secrets.yaml homeassistant/secrets.yaml
+
+install: pip3 install homeassistant
+
+script: hass -c homeassistant/ --script check_config --info all
