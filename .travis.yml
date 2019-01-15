@@ -5,6 +5,7 @@ python: "3.6.4"
 before_install:
   - touch fakekey.pem
   - mv homeassistant/fake_secrets.yaml homeassistant/secrets.yaml
+  - mv  homeassistant_rpi_rf_instance/fake_secrets.yaml homeassistant_rpi_rf_instance/secrets.yaml
 
 install: pip3 install homeassistant
 
