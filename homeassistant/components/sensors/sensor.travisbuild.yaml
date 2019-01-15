@@ -1,2 +1,4 @@
-platform: rest
+platform: scrape
 resource: https://api.travis-ci.org/eliseomartelli/HA-CONFIG.svg?branch=master
+name: Configuration Build Status
+select: 'text:nth-of-type(3)'

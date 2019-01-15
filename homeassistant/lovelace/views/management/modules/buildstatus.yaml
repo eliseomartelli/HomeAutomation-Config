@@ -1,0 +1,4 @@
+type: entities
+title: Build Status
+entities:
+  - sensor.configuration_build_status
