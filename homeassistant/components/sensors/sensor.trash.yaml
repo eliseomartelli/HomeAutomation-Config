@@ -1,0 +1,11 @@
+platform: rest
+name: Garbage Calendar Mozzagrogna
+resource: https://raw.githubusercontent.com/eliseomartelli/Calendari-Ecolan/master/calendars/MOZZAGROGNA.json
+value_template: >
+  {% set today = value_json.days[now().strftime('%j') | int - 1].garbage %}
+  {% if today | length > 0 %}
+    {{ today[0] }}
+  {% else %}
+    NOTHING
+  {% endif %}
+
