@@ -1,7 +1,7 @@
 alias: Next Garbage
 trigger:
-  - platform: state
-    entity_id: sensor.garbage_calendar_mozzagrogna
+  - platform: time
+    at: '19:55:00'
 action:
   - service: notify.family
     data_template:
@@ -29,7 +29,7 @@ action:
           il secco
         {%- endif -%}
         {%- if 'ORGANIC' in states('sensor.garbage_calendar_mozzagrogna') -%}
-          il secco
+          l'umido
         {%- endif -%}
         {%- if 'GLASS' in states('sensor.garbage_calendar_mozzagrogna') -%}
           il vetro
