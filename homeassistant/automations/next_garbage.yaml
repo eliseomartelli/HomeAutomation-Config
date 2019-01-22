@@ -1,0 +1,29 @@
+alias: Next Garbage
+trigger:
+  - platform: state
+    entity_id: sensor.garbage_calendar_mozzagrogna
+action:
+  - service: notify.family
+    data_template:
+      message: >
+        Domani 
+        {% if 'NOTHING' in states('sensor.garbage_calendar_mozzagrogna') %}
+          non bisogna buttare niente.
+        {% else %}
+          bisogna buttare
+        {% endif %}
+        {% if 'PAPER' in states('sensor.garbage_calendar_mozzagrogna') %}
+          la carta
+        {% endif %}
+        {% if 'PLASTIC' in states('sensor.garbage_calendar_mozzagrogna') %}
+          il multimateriale
+        {% endif %}
+        {% if 'DRY' in states('sensor.garbage_calendar_mozzagrogna') %}
+          il secco
+        {% endif %}
+        {% if 'ORGANIC' in states('sensor.garbage_calendar_mozzagrogna') %}
+          il secco
+        {% endif %}
+        {% if 'GLASS' in states('sensor.garbage_calendar_mozzagrogna') %}
+          il vetro
+        {% endif %}
