@@ -6,24 +6,31 @@ action:
   - service: notify.family
     data_template:
       message: >
-        Domani 
-        {% if 'NOTHING' in states('sensor.garbage_calendar_mozzagrogna') %}
-          non bisogna buttare niente.
-        {% else %}
-          bisogna buttare
-        {% endif %}
-        {% if 'PAPER' in states('sensor.garbage_calendar_mozzagrogna') %}
+        Domani
+        {%- if 'NOTHING' in states('sensor.garbage_calendar_mozzagrogna') -%}
+          {{ [' non bisogna buttare niente.',
+              ' la munnezza non passa.',
+              ' senza bidone (non passa nessuno.)',
+              ' EcoLan riposa',
+              ' niente spazzatura.'] | random }}
+        {%- else -%}
+          {{ [' bisogna buttare ',
+              ' si caccia ',
+              ' passa ',
+              ' EcoLan viene a prendersi '] | random }}
+        {%- endif -%}
+        {%- if 'PAPER' in states('sensor.garbage_calendar_mozzagrogna') -%}
           la carta
-        {% endif %}
-        {% if 'PLASTIC' in states('sensor.garbage_calendar_mozzagrogna') %}
+        {%- endif -%}
+        {%- if 'PLASTIC' in states('sensor.garbage_calendar_mozzagrogna') -%}
           il multimateriale
-        {% endif %}
-        {% if 'DRY' in states('sensor.garbage_calendar_mozzagrogna') %}
+        {%- endif -%}
+        {%- if 'DRY' in states('sensor.garbage_calendar_mozzagrogna') -%}
           il secco
-        {% endif %}
-        {% if 'ORGANIC' in states('sensor.garbage_calendar_mozzagrogna') %}
+        {%- endif -%}
+        {%- if 'ORGANIC' in states('sensor.garbage_calendar_mozzagrogna') -%}
           il secco
-        {% endif %}
-        {% if 'GLASS' in states('sensor.garbage_calendar_mozzagrogna') %}
+        {%- endif -%}
+        {%- if 'GLASS' in states('sensor.garbage_calendar_mozzagrogna') -%}
           il vetro
-        {% endif %}
+        {%- endif -%}
