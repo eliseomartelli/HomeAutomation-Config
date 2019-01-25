@@ -2,3 +2,4 @@ platform: scrape
 name: Parola Del Giorno
 resource: https://dizionaripiu.zanichelli.it/cultura-e-attualita/le-parole-del-giorno/parola-del-giorno/
 select: ".heading-50"
+value_template: '{{ value | title }}'

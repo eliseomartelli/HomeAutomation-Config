@@ -1,0 +1,19 @@
+type: picture-elements
+image: /local/wordoftheday.png
+elements:
+  - type: state-label
+    entity: sensor.blank
+    prefix: 'Parola del Giorno'
+    style:
+      color: 'White'
+      font-size: 14px
+      top: 42.5%
+      left: 50%
+  - type: state-label
+    entity: sensor.parola_del_giorno
+    style:
+      color: 'White'
+      font-weight: 'bold'
+      font-size: 24px
+      top: 57.5%
+      left: 50%
