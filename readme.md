@@ -40,7 +40,8 @@ A simple starting point to Home Automation inside a universitary apartement room
 ![](assets/ha4-min.png)
 ![](assets/ha5-min.png)
 
-#### HaDashboard
+#### HaDashboard  
+
 ![](assets/hadashboard-min.png)
 
 [build]: https://travis-ci.org/eliseomartelli/HomeAutomation-Config.svg?branch=master
