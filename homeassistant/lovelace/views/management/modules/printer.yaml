@@ -5,10 +5,10 @@ cards:
     show_name: false
     column_width: calc(100% / 4)
     entities:
-      - sensor.epson_xp205_black_ink
-      - sensor.epson_xp205_cyan_ink
-      - sensor.epson_xp205_magenta_ink
-      - sensor.epson_xp205_yellow_ink
+      - sensor.epson_xp_205_black_ink
+      - sensor.epson_xp_205_cyan_ink
+      - sensor.epson_xp_205_magenta_ink
+      - sensor.epson_xp_205_yellow_ink
   - type: entities
     entities:
-      - sensor.epson_xp205_status
+      - sensor.epson_xp_205_status
