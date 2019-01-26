@@ -7,15 +7,19 @@ cards:
     column_width: calc(100% / 4)
     entities:
       - entity: switch.movie
-        tap_action: toggle
+        tap_action: 
+          action: toggle
       - entity: switch.music_lights
-        tap_action: toggle
+        tap_action:
+          action: toggle
       - entity: scene.reading
-        tap_action: call-service
-        service: scene.turn_on
+        tap_action: 
+          action: call-service
+          service: scene.turn_on
       - entity: scene.studying
-        tap_action: call-service
-        service: scene.turn_on
+        tap_action: 
+          action: call-service
+          service: scene.turn_on
   - !include modules/bedroom_sensors.yaml
   - type: entities
     title: Lights

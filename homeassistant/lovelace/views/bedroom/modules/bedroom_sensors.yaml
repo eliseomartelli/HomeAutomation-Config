@@ -2,7 +2,9 @@ type: horizontal-stack
 cards:
   - type: sensor
     entity: sensor.bedroom_temperature
+    graph: line
     name: Temperature
   - type: sensor
     entity: sensor.bedroom_humidity
+    graph: line
     name: Humidity
