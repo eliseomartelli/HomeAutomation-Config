@@ -33,5 +33,13 @@ A simple starting point to Home Automation inside a universitary apartement room
 - 1 instance of MotionEye
 - 1 instance of AmazonDash
 
+## Screenshots 
+![](assets/ha1-min.png)
+![](assets/ha2-min.png)
+![](assets/ha3-min.png)
+![](assets/ha4-min.png)
+![](assets/ha5-min.png)
+![](assets/hadashboard-min.png)
+
 [build]: https://travis-ci.org/eliseomartelli/HomeAutomation-Config.svg?branch=master
 [buildlink]: https://travis-ci.org/eliseomartelli/HomeAutomation-Config
