@@ -1,7 +1,7 @@
 <p align=center>
   <img src="assets/haicon.png"/>
   <h1 align=center>Home Automation</h1>
-  <span align=center>A simple starting point to Home Automation inside a universitary apartement room.</span>
+  A simple starting point to Home Automation inside a universitary apartement room.
 </p>
 
 [![build]][buildlink]
