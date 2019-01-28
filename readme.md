@@ -3,8 +3,12 @@
   <h1 align=center>Home Automation</h1>
   <p align=center>A simple starting point to Home Automation inside a universitary apartement room.</p>
 </p>
-
-[![build]][buildlink]
+<hr>
+<p align=center>
+  <a href="https://travis-ci.org/eliseomartelli/HomeAutomation-Config">
+    <img src="https://travis-ci.org/eliseomartelli/HomeAutomation-Config.svg?branch=master"/>
+  </a>
+</p>
 
 ## What's in my room?
 - 4 Generic Warm Lights
@@ -48,6 +52,3 @@
 ### HaDashboard  
 
 ![](assets/hadashboard-min.png)
-
-[build]: https://travis-ci.org/eliseomartelli/HomeAutomation-Config.svg?branch=master
-[buildlink]: https://travis-ci.org/eliseomartelli/HomeAutomation-Config
