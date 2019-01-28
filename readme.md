@@ -1,8 +1,10 @@
-<h1 align:center>Home Automation</h1>
+<p align=center>
+  <img src="assets/haicon.png"/>
+  <h1 align=center>Home Automation</h1>
+  <span align=center>A simple starting point to Home Automation inside a universitary apartement room.</span>
+</p>
 
-A simple starting point to Home Automation inside a universitary apartement room.  
 [![build]][buildlink]
----
 
 ## What's in my room?
 - 4 Generic Warm Lights
@@ -33,7 +35,7 @@ A simple starting point to Home Automation inside a universitary apartement room
 - 1 instance of MotionEye
 - 1 instance of AmazonDash
 
-## In the ☁
+## In the ☁
 - 1 instance of "Cute Cat" CloudMQTT (Owntracks)
 
 ## Screenshots 
