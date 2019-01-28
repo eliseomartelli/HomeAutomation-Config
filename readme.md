@@ -3,7 +3,7 @@
   <h1 align=center>Home Automation</h1>
   <p align=center>A simple starting point to Home Automation inside a universitary apartement room.</p>
 </p>
-<hr>
+<h1></h1>
 <p align=center>
   <a href="https://travis-ci.org/eliseomartelli/HomeAutomation-Config">
     <img src="https://travis-ci.org/eliseomartelli/HomeAutomation-Config.svg?branch=master"/>
