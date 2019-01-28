@@ -1,0 +1,14 @@
+###########################################
+# AmazonDash                              #
+#-----------------------------------------#
+# Place this file in /etc/amazon-dash.yml #
+###########################################
+ 
+settings:
+  delay: 10
+devices:
+  <dash_mac_address>:
+    name: Bedroom Bed Button
+    homeassistant: https://<url>:<port>
+    event: bed_dash_button
+    access_token: <token>

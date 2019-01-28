@@ -1,4 +1,4 @@
-# Home Automation  
+<h1 align:center>Home Automation</h1>
 
 A simple starting point to Home Automation inside a universitary apartement room.  
 [![build]][buildlink]
@@ -32,6 +32,9 @@ A simple starting point to Home Automation inside a universitary apartement room
 - 1 instance of AppDaemon
 - 1 instance of MotionEye
 - 1 instance of AmazonDash
+
+## In the ☁
+- 1 instance of "Cute Cat" CloudMQTT (Owntracks)
 
 ## Screenshots 
 ![](assets/ha1-min.png)
