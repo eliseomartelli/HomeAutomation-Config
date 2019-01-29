@@ -14,7 +14,7 @@
   </a>
   <img alt="undefined" src="https://img.shields.io/github/last-commit/eliseomartelli/HomeAutomation-Config.svg">
   <img alt="undefined" src="https://img.shields.io/github/license/eliseomartelli/HomeAutomation-Config.svg">
-  <img src="https://img.shields.io/badge/haversion-0.86.2-blue.svg">
+  <img src="https://img.shields.io/badge/haversion-0.86.4-blue.svg">
 </p>
 
 ## What's in my room?
