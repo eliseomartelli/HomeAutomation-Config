@@ -18,28 +18,38 @@
 </p>
 
 ## What's in my room?
-- 3 Generic 433Mhz plugs
-- 1 Generic 315Mhz light socket
-- 1 RGB Light Strip
-- 1 DHT22 Sensor
-- 1 Tablet used as a controller
-- 1 Epson XP-205 printer
-- 1 PS3 Eye Camera
-- 1 Amazon Dash Button
-- 1 Google Home Mini
-- 1 Mac Mini
-- 1 Rapberry Pi Zero W
+### Switches
+| # | Type | Protocol |
+|---|---|---|
+| 3 | Plugs | 433MHz* |
+| 1 | Lamp Socket | 315MHz* |
+| 1 | RGB Light Strip | MQTT |
 
-## DIY Stuff
+### Sensors
+| # | Type | Protocol |
+|---|---|---|
+| 1 | Motion | MQTT |
+| 1 | Temperature | DHT One Wire* |
+| 1 | Humidity | DHT One Wire* |
+
+### Cameras 
+| # | Type | Protocol |
+|---|---|---|
+| 1 | PS3 Eye Camera | USB |
+
+### Misc
+| # | Type | Protocol |
+|---|---|---|
+| 1 | Tablet | |
+| 1 | Epson XP-205 Printer | Network |
+| 1 | Amazon Dash Button | Network |
+| 1 | Google Home Mini | Network | 
+| 1 | RPI Zero W | Network | 
+
+## Made By Me (DIY)
 - RGB Light Controller (ESP8266 based)
-- RF Bridge (Raspberry Pi)
-- Security Camera (Raspberry Pi) 
-
-## Control Points
-- Tablet on the wall
-- Amazon dash button
-- Voice input 
-- Web Interface
+- RF Bridge (Raspberry Pi Zero W)
+- Security Camera Bridge (Raspberry Pi Zero W)(MotionEye)
 
 ## What I Run?
 - 2 instances of Home Assistant (3 including the development one)
@@ -47,7 +57,7 @@
 - 1 instance of MotionEye
 - 1 instance of AmazonDash
 
-## In the ☁
+## In the cloud ☁
 - 1 instance of "Cute Cat" CloudMQTT (Owntracks)
 
 ## Screenshots 
