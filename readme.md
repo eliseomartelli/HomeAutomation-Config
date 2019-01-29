@@ -60,6 +60,8 @@
 ## In the cloud ☁
 - 1 instance of "Cute Cat" CloudMQTT (Owntracks)
 
+* (Bridged to MQTT with the second instance of HA)
+
 ## Screenshots 
 ![](assets/ha1-min.png)
 ![](assets/ha2-min.png)
