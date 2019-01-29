@@ -18,7 +18,8 @@
 </p>
 
 ## What's in my room?
-- 4 Generic Warm Lights
+- 3 Generic 433Mhz plugs
+- 1 Generic 315Mhz light socket
 - 1 RGB Light Strip
 - 1 DHT22 Sensor
 - 1 Tablet used as a controller
