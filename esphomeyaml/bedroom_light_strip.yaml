@@ -46,17 +46,23 @@ light:
             static int state = 0;
             auto call = id(my_light).turn_on();
             // Transtion of 1000ms = 1s
-            call.set_transition_length(10000);
+            call.set_transition_length(1000);
             if (state == 0) {
-              call.set_rgb(1.0, 1.0, 1.0);
+              call.set_rgb(1.0, 0.0, 0.0);
             } else if (state == 1) {
-              call.set_rgb(1.0, 0.0, 1.0);
+              call.set_rgb(0.0, 1.0, 0.0);
             } else if (state == 2) {
               call.set_rgb(0.0, 0.0, 1.0);
+            } else if (state == 3) {
+              call.set_rgb(1.0, 0.3, 0.0);
+            } else if (state == 4) {
+              call.set_rgb(0.7, 0.0, 1.0);
+            } else if (state == 5) {
+              call.set_rgb(0.0, 1.0, 1.0);
             } else {
-              call.set_rgb(1.0, 0.0, 0.0);
+              call.set_rgb(1.0, 1.0, 0.0);
             }
             call.perform();
             state += 1;
-            if (state == 4)
+            if (state == 7)
               state = 0;
