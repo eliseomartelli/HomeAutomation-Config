@@ -1,11 +1,11 @@
 platform: mqtt
 name: Bed Light Strip
 schema: json
-state_topic: "home/bedroom/light/underbed"
-command_topic: "home/bedroom/light/underbed/set"
+state_topic: "bedroom_light_strip/light/bedroom_light_strip/state"
+command_topic: "bedroom_light_strip/light/bedroom_light_strip/command"
 brightness: true
 rgb: true
 effect: true
-effect_list: [colorfade_slow, colorfade_fast, flash]
+#effect_list: [colorfade_slow, colorfade_fast, flash]
 optimistic: false
 qos: 0
