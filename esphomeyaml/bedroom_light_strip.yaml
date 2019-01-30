@@ -1,0 +1,62 @@
+esphomeyaml:
+  name: bedroom_light_strip
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  ssid: !secret ssid
+  password: !secret password
+
+mqtt:
+  broker: !secret brokerip
+  username: !secret brokerusername
+  password: !secret brokerpassword
+
+# Enable logging
+logger:
+
+ota:
+
+output:
+  - platform: esp8266_pwm
+    pin: D6
+    id: red_output
+  - platform: esp8266_pwm
+    pin: D5
+    id: green_output
+  - platform: esp8266_pwm
+    pin: D7
+    id: blue_output
+
+light:
+  - platform: rgb
+    name: "Bedroom Light Strip"
+    red: red_output
+    green: green_output
+    blue: blue_output
+    id: my_light
+    effects:
+      - strobe:
+      - random:
+      - flicker:
+      - lambda:
+          name: Fade
+          update_interval: 1s
+          lambda: |-
+            static int state = 0;
+            auto call = id(my_light).turn_on();
+            // Transtion of 1000ms = 1s
+            call.set_transition_length(10000);
+            if (state == 0) {
+              call.set_rgb(1.0, 1.0, 1.0);
+            } else if (state == 1) {
+              call.set_rgb(1.0, 0.0, 1.0);
+            } else if (state == 2) {
+              call.set_rgb(0.0, 0.0, 1.0);
+            } else {
+              call.set_rgb(1.0, 0.0, 0.0);
+            }
+            call.perform();
+            state += 1;
+            if (state == 4)
+              state = 0;
