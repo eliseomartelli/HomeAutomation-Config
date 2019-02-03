@@ -6,6 +6,6 @@ command_topic: "bedroom_light_strip/light/bedroom_light_strip/command"
 brightness: true
 rgb: true
 effect: true
-effect_list: [strobe, random, flicker, fade]
+effect_list: [strobe, random, flicker, fade, police]
 optimistic: false
 qos: 0
