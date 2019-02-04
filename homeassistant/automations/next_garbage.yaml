@@ -1,7 +1,7 @@
 alias: Next Garbage
 trigger:
   - platform: time
-    at: '19:55:00'
+    at: '19:30:00'
 action:
   - service: notify.family
     data_template:
