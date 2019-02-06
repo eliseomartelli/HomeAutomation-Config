@@ -1,0 +1,3 @@
+platform: iliad_italy
+username: !secret iliad_user
+password: !secret iliad_pass
