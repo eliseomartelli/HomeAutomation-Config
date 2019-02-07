@@ -1,0 +1,39 @@
+alias: Bedroom WakeUp
+trigger:
+  - platform: template
+    value_template: >
+      {%- if "unknown" in states.sensor.next_google_home_alarm.state -%}
+        False
+      {%- else -%}
+        {{ (states.sensor.next_google_home_alarm.state | int -
+            as_timestamp(states.sensor.now.state)) < 600 }}
+      {%- endif -%}
+action:
+  - service: light.turn_on
+    data:
+      entity_id:
+        - light.bed_light_strip
+      transition: 30
+  - delay:
+      seconds: 30
+  - service: switch.turn_on
+    entity_id: switch.bedroom_bedside_light
+  - delay:
+      minutes: 4
+      seconds: 30
+  - service: switch.turn_on
+    entity_id: switch.bedroom_desk_light
+  - delay:
+      minutes: 4
+  - service: switch.turn_on
+    entity_id: switch.bedroom_ceiling_light
+  - delay:
+      minutes: 10
+  - service: switch.turn_off
+    entity_id:
+      - switch.bedroom_desk_light
+      - switch.bedroom_bedside_light
+  - service: light.turn_off
+    data:
+      entitiy_id: 
+        - light.bed_light_strip
