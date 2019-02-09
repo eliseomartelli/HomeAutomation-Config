@@ -1,0 +1,9 @@
+[submodule "homeassistant/www/vertical-stack-in-card"]
+	path = homeassistant/www/vertical-stack-in-card
+	url = https://github.com/custom-cards/vertical-stack-in-card
+[submodule "homeassistant/www/mini-media-player"]
+	path = homeassistant/www/mini-media-player
+	url = https://github.com/kalkih/mini-media-player
+[submodule "homeassistant/www/custom-lovelace"]
+	path = homeassistant/www/custom-lovelace
+	url = https://github.com/ciotlosm/custom-lovelace
