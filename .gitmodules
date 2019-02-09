@@ -1,3 +1,0 @@
-[submodule "homeassistant/www/tankerkoenig-card"]
-	path = homeassistant/www/tankerkoenig-card
-	url = https://github.com/panbachi/tankerkoenig-card

@@ -6,6 +6,7 @@ resources:
     type: js
   - url: /local/mini-media-player/mini-media-player.js?v=0.9.2
     type: module
+  - url: /local/tankerkoenig-card/tankerkoenig-card.js
 views:
   - !include lovelace/views/home/home.yaml
   - !include lovelace/views/bedroom/bedroom.yaml
