@@ -1,5 +1,3 @@
 platform: spotify
 client_id: !secret spotify_client_id
 client_secret: !secret spotify_client_secret
-aliases:
-  7ac91ebf44c40c3837e5c364dd7a2a5: Bedroom
