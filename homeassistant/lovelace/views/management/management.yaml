@@ -2,12 +2,6 @@ title: Management
 icon: mdi:gauge
 id: management
 cards:
-  - type: history-graph
-    title: Speedtest
-    entities:
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
-      - sensor.speedtest_ping
   - !include modules/printer.yaml
   - !include modules/torrent.yaml
   - !include modules/buildstatus.yaml
