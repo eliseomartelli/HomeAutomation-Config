@@ -2,11 +2,11 @@ alias: Bedroom WakeUp
 trigger:
   - platform: template
     value_template: >
-      {%- if "unknown" in states.sensor.next_google_home_alarm.state -%}
+      {%- if "unavailable" in states.sensor.next_google_home_alarm.state -%}
         false
       {%- else -%}
-        {{ ((states.sensor.next_google_home_alarm.state | int -
-             as_timestamp(states.sensor.now.state)) < 600) | lower }}
+        {{ ((as_timestamp(states.sensor.bedroom_alarm.state) -
+             as_timestamp(states.sensor.now.state) < 600)) | lower }}
       {%- endif -%}
 action:
   - service: light.turn_on
