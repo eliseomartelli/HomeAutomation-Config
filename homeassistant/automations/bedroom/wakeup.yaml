@@ -2,7 +2,7 @@ alias: Bedroom WakeUp
 trigger:
   - platform: template
     value_template: >
-      {%- if "unavailable" in states.sensor.next_google_home_alarm.state -%}
+      {%- if "unavailable" in states.sensor.bedroom_speaker_alarm.state -%}
         false
       {%- else -%}
         {{ ((as_timestamp(states.sensor.bedroom_alarm.state) -

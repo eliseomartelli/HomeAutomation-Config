@@ -1,2 +1,4 @@
 mqtt_eventstream:
   publish_topic: homeassistant/master/events
+  ignore_event:
+    - state_changed
