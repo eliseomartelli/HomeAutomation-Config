@@ -5,7 +5,7 @@ trigger:
       {%- if "unavailable" in states.sensor.bedroom_speaker_alarm.state -%}
         false
       {%- else -%}
-        {{ ((as_timestamp(states.sensor.bedroom_alarm.state) -
+        {{ ((as_timestamp(states.sensor.bedroom_speaker_alarm.state) -
              as_timestamp(states.sensor.now.state) < 600)) | lower }}
       {%- endif -%}
 action:
