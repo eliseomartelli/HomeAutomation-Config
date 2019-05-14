@@ -16,6 +16,8 @@
   <img alt="undefined" src="https://img.shields.io/github/license/eliseomartelli/HomeAutomation-Config.svg">
   <img src="https://img.shields.io/badge/haversion-0.87.0-blue.svg">
 </p>
+## TODO:
+[] Move custom integrations to new style
 
 ## What's in my room?
 ### Switches
