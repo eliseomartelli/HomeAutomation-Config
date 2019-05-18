@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  blank:
+    friendly_name: "Blank"
+    value_template: ""
