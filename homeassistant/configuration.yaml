@@ -7,3 +7,6 @@ homeassistant:
   time_zone: Europe/Rome
   
   packages: !include_dir_named components/packages
+
+hacs:
+  token: !secret gh_token

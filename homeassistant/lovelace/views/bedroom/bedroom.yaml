@@ -21,13 +21,17 @@ cards:
           action: call-service
           service: scene.turn_on
   - !include modules/bedroom_sensors.yaml
-  - type: entities
-    title: Lights
-    entities:
-      - switch.bedroom_ceiling_light
-      - switch.bedroom_bedside_light
-      - switch.bedroom_desk_light
-      - light.bed_light_strip
+  - type: horizontal-stack
+    cards:
+      - type: entity-button
+        aspect_ratio: 1/1
+        entity: switch.bedroom_bedside_light
+      - type: entity-button
+        aspect_ratio: 1/1
+        entity: switch.bedroom_ceiling_light
+      - type: entity-button
+        aspect_ratio: 1/1
+        entity: switch.bedroom_desk_light
   - type: entities
     title: Plugs
     entities:
