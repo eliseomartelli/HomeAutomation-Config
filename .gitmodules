@@ -7,3 +7,6 @@
 [submodule "homeassistant/www/custom-lovelace"]
 	path = homeassistant/www/custom-lovelace
 	url = https://github.com/ciotlosm/custom-lovelace
+[submodule "homeassistant/custom_components/spotcast"]
+	path = homeassistant/custom_components/spotcast
+	url = https://github.com/fondberg/spotcast
