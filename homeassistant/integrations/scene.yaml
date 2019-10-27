@@ -1,1 +1,1 @@
-scene: !include_dir_list ../../scenes
+scene: !include_dir_list ../scenes

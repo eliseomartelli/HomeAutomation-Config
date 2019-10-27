@@ -1,8 +1,0 @@
-notify:
-  - platform: telegram
-    chat_id: !secret family_chat_id
-    name: FAMILY
-  - platform: html5
-    name: Html5 Notifier
-    gcm_api_key: !secret gcm_server_key
-    gcm_sender_id: !secret gcm_sender_id

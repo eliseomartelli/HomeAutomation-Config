@@ -1,5 +1,0 @@
-platform: mqtt
-retain: true
-name: Bedroom Ceiling Light
-command_topic: home/bedroom/switch/ceiling
-state_topic: home/bedroom/switch/ceiling

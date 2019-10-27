@@ -1,1 +1,1 @@
-media_player: !include_dir_list ../media_players
+media_player: !include_dir_list ../entities/media_players

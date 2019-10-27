@@ -1,5 +1,0 @@
-platform: mqtt
-name: Bedroom Plug
-retain: true
-command_topic: home/bedroom/switch/plug
-state_topic: home/bedroom/switch/plug

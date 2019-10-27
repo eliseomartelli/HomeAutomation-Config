@@ -1,5 +1,0 @@
-platform: mqtt
-name: Bedroom Bedside Light
-retain: true
-command_topic: home/bedroom/switch/bedside
-state_topic: home/bedroom/switch/bedside

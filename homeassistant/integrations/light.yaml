@@ -1,1 +1,1 @@
-light: !include_dir_list ../lights
+light: !include_dir_list ../entities/lights

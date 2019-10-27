@@ -1,12 +1,2 @@
 homeassistant:
-  name: Home
-  latitude: !secret lat
-  longitude: !secret long
-  elevation: !secret elev
-  unit_system: metric
-  time_zone: Europe/Rome
-  
-  packages: !include_dir_named components/packages
-
-hacs:
-  token: !secret gh_token
+  packages: !include_dir_named integrations

@@ -1,5 +1,0 @@
-platform: mqtt
-name: Bedroom Desk Light
-command_topic: home/bedroom/switch/desk
-state_topic: home/bedroom/switch/desk
-retain: true

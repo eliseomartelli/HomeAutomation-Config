@@ -1,2 +1,0 @@
-googlehome:
-  devices: !include_dir_list ../googlehome

@@ -1,3 +1,0 @@
-bedroom_away_sensors:
-  entities:
-    - binary_sensor.bedroom_motion

@@ -1,1 +1,0 @@
-alarm_control_panel: !include_dir_list ../alarm_control_panels

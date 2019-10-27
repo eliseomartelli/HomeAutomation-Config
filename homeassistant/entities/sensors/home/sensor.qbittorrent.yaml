@@ -1,4 +1,0 @@
-platform: qbittorrent
-url: http://192.168.0.1:8080
-username: !secret qbittorrent_user
-password: !secret qbittorrent_password
