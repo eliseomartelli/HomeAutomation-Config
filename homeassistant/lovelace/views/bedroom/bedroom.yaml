@@ -6,12 +6,6 @@ cards:
     show_state: false
     column_width: calc(100% / 4)
     entities:
-      - entity: switch.movie
-        tap_action: 
-          action: toggle
-      - entity: switch.music_lights
-        tap_action:
-          action: toggle
       - entity: scene.reading
         tap_action: 
           action: call-service
@@ -47,6 +41,3 @@ cards:
         type: "custom:mini-media-player"
         artwork: cover
         show_progress: true
-  - type: picture-entity
-    entity: camera.bedroom_camera
-    show_state: false

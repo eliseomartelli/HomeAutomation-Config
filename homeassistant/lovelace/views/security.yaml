@@ -1,7 +1,0 @@
-name: Security
-id: security
-icon: mdi:lock
-cards:
-  - type: alarm-panel
-    entity: alarm_control_panel.alarm
-
