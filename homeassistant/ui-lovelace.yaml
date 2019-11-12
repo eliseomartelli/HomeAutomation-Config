@@ -11,4 +11,3 @@ views:
   - !include lovelace/views/bedroom/bedroom.yaml
   - !include lovelace/views/outside.yaml
   - !include lovelace/views/management/management.yaml
-  - !include lovelace/views/security.yaml
