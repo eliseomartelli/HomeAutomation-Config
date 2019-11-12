@@ -24,3 +24,4 @@ google_calendars.yaml
 .DS_Store
 ._.DS_Store
 .spotify*
+.homekit*

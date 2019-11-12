@@ -1,0 +1,5 @@
+remote_homeassistant:
+  instances:
+    - host: 192.168.0.89
+      port: 8123
+      api_password: !secret apipass
