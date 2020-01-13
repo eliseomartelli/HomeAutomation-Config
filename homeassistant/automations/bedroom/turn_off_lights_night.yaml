@@ -1,0 +1,12 @@
+alias: Turn off lights at night
+trigger:
+  - platform: state
+    entity_id: switch.bedroom_bedside_light
+    to: 'on'
+    for:
+      minutes: 15
+action:
+  - service: homeassistant.turn_off
+    entity_id:
+      - switch.bedroom_bedside_light
+
