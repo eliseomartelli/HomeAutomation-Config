@@ -80,3 +80,17 @@ light:
             state +=1;
             if (state == 2)
               state = 0;
+
+
+sensor:
+  - platform: dht
+    pin: D8
+    temperature:
+      name: "Living Room Temperature"
+    humidity:
+      name: "Living Room Humidity"
+    update_interval: 60s
+
+remote_transmitter:
+  pin: D3
+  carrier_duty_percent: 100%

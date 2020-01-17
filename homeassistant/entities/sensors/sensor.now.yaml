@@ -1,6 +1,0 @@
-platform: template
-sensors:
-  now:
-    friendly_name: "Now"
-    value_template: "{{ now() }}"
-    device_class: timestamp

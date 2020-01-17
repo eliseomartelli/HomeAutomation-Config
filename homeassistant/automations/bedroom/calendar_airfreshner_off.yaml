@@ -1,9 +1,0 @@
-alias: Mirror Air Freshner Calendar OFF
-trigger:
-  - platform: state
-    entity_id: calendar.airfreshnerschedule
-    to: 'off'
-action:
-  - service: homeassistant.turn_off
-    entity_id:
-      - switch.bedroom_plug

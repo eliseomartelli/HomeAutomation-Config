@@ -1,4 +1,0 @@
-platform: waqi
-token: !secret waqi_token
-locations:
-  - torino

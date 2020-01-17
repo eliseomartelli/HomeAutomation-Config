@@ -4,11 +4,13 @@ import os
 import json
 
 from .const import CUSTOM_UPDATER_LOCATIONS, CUSTOM_UPDATER_WARNING
-from .helpers.misc import version_is_newer_than_version
+from .helpers.misc import version_left_higher_then_right
 
 
 def check_constans(hacs):
     """Check HACS constrains."""
+    if not constrain_translations(hacs):
+        return False
     if not constrain_custom_updater(hacs):
         return False
     if not constrain_version(hacs):
@@ -36,9 +38,23 @@ def constrain_version(hacs):
         manifest = json.loads(read.read())
 
     # Check if HA is the required version.
-    if version_is_newer_than_version(manifest["homeassistant"], hacs.system.ha_version):
+    installed = hacs.system.ha_version
+    minimum = manifest["homeassistant"]
+    if not version_left_higher_then_right(installed, minimum):
         hacs.logger.critical(
             f"You need HA version {manifest['homeassistant']} or newer to use this integration."
         )
         return False
     return True
+
+
+def constrain_translations(hacs):
+    """Check if traslations exist."""
+    if not os.path.exists(
+        f"{hacs.system.config_path}/custom_components/hacs/.translations"
+    ):
+        hacs.logger.critical("You are missing the translations directory.")
+        return False
+
+    return True
+

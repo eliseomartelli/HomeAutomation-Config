@@ -1,14 +1,14 @@
-secrets: /home/homeassistant/homeassistant/homeassistant/secrets.yaml
+secrets: /conf/secrets.yaml
 appdaemon:
   disable_apps: 1
   threads: 16
   plugins:
     HASS:
       type: hass
-      ha_url: !secret base_url_w_protocol
-      token: !secret adtoken
+      ha_url: !secret hass_url
+      token: !secret daemon_token
 
 hadashboard:
-  dash_url: http://192.168.0.88:5050
-  dash_password: !secret apipass
+  dash_url: http://192.168.0.1:5050
+  dash_password: !secret daemon_pass 
 

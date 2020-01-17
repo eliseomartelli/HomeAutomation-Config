@@ -1,9 +1,0 @@
-
-##
-# Temperature Sensor for the bedroom
-##
-platform: mqtt
-name: Bedroom Temperature
-device_class: temperature
-state_topic: home/bedroom/sensor/dht_temperature/state
-unit_of_measurement: "°C"
