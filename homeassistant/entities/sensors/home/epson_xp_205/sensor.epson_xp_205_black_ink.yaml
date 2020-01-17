@@ -1,4 +1,0 @@
-platform: command_line
-command: curl http://192.168.0.13/PRESENTATION/HTML/TOP/PRTINFO.HTML | awk -F"'" '/Ink_K.PNG/ && $6+0 == $6 { printf "%.0f\n", $6 / 50 * 100 }'
-name: Epson XP-205 Black Ink
-unit_of_measurement: '%'

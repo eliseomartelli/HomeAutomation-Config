@@ -1,7 +1,3 @@
 homekit:
-  filter:
-    include_entities:
-      - switch.bedroom_ceiling_light
-      - switch.bedroom_bedside_light
-      - switch.bedroom_desk_light
-      - sensor.bedroom_temperature
+  advertise_ip: 192.168.1.254
+  safe_mode: true
