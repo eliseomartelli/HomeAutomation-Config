@@ -1,4 +1,0 @@
-platform: scrape
-resource: https://travis-ci.org/eliseomartelli/HomeAutomation-Config.svg?branch=master
-name: Configuration Build Status
-select: 'text:nth-of-type(3)'

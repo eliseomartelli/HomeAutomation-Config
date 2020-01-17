@@ -1,6 +1,0 @@
-zone:
-  - name: University
-    latitude: !secret university_lat
-    longitude: !secret university_lon
-    radius: 250
-    icon: mdi:school

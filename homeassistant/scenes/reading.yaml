@@ -1,8 +1,0 @@
-- name: Reading
-  entities:
-    switch.bedroom_ceiling_light: off
-    switch.bedroom_desk_light: on
-    switch.bedroom_bedside_light: on
-    light.bed_light_strip:
-      state: on
-      effect: colorfade_fast

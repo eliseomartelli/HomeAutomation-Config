@@ -1,7 +1,0 @@
-alias: 'Time Updater'
-trigger:
-  - platform: time_pattern
-    seconds: '/10'
-action:
-  - service: homeassistant.update_entity
-    entity_id: sensor.now

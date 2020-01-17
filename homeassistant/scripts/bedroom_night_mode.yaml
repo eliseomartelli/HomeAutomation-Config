@@ -1,9 +1,0 @@
-bedroom_night_mode:
-  sequence:
-    - service: homeassistant.turn_off
-      entity_id: 
-        - switch.bedroom_desk_light
-        - switch.bedroom_ceiling_light
-    - delay: '00:01:00'
-    - service: homeassistant.turn_off
-      entity_id: switch.bedroom_bedside_light
