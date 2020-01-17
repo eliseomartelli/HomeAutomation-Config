@@ -1,1 +1,3 @@
 homekit:
+  advertise_ip: 192.168.1.254
+  safe_mode: true
