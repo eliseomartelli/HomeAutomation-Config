@@ -1,0 +1,43 @@
+title: Bedroom
+id: bedroom
+icon: mdi:hotel
+cards:
+  - type: glance
+    show_state: false
+    column_width: calc(100% / 4)
+    entities:
+      - entity: scene.reading
+        tap_action: 
+          action: call-service
+          service: scene.turn_on
+      - entity: scene.studying
+        tap_action: 
+          action: call-service
+          service: scene.turn_on
+  - !include modules/bedroom_sensors.yaml
+  - type: horizontal-stack
+    cards:
+      - type: entity-button
+        aspect_ratio: 1/1
+        entity: switch.bedroom_bedside_light
+      - type: entity-button
+        aspect_ratio: 1/1
+        entity: switch.bedroom_ceiling_light
+      - type: entity-button
+        aspect_ratio: 1/1
+        entity: switch.bedroom_desk_light
+  - type: entities
+    title: Plugs
+    entities:
+      - switch.bedroom_plug
+  - type: custom:vertical-stack-in-card
+    title: Media
+    cards:
+      - entity: media_player.bedroom
+        type: "custom:mini-media-player"
+        artwork: cover
+        show_progress: true
+      - entity: media_player.kodi_mac_mini
+        type: "custom:mini-media-player"
+        artwork: cover
+        show_progress: true

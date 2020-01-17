@@ -1,0 +1,13 @@
+title: Home
+resources:
+  - url: /local/vertical-stack-in-card/vertical-stack-in-card.js?v=0.0.2
+    type: js
+  - url: /local/custom-lovelace/monster-card/monster-card.js?v=1.1.3
+    type: module
+  - url: /local/mini-media-player-bundle.js?v=1.1.3
+    type: module
+views:
+  - !include lovelace/views/home/home.yaml
+  - !include lovelace/views/bedroom/bedroom.yaml
+  - !include lovelace/views/outside.yaml
+  - !include lovelace/views/management/management.yaml

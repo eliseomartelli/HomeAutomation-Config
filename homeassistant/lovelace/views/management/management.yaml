@@ -1,0 +1,6 @@
+title: Management
+icon: mdi:gauge
+id: management
+cards:
+  - !include modules/printer.yaml
+  - !include modules/buildstatus.yaml
