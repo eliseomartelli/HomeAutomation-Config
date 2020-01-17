@@ -1,19 +1,14 @@
 homeassistant:
-  name: Home
-  unit_system: metric
   time_zone: Europe/Rome
-
-mqtt:
-  broker: 192.168.0.88
-  username: homeassistant
-  password: !secret mqttpass
+  unit_system: metric
+  auth_providers:
+    - type: legacy_api_password
+      api_password: !secret apipass
 
 sensor: !include_dir_merge_list includes/sensor
 switch: !include_dir_merge_list includes/switches/
 light: !include_dir_merge_list includes/light/
 
-mqtt_statestream:
-  base_topic: home/bedroom
+api:
+websocket_api:
 
-mqtt_eventstream:
-  subscribe_topic: homeassistant/master/events

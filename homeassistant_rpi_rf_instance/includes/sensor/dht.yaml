@@ -1,7 +1,7 @@
 ## Inbuilt Sensor
 - platform: dht
   sensor: DHT22
-  name: 'dht'
+  name: Bedroom
   pin: 17
   monitored_conditions:
         - temperature
