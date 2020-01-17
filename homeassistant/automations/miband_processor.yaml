@@ -1,7 +1,0 @@
-alias: Mi Band Processor
-trigger:
-  - platform: webhook
-    webhook_id: !secret webhook_miband
-action:
-  - service: homeassistant.toggle
-    entity_id: switch.bedroom_ceiling_light
