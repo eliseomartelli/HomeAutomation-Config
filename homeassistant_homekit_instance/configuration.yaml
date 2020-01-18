@@ -5,12 +5,13 @@ homeassistant:
 homekit:
   filter:
     include_entities:
-      - switch.bedroom_desk 
-      - switch.bedroom_bedside 
-      - switch.bedroom_ceiling 
+      - light.bedroom_desk 
+      - light.bedroom_bedside 
+      - light.bedroom_ceiling 
       - switch.bedroom_plug
       - light.bedroom_accent_bed 
       - light.bedroom_accent_monitor
+      - light.bedroom_accent
       - sensor.bedroom_temperature
 
 switch:
