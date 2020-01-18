@@ -1,12 +1,12 @@
-alias: Turn off lights at night
+alias: Turn Off Bedside Timer
 trigger:
   - platform: state
-    entity_id: switch.bedroom_bedside_light
+    entity_id: switch.bedroom_bedside
     to: 'on'
     for:
       minutes: 15
 action:
   - service: homeassistant.turn_off
     entity_id:
-      - switch.bedroom_bedside_light
+      - switch.bedroom_bedside
 
