@@ -1,0 +1,18 @@
+alias: Bedroom Humidity Notification
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.bedroom_humidity
+    above: 75
+    for:
+      minutes: 5
+condition:
+  - condition: state
+    entity_id: sun.sun
+    state: 'above_horizon'
+action:
+  - service: notify.mobile_app_mi_a3
+    data:
+      title: Humidity is above 75%
+      message: Open the window! 
+
+

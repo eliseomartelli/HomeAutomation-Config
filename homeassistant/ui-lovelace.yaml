@@ -1,0 +1,36 @@
+title: Home
+resources:
+  - url: /community_plugin/simple-weather-card/simple-weather-card-bundle.js
+    type: module
+views:
+    # View tab title.
+  - title: Home
+    cards:
+      # First Card 
+      - type: custom:simple-weather-card
+        entity: weather.home
+        name: " "
+        backdrop: true
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: light.bedroom_ceiling
+          - type: entity-button
+            entity: light.bedroom_bedside
+          - type: entity-button
+            entity: light.bedroom_desk
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: light.bedroom_accent
+          - type: entity-button
+            entity: light.bedroom_accent_monitor
+          - type: entity-button
+            entity: light.bedroom_accent_bed
+      - type: entities
+        entities:
+          - switch.bedroom_plug
+          - input_boolean.bedroom_sync_music_with_lights
+          - script.bedroom_speaker_play_lofi
+      - type: media-control
+        entity: media_player.bedroom_speaker

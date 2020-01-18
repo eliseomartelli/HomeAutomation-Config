@@ -1,0 +1,3 @@
+spotcast:
+  username: !secret spotify_username
+  password: !secret spotify_password

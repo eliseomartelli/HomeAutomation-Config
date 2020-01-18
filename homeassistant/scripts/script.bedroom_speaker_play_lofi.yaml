@@ -1,0 +1,9 @@
+bedroom_speaker_play_lofi:
+  alias: Play Lo-Fi Music
+  sequence:
+    - service: spotcast.start
+      data:
+        entity_id: media_player.bedroom_speaker
+        uri: spotify:playlist:0vvXsWCC9xrXsKd4FyS8kM
+    - service: scene.turn_on
+      entity_id: scene.bedroom_lofi_music

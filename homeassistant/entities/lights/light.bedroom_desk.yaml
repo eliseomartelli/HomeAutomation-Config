@@ -1,0 +1,3 @@
+platform: switch
+name: Bedroom Desk
+entity_id: switch.bedroom_desk

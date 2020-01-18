@@ -1,0 +1,3 @@
+platform: switch
+name: Bedroom Bedside
+entity_id: switch.bedroom_bedside

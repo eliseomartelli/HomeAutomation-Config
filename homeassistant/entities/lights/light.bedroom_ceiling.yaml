@@ -1,0 +1,3 @@
+platform: switch
+name: Bedroom Ceiling
+entity_id: switch.bedroom_ceiling
