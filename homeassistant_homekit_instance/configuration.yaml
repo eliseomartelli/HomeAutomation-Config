@@ -1,0 +1,22 @@
+homeassistant:
+  time_zone: Europe/Rome
+  unit_system: metric
+
+homekit:
+  filter:
+    include_entities:
+      - switch.bedroom_desk 
+      - switch.bedroom_bedside 
+      - switch.bedroom_ceiling 
+      - switch.bedroom_plug
+      - light.bedroom_accent_bed 
+      - light.bedroom_accent_monitor
+      - sensor.bedroom_temperature
+
+switch:
+light:
+
+remote_homeassistant:
+  instances:
+    - host: 192.168.0.1
+      access_token: !secret access_token

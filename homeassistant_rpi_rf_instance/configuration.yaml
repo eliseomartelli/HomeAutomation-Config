@@ -12,4 +12,3 @@ light: !include_dir_merge_list includes/light/
 api:
 websocket_api:
 
-homekit:
