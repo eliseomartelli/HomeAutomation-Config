@@ -1,0 +1,8 @@
+name: Bedroom Cotton Candy
+entities:
+  light.bedroom_accent_bed:
+    state: on
+    rgb_color: [0,255,255]
+  light.bedroom_accent_monitor:
+    state: on
+    rgb_color: [255,0,190]

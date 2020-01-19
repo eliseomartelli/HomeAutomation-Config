@@ -56,4 +56,4 @@ layout:
   -
   -
   -
-  - script.bedroom_speaker_play_lofi
+  - script.bedroom_speaker_play_lofi, spacer(1x1), scene.bedroom_cotton_candy

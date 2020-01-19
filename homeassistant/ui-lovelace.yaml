@@ -19,14 +19,12 @@ views:
             entity: light.bedroom_bedside
           - type: entity-button
             entity: light.bedroom_desk
-      - type: horizontal-stack
-        cards:
-          - type: entity-button
-            entity: light.bedroom_accent
-          - type: entity-button
-            entity: light.bedroom_accent_monitor
-          - type: entity-button
-            entity: light.bedroom_accent_bed
+      - type: entities
+        title: RGB
+        entities:
+          - light.bedroom_accent
+          - light.bedroom_accent_monitor
+          - light.bedroom_accent_bed
       - type: entities
         entities:
           - switch.bedroom_plug
