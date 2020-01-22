@@ -1,0 +1,16 @@
+alias: Bedroom Movie Lights
+trigger:
+  - platform: state
+    entity_id: media_player.bedroom_jellyfin
+condition:
+  - condition: state
+    entity_id: input_boolean.bedroom_movie_lights
+    state: 'on'
+action:
+  - service_template: >
+      {% if "playing" in trigger.to_state.state %}
+        light.turn_on
+      {% else %}
+        light.turn_off
+      {% endif %}
+    entity_id: light.bedroom_accent

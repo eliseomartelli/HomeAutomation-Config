@@ -29,6 +29,9 @@ views:
         entities:
           - switch.bedroom_plug
           - input_boolean.bedroom_sync_music_with_lights
+          - input_boolean.bedroom_movie_lights
           - script.bedroom_speaker_play_lofi
       - type: media-control
         entity: media_player.bedroom_speaker
+      - type: media-control
+        entity: media_player.bedroom_jellyfin
