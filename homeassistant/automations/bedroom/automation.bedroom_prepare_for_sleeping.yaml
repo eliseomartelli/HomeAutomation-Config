@@ -1,0 +1,25 @@
+alias: Bedroom Prepare For Sleeping
+trigger:
+  - platform: state
+    entity_id: binary_sensor.home_asleep
+    to: 'on'
+condition:
+  - condition: template
+    value_template: >
+      {{ (as_timestamp(now()) - as_timestamp(state_attr('automation.bedroom_prepare_for_sleeping','last_triggered'))) > 28800 }}
+action:
+  - service: spotcast.start
+    data:
+      entity_id: media_player.bedroom_speaker
+      uri: spotify:playlist:37i9dQZF1DWZd79rJ6a7lp
+
+  - service: media_player.volume_set
+    entity_id: media_player.bedroom_speaker
+    data:
+      volume_level: 0.2
+
+  - delay: 00:20:00
+
+  - service: media_player.media_stop
+    entity_id: media_player.bedroom_speaker
+

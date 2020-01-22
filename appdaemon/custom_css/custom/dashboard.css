@@ -42,7 +42,8 @@ img, object {
   max-width: 100%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 5px;}
+  border-radius: 5px;
+}
 
 iframe {
   max-width: 100%;
@@ -138,9 +139,8 @@ input {
   display: table-cell;
   vertical-align: middle;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;}
+  border-radius: 16px;
+}
 
 .title {
   color: #fff;

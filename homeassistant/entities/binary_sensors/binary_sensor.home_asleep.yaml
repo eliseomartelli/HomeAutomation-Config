@@ -1,0 +1,46 @@
+platform: bayesian
+name: Home Asleep
+prior: 0.2
+probability_threshold: 0.9
+observations:
+  - platform: state
+    entity_id: light.bedroom_ceiling
+    prob_given_true: 0.6
+    prob_given_false: 0.2
+    to_state: 'off'
+
+  - platform: state
+    entity_id: light.bedroom_desk
+    prob_given_true: 0.6
+    prob_given_false: 0.2
+    to_state: 'off'
+
+  - platform: state
+    entity_id: person.eliseo
+    to_state: 'home'
+    prob_given_true: 0.8
+    prob_given_false: 0
+
+  - platform: state
+    entity_id: binary_sensor.bedroom_monitor_power
+    to_state: 'off'
+    prob_given_true: 0.5
+    prob_given_false: 0.1
+
+  - platform: numeric_state
+    entity_id: sensor.bedroom_humidity
+    above: 65
+    prob_given_true: 0.5
+    prob_given_false: 0.2
+
+  - platform: state
+    entity_id: light.bedroom_bedside
+    to_state: 'off'
+    prob_given_true: 0.6
+    prob_given_false: 0.2
+
+  - platform: 'state'
+    entity_id: 'sun.sun'
+    prob_given_true: 0.5
+    prob_given_false: 0.2
+    to_state: 'below_horizon'
