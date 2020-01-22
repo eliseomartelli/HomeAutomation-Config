@@ -1,0 +1,8 @@
+home_day_state:
+  name: Home Day State
+  options:
+    - Morning
+    - Afternoon
+    - Evening
+    - Bedtime
+    - Night
