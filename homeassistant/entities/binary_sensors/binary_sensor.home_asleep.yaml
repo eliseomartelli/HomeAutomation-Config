@@ -7,7 +7,7 @@ observations:
   - platform: template
     value_template: >
       {{ states('input_select.home_day_state') in ["Bedtime", "Night"]  }}
-    prob_given_true: 0.9
+    prob_given_true: 0.8
     prob_given_false: 0.2
 
   # as observed, the humidity in my bedroom gets closer to 65/70 when I'm sleeping
@@ -20,27 +20,27 @@ observations:
   # if my computer monitor is on, I'm probably not sleeping
   - platform: state
     entity_id: binary_sensor.bedroom_monitor_power
-    to_state: on
+    to_state: 'on'
     prob_given_true: 0.2
-    prob_given_false: 0.8
+    prob_given_false: 0.7
 
   # if my desk light is on, I'm probably not sleeping
   - platform: state
     entity_id: light.bedroom_desk
-    to_state: on
+    to_state: 'on'
     prob_given_true: 0.1
-    prob_given_false: 0.8
+    prob_given_false: 0.7
 
   # if my ceiling light is on, I'm probably not sleeping
   - platform: state
     entity_id: light.bedroom_ceiling
-    to_state: on
+    to_state: 'on'
     prob_given_true: 0.1
-    prob_given_false: 0.8
+    prob_given_false: 0.7
 
   # if my bedside light is on, I'm probably not sleeping
   - platform: state
     entity_id: light.bedroom_bedside
-    to_state: on
+    to_state: 'on'
     prob_given_true: 0.1
     prob_given_false: 0.6

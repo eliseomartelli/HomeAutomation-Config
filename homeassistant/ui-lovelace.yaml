@@ -1,6 +1,14 @@
 title: Home
 resources:
+  - url: /community_plugin/button-card/button-card.js
+    type: module
   - url: /community_plugin/simple-weather-card/simple-weather-card-bundle.js
+    type: module
+  - url: /community_plugin/swipe-card/swipe-card.js
+    type: module
+  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+    type: module
+  - url: /community_plugin/button-entity-row/button-entity-row.js
     type: module
 views:
     # View tab title.
@@ -13,25 +21,52 @@ views:
         backdrop: true
       - type: horizontal-stack
         cards:
-          - type: entity-button
-            entity: light.bedroom_ceiling
-          - type: entity-button
-            entity: light.bedroom_bedside
-          - type: entity-button
-            entity: light.bedroom_desk
-      - type: entities
-        title: RGB
+          - type: sensor
+            entity: sensor.bedroom_humidity
+            graph: line
+          - type: sensor
+            entity: sensor.bedroom_temperature
+            graph: line
+      - type: glance
+        columns: 3
         entities:
-          - light.bedroom_accent
-          - light.bedroom_accent_monitor
-          - light.bedroom_accent_bed
+          - entity: light.bedroom_ceiling
+            tap_action: 
+              action: toggle
+          - entity: light.bedroom_bedside
+            tap_action: 
+              action: toggle
+          - entity: light.bedroom_desk
+            tap_action: 
+              action: toggle
+          - entity: light.bedroom_accent_monitor
+            tap_action:
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.bedroom_accent_bed
+            tap_action:
+              action: toggle
+            hold_action:
+              action: more-info
+      
       - type: entities
         entities:
+          - type: "custom:button-entity-row"
+            buttons:
+              - input_boolean.bedroom_sync_music_with_lights
+              - input_boolean.bedroom_movie_lights
+              - entity: scene.bedroom_cotton_candy
+                icon: mdi:string-lights
           - switch.bedroom_plug
-          - input_boolean.bedroom_sync_music_with_lights
-          - input_boolean.bedroom_movie_lights
-          - script.bedroom_speaker_play_lofi
-      - type: media-control
-        entity: media_player.bedroom_speaker
-      - type: media-control
-        entity: media_player.bedroom_jellyfin
+      - type: custom:swipe-card
+        cards:
+          - type: custom:mini-media-player
+            entity: media_player.bedroom_speaker
+            shortcuts:
+              buttons:
+                - name: Lo-Fi Music
+                  type: script
+                  id: script.bedroom_speaker_play_lofi
+          - type: custom:mini-media-player
+            entity: media_player.bedroom_jellyfin
