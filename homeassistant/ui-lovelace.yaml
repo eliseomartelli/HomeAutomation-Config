@@ -10,9 +10,69 @@ resources:
     type: module
   - url: /community_plugin/button-entity-row/button-entity-row.js
     type: module
+  - url: /community_plugin/decluttering-card/decluttering-card.js
+    type: module
+  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+    type: module
+  - url: /community_plugin/custom-header/custom-header.js
+    type: module
+  - url: /community_plugin/lovelace-auto-entities/auto-entities.js
+    type: module
+decluttering_templates:
+  mini_graph:
+    card:
+      type: custom:mini-graph-card
+      entities:
+        - '[[entity_id]]'
+      line_color: '[[color]]'
+      line_width: 8
+      font_size: 75
+      animate: true
+      name: "[[name]]"
+      align_icon: left
+      align_header: left
+  hk_button:
+    card:
+      type: custom:button-card
+      entity: '[[entity_id]]'
+      name: "[[name]]"
+      show_state: true
+      aspect_ratio: 1/1
+      hold_action:
+        action: more-info
+      styles:
+        grid:
+          - grid-template-areas: '"i" "n" "s"'
+          - grid-template-columns: 1fr
+          - grid-template-rows: 1fr min-content min-content
+        img_cell:
+          - align-self: start
+          - text-align: start
+          - margin-right: calc(66% - 16px)
+        name:
+          - justify-self: start
+          - padding-left: 10px
+          - font-weight: bold
+          - text-transform: lowercase
+        state:
+          - justify-self: start
+          - padding-left: 10px
+        icon: 
+          - color: var(--button-card-light-color)
+      state:
+        - value: 'off'
+          styles:
+            card:
+              - filter: opacity(50%)
+            icon:
+              - filter: grayscale(100%)
+
+custom_header:
+  compact_mode: true
 views:
     # View tab title.
   - title: Home
+    icon: mdi:home
     cards:
       # First Card 
       - type: custom:simple-weather-card
@@ -21,35 +81,56 @@ views:
         backdrop: true
       - type: horizontal-stack
         cards:
-          - type: sensor
-            entity: sensor.bedroom_humidity
-            graph: line
-          - type: sensor
-            entity: sensor.bedroom_temperature
-            graph: line
-      - type: glance
-        columns: 3
-        entities:
-          - entity: light.bedroom_ceiling
-            tap_action: 
-              action: toggle
-          - entity: light.bedroom_bedside
-            tap_action: 
-              action: toggle
-          - entity: light.bedroom_desk
-            tap_action: 
-              action: toggle
-          - entity: light.bedroom_accent_monitor
-            tap_action:
-              action: toggle
-            hold_action:
-              action: more-info
-          - entity: light.bedroom_accent_bed
-            tap_action:
-              action: toggle
-            hold_action:
-              action: more-info
+          - type: custom:decluttering-card
+            template: mini_graph
+            variables:
+              - entity_id: sensor.bedroom_humidity
+              - color: purple
+              - name: Humidity
+          - type: custom:decluttering-card
+            template: mini_graph
+            variables:
+              - entity_id: sensor.bedroom_temperature
+              - color: red
+              - name: Temperature
       
+      - type: vertical-stack
+        title: Lights
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:decluttering-card
+                template: "hk_button"
+                variables:
+                  - entity_id: light.bedroom_ceiling
+                  - name: "Ceiling"
+              - type: custom:decluttering-card
+                template: "hk_button"
+                variables:
+                  - entity_id: light.bedroom_desk
+                  - name: "Desk"
+              - type: custom:decluttering-card
+                template: "hk_button"
+                variables:
+                  - entity_id: light.bedroom_bedside
+                  - name: "Bedside"
+          - type: horizontal-stack
+            cards:
+              - type: custom:decluttering-card
+                template: "hk_button"
+                variables:
+                  - entity_id: light.bedroom_accent_monitor
+                  - name: "Monitor"
+              - type: custom:decluttering-card
+                template: "hk_button"
+                variables:
+                  - entity_id: light.bedroom_accent_bed
+                  - name: "Bed"
+              - type: custom:button-card
+                styles:
+                  card:
+                    - filter: opacity(0%)
+ 
       - type: entities
         entities:
           - type: "custom:button-entity-row"
@@ -59,7 +140,10 @@ views:
               - entity: scene.bedroom_cotton_candy
                 icon: mdi:string-lights
           - switch.bedroom_plug
-      - type: custom:swipe-card
+          - person.eliseo_martelli
+          - binary_sensor.home_asleep
+      - type: vertical-stack
+        title: Media
         cards:
           - type: custom:mini-media-player
             entity: media_player.bedroom_speaker
@@ -70,3 +154,22 @@ views:
                   id: script.bedroom_speaker_play_lofi
           - type: custom:mini-media-player
             entity: media_player.bedroom_jellyfin
+
+  - title: Settings
+    icon: mdi:settings
+    cards:
+      - type: custom:auto-entities
+        card:
+          title: Automations
+          type: entities
+        filter:
+          include:
+            - entity_id: automation.*
+
+      - type: custom:auto-entities
+        card:
+          title: Printer
+          type: entities
+        filter:
+          include:
+            - entity_id: sensor.bedroom_printer_*
