@@ -5,7 +5,6 @@ python: "3.6.4"
 before_install:
   - touch fakekey.pem
   - mv homeassistant/fake_secrets.yaml homeassistant/secrets.yaml
-  - mv  homeassistant_rpi_rf_instance/fake_secrets.yaml homeassistant_rpi_rf_instance/secrets.yaml
 
 install: pip3 install homeassistant
 
@@ -13,5 +12,3 @@ jobs:
   include:
     - stage: test
       script: hass -c homeassistant/ --script check_config --info all
-    - stage: test
-      script: hass -c homeassistant_rpi_rf_instance/ --script check_config --info all
