@@ -2,3 +2,4 @@ android_ip_webcam:
   - host: 192.168.1.221
     name: Bedroom Panel
     motion_sensor: true
+    scan_interval: 1

@@ -1,4 +1,4 @@
-alias: Bedroom Ceiling Motion
+alias: Bedroom Motion Lights
 trigger:
   - platform: state
     entity_id: binary_sensor.bedroom_panel_motion_active
@@ -6,13 +6,18 @@ trigger:
 condition:
   - condition: template
     value_template: >
-      {{ states.input_select.home_day_state.state in ["Morning", "Afternoon", "Evening"] }}
-  - condition: template
-    value_template: >
-        {{ as_timestamp(now()) - as_timestamp(state_attr("automation.bedroom_ceiling_motion", "last_triggered")) > 180 }}
+      {{ as_timestamp(now()) - as_timestamp(state_attr("automation.bedroom_motion_lights", "last_triggered")) | int > 180 }}
   - condition: state
     entity_id: input_boolean.bedroom_movie_lights
     state: 'off'
 action:
   - service: light.turn_on
-    entity_id: light.bedroom_ceiling
+    data_template:
+      entity_id: >
+        {% if states.input_select.home_day_state.state in ["Morning", "Afternoon", "Evening"] %}
+          light.bedroom_ceiling
+        {% else %}
+          light.bedroom_accent_bed
+        {% endif %}
+      rgb_color: [0, 190, 255]
+
