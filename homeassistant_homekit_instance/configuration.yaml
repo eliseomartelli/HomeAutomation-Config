@@ -13,9 +13,12 @@ homekit:
       - light.bedroom_accent_monitor
       - light.bedroom_accent
       - sensor.bedroom_temperature
+      - script.bedroom_speaker_play_lofi
+      - script.bedroom_speaker_play_warm_piano
 
 switch:
 light:
+script:
 
 remote_homeassistant:
   instances:
