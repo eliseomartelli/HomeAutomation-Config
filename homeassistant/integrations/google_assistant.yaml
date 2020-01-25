@@ -1,0 +1,3 @@
+google_assistant:
+  project_id: !secret ga_pid
+  api_key: !secret ga_api
