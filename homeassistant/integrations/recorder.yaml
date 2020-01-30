@@ -1,0 +1,5 @@
+recorder:
+  include:
+    entities:
+      - sensor.bedroom_humidity
+      - sensor.bedroom_temperature

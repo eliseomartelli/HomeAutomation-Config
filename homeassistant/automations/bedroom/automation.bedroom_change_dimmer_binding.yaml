@@ -1,0 +1,16 @@
+alias: Bedroom Change Dimmer Binding
+trigger:
+  - platform: state
+    entity_id: input_select.home_day_state
+action:
+  - service: mqtt.publish
+    data:
+      topic: "zigbee2mqtt/bridge/unbind/Bedroom Dimmer"
+      payload_template: > 
+        {{- "Bedroom Bedside" if states.input_select.home_day_state.state in ["Morning", "Afternoon", "Evening"] else "Bedroom Ceiling" }}
+  - delay: '00:00:10'
+  - service: mqtt.publish
+    data:
+      topic: "zigbee2mqtt/bridge/bind/Bedroom Dimmer"
+      payload_template: > 
+        {{- "Bedroom Ceiling" if states.input_select.home_day_state.state in ["Morning", "Afternoon", "Evening"] else "Bedroom Bedside" }}

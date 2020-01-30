@@ -164,6 +164,7 @@ views:
         title: Media
         cards:
           - type: custom:mini-media-player
+            artwork: full-cover
             entity: media_player.bedroom_speaker
             shortcuts:
               buttons:
@@ -174,6 +175,7 @@ views:
                   type: script
                   id: script.bedroom_speaker_play_lofi
       - type: custom:mini-media-player
+        artwork: cover
         entity: media_player.bedroom_jellyfin
       - type: horizontal-stack
         title: Scenes
@@ -215,3 +217,21 @@ views:
       - type: entities
         entities:
           - input_select.home_day_state
+      - title: Zigbee2mqtt
+        type: entities
+        show_header_toggle: false
+        entities:
+          - entity: sensor.zigbee2mqtt_bridge_state
+          - entity: sensor.zigbee2mqtt_version
+          - entity: sensor.coordinator_version
+          - entity: input_select.zigbee2mqtt_log_level
+          - type: divider
+          - entity: switch.zigbee2mqtt_main_join
+          - entity: timer.zigbee_permit_join
+          - type: divider
+          - entity: input_text.zigbee2mqtt_old_name
+          - entity: input_text.zigbee2mqtt_new_name
+          - entity: script.zigbee2mqtt_rename
+          - type: divider
+          - entity: input_text.zigbee2mqtt_remove
+          - entity: script.zigbee2mqtt_remove
