@@ -12,4 +12,4 @@ trigger:
     at: '00:00:00'
 action:
   - service: input_select.select_next
-    entity_id: input_select.home_day_state
+    entity_id: input_select.system_day_state

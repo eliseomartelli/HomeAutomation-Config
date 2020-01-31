@@ -1,5 +1,5 @@
-home_day_state:
-  name: Home Day State
+system_day_state:
+  name: System Day State
   options:
     - Morning
     - Afternoon

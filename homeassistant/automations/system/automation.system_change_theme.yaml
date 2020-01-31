@@ -8,7 +8,7 @@ action:
   - service: frontend.set_theme
     data_template:
       name: >
-        {%- if states.input_select.home_day_state.state in ["Evening", "Bedtime", "Night"] -%}
+        {%- if states.input_select.system_day_state.state in ["Evening", "Bedtime", "Night"] -%}
           Google Dark Theme
         {%- else -%}
           Google Light Theme
