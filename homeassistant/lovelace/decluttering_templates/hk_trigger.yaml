@@ -1,0 +1,12 @@
+hk_trigger:
+  card:
+    type: custom:button-card
+    entity: '[[entity_id]]'
+    name: "[[name]]"
+    show_icon: false
+    aspect_ratio: 2/1
+    tap_action:
+      action: call-service
+      service: scene.turn_on
+      service_data:
+        entity_id: entity

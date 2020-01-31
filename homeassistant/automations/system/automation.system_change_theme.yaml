@@ -1,7 +1,7 @@
 alias: System Change Theme
 trigger:
   - platform: state
-    entity_id: input_select.home_day_state
+    entity_id: input_select.system_day_state
   - platform: homeassistant
     event: start
 action:

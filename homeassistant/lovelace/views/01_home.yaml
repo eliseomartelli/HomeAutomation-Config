@@ -1,0 +1,104 @@
+title: Home
+icon: mdi:home
+cards:
+  # First Card 
+  - type: custom:simple-weather-card
+    entity: weather.home
+    name: " "
+    backdrop: true
+  - type: horizontal-stack
+    cards:
+      - type: custom:decluttering-card
+        template: mini_graph
+        variables:
+          - entity_id: sensor.bedroom_humidity
+          - color: purple
+          - name: Humidity
+      - type: custom:decluttering-card
+        template: mini_graph
+        variables:
+          - entity_id: sensor.bedroom_temperature
+          - color: red
+          - name: Temperature
+  
+  - type: vertical-stack
+    title: Lights
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: light.bedroom_ceiling
+              - name: "Ceiling"
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: light.bedroom_desk
+              - name: "Desk"
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: light.bedroom_bedside
+              - name: "Bedside"
+      - type: horizontal-stack
+        cards:
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: light.bedroom_accent_monitor
+              - name: "Monitor"
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: light.bedroom_accent_bed
+              - name: "Bed"
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: binary_sensor.bedroom_panel_motion_active
+              - name: "Motion"
+
+  - type: entities
+    entities:
+      - type: "custom:button-entity-row"
+        buttons:
+          - input_boolean.bedroom_sync_music_with_lights
+          - input_boolean.bedroom_movie_lights
+      - switch.bedroom_plug
+      - person.eliseo_martelli
+  - type: vertical-stack
+    title: Media
+    cards:
+      - type: custom:mini-media-player
+        artwork: full-cover
+        entity: media_player.bedroom_speaker
+        shortcuts:
+          buttons:
+            - name: Warm Piano
+              type: script
+              id: script.bedroom_speaker_play_warm_piano
+            - name: Lo-Fi Music
+              type: script
+              id: script.bedroom_speaker_play_lofi
+  - type: custom:mini-media-player
+    artwork: cover
+    entity: media_player.bedroom_tv
+  - type: horizontal-stack
+    title: Scenes
+    cards:
+      - type: custom:decluttering-card
+        template: "hk_trigger"
+        variables:
+          - entity_id: scene.bedroom_warm
+          - name: "Warm"
+      - type: custom:decluttering-card
+        template: "hk_trigger"
+        variables:
+          - entity_id: scene.bedroom_sea
+          - name: "Sea"
+      - type: custom:decluttering-card
+        template: "hk_trigger"
+        variables:
+          - entity_id: scene.bedroom_cotton_candy
+          - name: "Candy"

@@ -1,0 +1,21 @@
+title: Settings
+icon: mdi:settings
+cards:
+  - type: custom:auto-entities
+    card:
+      title: Automations
+      type: entities
+    filter:
+      include:
+        - entity_id: automation.*
+
+  - type: custom:auto-entities
+    card:
+      title: Printer
+      type: entities
+    filter:
+      include:
+        - entity_id: sensor.bedroom_printer_*
+  - type: entities
+    entities:
+      - input_select.system_day_state

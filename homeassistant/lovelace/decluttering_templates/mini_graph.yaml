@@ -1,0 +1,12 @@
+mini_graph:
+  card:
+    type: custom:mini-graph-card
+    entities:
+      - '[[entity_id]]'
+    line_color: '[[color]]'
+    line_width: 8
+    font_size: 75
+    animate: true
+    name: "[[name]]"
+    align_icon: left
+    align_header: left
