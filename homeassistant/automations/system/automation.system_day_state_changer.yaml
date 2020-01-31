@@ -1,4 +1,4 @@
-alias: Home Day State Changer
+alias: System Day State Changer
 trigger:
   - platform: sun
     event: sunrise

@@ -1,3 +1,31 @@
 google_assistant:
   project_id: !secret ga_pid
   api_key: !secret ga_api
+  expose_by_default: false
+  entity_config:
+    light.bedroom_ceiling:
+      aliases:
+        - Principale
+      room: Bedroom
+      expose: true
+    light.bedroom_bedside:
+      aliases:
+        - Comodino
+      room: Bedroom
+      expose: true
+    light.bedroom_accent:
+      aliases:
+        - Colorate
+      room: Bedroom
+      expose: true
+    light.bedroom_desk:
+      aliases:
+        - Scrivania
+      room: Bedroom
+      expose: true
+    switch.bedroom_plug:
+      aliases:
+        - Presa
+      room: Bedroom
+      expose: true
+

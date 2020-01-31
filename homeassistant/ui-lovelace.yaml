@@ -176,7 +176,7 @@ views:
                   id: script.bedroom_speaker_play_lofi
       - type: custom:mini-media-player
         artwork: cover
-        entity: media_player.bedroom_jellyfin
+        entity: media_player.bedroom_tv
       - type: horizontal-stack
         title: Scenes
         cards:

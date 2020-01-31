@@ -1,0 +1,31 @@
+alias: Bedroom Movie Lights Activate
+trigger:
+  - platform: state
+    entity_id: media_player.bedroom_tv
+    to: playing
+condition:
+  - condition: state
+    entity_id: input_boolean.bedroom_movie_lights
+    state: 'on'
+action:
+
+  - service: scene.create
+    data:
+      scene_id: "bedroom_snapshot"
+      snapshot_entities:
+        - light.bedroom_ceiling
+        - light.bedroom_bedside
+        - light.bedroom_desk
+        - light.bedroom_accent_monitor
+        - light.bedroom_accent_bed
+
+  - service: light.turn_on
+    entity_id: light.bedroom_accent
+    data:
+      rgb_color: [255,126,0]
+
+  - service: light.turn_off
+    entity_id: 
+      - light.bedroom_ceiling
+      - light.bedroom_bedside
+      - light.bedroom_desk

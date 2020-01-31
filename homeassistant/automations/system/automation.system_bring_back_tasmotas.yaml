@@ -1,4 +1,4 @@
-alias: Home Bring Back Tasmotas
+alias: System Bring Back Tasmotas
 trigger:
   - platform: homeassistant
     event: start

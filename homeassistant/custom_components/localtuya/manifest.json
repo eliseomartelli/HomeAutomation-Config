@@ -1,8 +1,0 @@
-{
-  "domain": "localtuya",
-  "name": "Tuya Local",
-  "documentation": "https://github.com/mileperhour/localtuya-homeassistant/",
-  "dependencies": [],
-  "codeowners": ["@mileperhour"],
-  "requirements": []
-}

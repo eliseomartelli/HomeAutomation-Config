@@ -1,3 +1,0 @@
-platform: emby
-host: 192.168.0.1
-api_key: !secret jf_api_key
