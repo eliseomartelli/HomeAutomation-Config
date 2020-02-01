@@ -1,10 +1,10 @@
 - platform: rpi_rf
   gpio: 27
   switches:
-    Bedroom Bedside:
-      code_on: 1394007
-      code_off: 1394004
-      signal_repetitions: 25 
+#    Bedroom Bedside:
+#      code_on: 1394007
+#      code_off: 1394004
+#      signal_repetitions: 25 
     Bedroom Desk:
       code_on: 1381719
       code_off: 1381716
