@@ -1,3 +1,5 @@
+---
+id: 2BF29DA0-F4CE-4405-AC45-69E5D9015FFC
 alias: Bedroom Humidity Notification
 trigger:
   - platform: numeric_state
@@ -13,6 +15,4 @@ action:
   - service: notify.mobile_app_mi_a3
     data:
       title: Humidity is above 75%
-      message: Open the window! 
-
-
+      message: Open the window!

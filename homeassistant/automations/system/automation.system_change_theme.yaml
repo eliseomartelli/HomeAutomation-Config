@@ -1,3 +1,5 @@
+---
+id: 88DF7D78-CC15-4443-B687-35001BFD2AC5
 alias: System Change Theme
 trigger:
   - platform: state

@@ -1,11 +1,11 @@
 title: Home
 icon: mdi:home
 cards:
-  # First Card 
   - type: custom:simple-weather-card
     entity: weather.home
     name: " "
     backdrop: true
+
   - type: horizontal-stack
     cards:
       - type: custom:decluttering-card
@@ -20,44 +20,51 @@ cards:
           - entity_id: sensor.bedroom_temperature
           - color: red
           - name: Temperature
-  
+
   - type: vertical-stack
     title: Lights
     cards:
+
       - type: horizontal-stack
         cards:
+
           - type: custom:decluttering-card
             template: "hk_button"
             variables:
               - entity_id: light.bedroom_ceiling
               - name: "Ceiling"
+
           - type: custom:decluttering-card
             template: "hk_button"
             variables:
               - entity_id: light.bedroom_desk
               - name: "Desk"
+
           - type: custom:decluttering-card
             template: "hk_button"
             variables:
               - entity_id: light.bedroom_bedside
               - name: "Bedside"
+
       - type: horizontal-stack
         cards:
+
           - type: custom:decluttering-card
             template: "hk_button"
             variables:
               - entity_id: light.bedroom_accent_monitor
               - name: "Monitor"
+
           - type: custom:decluttering-card
             template: "hk_button"
             variables:
               - entity_id: light.bedroom_accent_bed
               - name: "Bed"
-          - type: custom:decluttering-card
-            template: "hk_button"
-            variables:
-              - entity_id: binary_sensor.bedroom_panel_motion_active
-              - name: "Motion"
+
+          - type: custom:button-card
+            style:
+              card:
+                - opacity: 0
 
   - type: entities
     entities:

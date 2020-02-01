@@ -1,3 +1,5 @@
+---
+id: 75A78B82-60DE-4C46-BBC0-098283B747F2
 alias: Bedroom Movie Lights
 trigger:
   - platform: state

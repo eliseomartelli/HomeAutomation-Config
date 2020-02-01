@@ -11,7 +11,7 @@ cards:
 
   - type: custom:auto-entities
     card:
-      title: Printer
+      title: Bedroom Printer
       type: entities
     filter:
       include:

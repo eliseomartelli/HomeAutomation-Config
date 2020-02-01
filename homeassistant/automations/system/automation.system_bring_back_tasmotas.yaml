@@ -1,3 +1,5 @@
+---
+id: 1B1FE5A9-B874-489F-AFB8-E95276893D40
 alias: System Bring Back Tasmotas
 trigger:
   - platform: homeassistant

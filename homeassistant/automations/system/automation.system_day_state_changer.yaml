@@ -1,3 +1,5 @@
+---
+id: 0201A5ED-6CC8-4E2A-BFA6-6AAB7E52E55D
 alias: System Day State Changer
 trigger:
   - platform: sun
