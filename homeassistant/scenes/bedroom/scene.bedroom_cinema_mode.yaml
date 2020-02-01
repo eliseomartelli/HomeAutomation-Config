@@ -1,0 +1,8 @@
+name: Bedroom Cinema Mode
+entities:
+  light.bedroom_accent:
+    state: on
+    rgb_color: [255,126,0]
+  light.bedroom_ceiling: off
+  light.bedroom_bedside: off
+  light.bedroom_desk: off

@@ -1,0 +1,8 @@
+name: Bedroom Rainbow
+entities:
+  light.bedroom_accent:
+    state: on
+    effect: 4
+  light.bedroom_accent_monitor:
+    state: on
+    brightness: 170

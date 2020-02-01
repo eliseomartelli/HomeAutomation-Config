@@ -1,0 +1,25 @@
+alias: Bedroom Movie Lights
+trigger:
+  - platform: state
+    entity_id: media_player.bedroom_tv
+    to: playing
+  - platform: state
+    entity_id: media_player.bedroom_tv
+    from: playing
+condition:
+  - condition: state
+    entity_id: input_boolean.bedroom_movie_lights
+    state: 'on'
+action:
+  - service: script.turn_on
+    data_template:
+      entity_id: >
+        {%- if trigger.to_state.state in "playing" %}
+          script.bedroom_create_snapshot
+        {%- else %}
+          script.bedroom_apply_snapshot
+        {%- endif %}
+  - service: scene.turn_on
+    data_template:
+      entity_id: >
+        {{- "scene.bedroom_cinema_mode" if trigger.to_state.state in "playing" else "scene.dummy" }}
