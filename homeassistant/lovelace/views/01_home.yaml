@@ -60,20 +60,13 @@ cards:
             variables:
               - entity_id: light.bedroom_accent_bed
               - name: "Bed"
+          
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: switch.bedroom_plug
+              - name: "Plug"
 
-          - type: custom:button-card
-            style:
-              card:
-                - opacity: 0
-
-  - type: entities
-    entities:
-      - type: "custom:button-entity-row"
-        buttons:
-          - input_boolean.bedroom_sync_music_with_lights
-          - input_boolean.bedroom_movie_lights
-      - switch.bedroom_plug
-      - person.eliseo_martelli
   - type: vertical-stack
     title: Media
     cards:
@@ -91,21 +84,31 @@ cards:
   - type: custom:mini-media-player
     artwork: cover
     entity: media_player.bedroom_tv
-  - type: horizontal-stack
+  - type: vertical-stack
     title: Scenes
     cards:
-      - type: custom:decluttering-card
-        template: "hk_trigger"
-        variables:
-          - entity_id: scene.bedroom_warm
-          - name: "Warm"
-      - type: custom:decluttering-card
-        template: "hk_trigger"
-        variables:
-          - entity_id: scene.bedroom_sea
-          - name: "Sea"
-      - type: custom:decluttering-card
-        template: "hk_trigger"
-        variables:
-          - entity_id: scene.bedroom_cotton_candy
-          - name: "Candy"
+      - type: horizontal-stack
+        cards:
+          - type: custom:decluttering-card
+            template: "hk_trigger"
+            variables:
+              - entity_id: scene.bedroom_warm
+              - name: "Warm"
+          - type: custom:decluttering-card
+            template: "hk_trigger"
+            variables:
+              - entity_id: scene.bedroom_sea
+              - name: "Sea"
+          - type: custom:decluttering-card
+            template: "hk_trigger"
+            variables:
+              - entity_id: scene.bedroom_cotton_candy
+              - name: "Candy" 
+      - type: entities
+        entities:
+          - type: "custom:button-entity-row"
+            buttons:
+              - input_boolean.bedroom_sync_music_with_lights
+              - input_boolean.bedroom_movie_lights
+    
+    

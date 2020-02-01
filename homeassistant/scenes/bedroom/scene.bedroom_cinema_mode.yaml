@@ -1,5 +1,8 @@
 name: Bedroom Cinema Mode
 entities:
+  light.bedroom_accent_monitor:
+    state: on
+    effect: "Solid"
   light.bedroom_accent:
     state: on
     rgb_color: [255,126,0]
