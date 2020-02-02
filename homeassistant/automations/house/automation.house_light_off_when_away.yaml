@@ -6,7 +6,6 @@ trigger:
     entity_id:
       - person.eliseo_martelli
     from: "home"
-    for: '00:10:00'
 action:
   - service: light.turn_off
     entity_id: all
