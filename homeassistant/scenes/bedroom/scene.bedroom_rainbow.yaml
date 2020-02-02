@@ -1,8 +1,9 @@
 name: Bedroom Rainbow
 entities:
-  light.bedroom_accent:
+  light.bedroom_accent_bed:
     state: on
     effect: 4
   light.bedroom_accent_monitor:
     state: on
     brightness: 170
+    effect: "Colorloop"

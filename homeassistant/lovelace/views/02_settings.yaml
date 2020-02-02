@@ -1,6 +1,10 @@
 title: Settings
 icon: mdi:settings
 cards:
+  - type: entities
+    entities:
+      - sensor.city_next_tram
+
   - type: custom:auto-entities
     card:
       title: Automations

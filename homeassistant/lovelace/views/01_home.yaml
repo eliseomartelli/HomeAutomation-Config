@@ -8,12 +8,14 @@ cards:
 
   - type: horizontal-stack
     cards:
+
       - type: custom:decluttering-card
         template: mini_graph
         variables:
           - entity_id: sensor.bedroom_humidity
           - color: purple
           - name: Humidity
+
       - type: custom:decluttering-card
         template: mini_graph
         variables:
@@ -70,45 +72,53 @@ cards:
   - type: vertical-stack
     title: Media
     cards:
+
       - type: custom:mini-media-player
         artwork: full-cover
         entity: media_player.bedroom_speaker
         shortcuts:
           buttons:
+
             - name: Warm Piano
               type: script
               id: script.bedroom_speaker_play_warm_piano
+
             - name: Lo-Fi Music
               type: script
               id: script.bedroom_speaker_play_lofi
+
   - type: custom:mini-media-player
     artwork: cover
     entity: media_player.bedroom_tv
+
   - type: vertical-stack
     title: Scenes
     cards:
+
       - type: horizontal-stack
         cards:
+
           - type: custom:decluttering-card
             template: "hk_trigger"
             variables:
               - entity_id: scene.bedroom_warm
               - name: "Warm"
+
           - type: custom:decluttering-card
             template: "hk_trigger"
             variables:
               - entity_id: scene.bedroom_sea
               - name: "Sea"
+
           - type: custom:decluttering-card
             template: "hk_trigger"
             variables:
               - entity_id: scene.bedroom_cotton_candy
-              - name: "Candy" 
+              - name: "Candy"
+
       - type: entities
         entities:
           - type: "custom:button-entity-row"
             buttons:
               - input_boolean.bedroom_sync_music_with_lights
               - input_boolean.bedroom_movie_lights
-    
-    
