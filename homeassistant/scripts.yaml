@@ -1,4 +1,1 @@
-'1580556867968':
-  alias: New Scriptf
-  sequence:
-  - service: automation.reload
+{}
