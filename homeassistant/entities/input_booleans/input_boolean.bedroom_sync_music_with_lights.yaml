@@ -1,4 +1,0 @@
-bedroom_sync_music_with_lights:
-        name: Sync Music With Lights
-        initial: off
-        icon: mdi:file-music

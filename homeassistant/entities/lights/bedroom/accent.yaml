@@ -1,0 +1,10 @@
+---
+# Light Group to control RGB lighting.
+#
+# https://www.home-assistant.io/integrations/light.group/
+#
+platform: group
+name: Bedroom Accent
+entities:
+  - light.bedroom_accent_bed
+  - light.bedroom_accent_monitor

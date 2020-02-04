@@ -1,3 +1,7 @@
-# Text to speech
+---
+# Configures the tts.
+#
+# https://www.home-assistant.io/integrations/tts/
+#
 tts:
   - platform: google_translate

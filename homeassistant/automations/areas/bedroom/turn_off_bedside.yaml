@@ -1,6 +1,7 @@
 ---
 id: 2EC8B7F8-5AEF-4587-989E-9399B8F33ECB
 alias: Bedroom Turn Off Bedside
+description: Turns off the bedside lamp after 15 minutes.
 trigger:
   - platform: state
     entity_id: light.bedroom_bedside

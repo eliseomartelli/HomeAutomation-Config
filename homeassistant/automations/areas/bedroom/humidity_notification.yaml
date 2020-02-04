@@ -1,6 +1,7 @@
 ---
 id: 2BF29DA0-F4CE-4405-AC45-69E5D9015FFC
 alias: Bedroom Humidity Notification
+description: Sends a notification when the humidity goes above 75%
 trigger:
   - platform: numeric_state
     entity_id: sensor.bedroom_humidity

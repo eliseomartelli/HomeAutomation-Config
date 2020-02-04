@@ -1,6 +1,7 @@
 ---
 id: 88DF7D78-CC15-4443-B687-35001BFD2AC5
 alias: System Change Theme
+description: Changes the theme based on the state of the day.
 trigger:
   - platform: state
     entity_id: input_select.system_day_state

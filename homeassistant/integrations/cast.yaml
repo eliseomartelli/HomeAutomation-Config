@@ -1,2 +1,7 @@
+---
+# Loads the cast integration.
+#
+# https://www.home-assistant.io/integrations/cast/
+#
 cast:
   media_player: !include_dir_list ../entities/cast
