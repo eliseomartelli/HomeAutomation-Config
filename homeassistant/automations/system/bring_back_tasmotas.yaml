@@ -1,7 +1,7 @@
 ---
 id: 1B1FE5A9-B874-489F-AFB8-E95276893D40
 alias: System Bring Back Tasmotas
-description: Sends a MQTT message to re-discover tasmota devices.
+description: Sends a MQTT message to re-discover tasmota devices.
 trigger:
   - platform: homeassistant
     event: start
