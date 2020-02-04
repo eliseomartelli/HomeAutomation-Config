@@ -25,3 +25,5 @@ google_calendars.yaml
 ._.DS_Store
 .spotify*
 .homekit*
+
+.pip_progress
