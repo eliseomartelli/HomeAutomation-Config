@@ -6,8 +6,7 @@ homeassistant:
       api_password: !secret apipass
 
 sensor: !include_dir_merge_list includes/sensor
-switch: !include_dir_merge_list includes/switches/
-light: !include_dir_merge_list includes/light/
+switch: !include_dir_merge_list includes/switches
 
 api:
 websocket_api:
