@@ -116,6 +116,13 @@ cards:
               - entity_id: scene.bedroom_cotton_candy
               - name: "Candy"
 
+          - type: custom:decluttering-card
+            template: "hk_trigger"
+            variables:
+              - entity_id: scene.bedroom_rainbow
+              - name: "Rainbow"
+
+
       - type: entities
         entities:
           - type: "custom:button-entity-row"
