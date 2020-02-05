@@ -3,7 +3,7 @@ entities:
   light.bedroom_accent_bed:
     state: on
     rgb_color: [0,255,255]
-    effect: "Solid"
   light.bedroom_accent_monitor:
     state: on
     rgb_color: [255,0,190]
+    effect: "Solid"
