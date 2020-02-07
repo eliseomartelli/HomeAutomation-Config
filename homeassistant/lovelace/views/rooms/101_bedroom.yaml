@@ -1,0 +1,43 @@
+# lovelace_gen
+
+!include 
+  - ../../view_templates/room.yaml
+  - room_name: Bedroom
+    room_sensors:
+      - entity_id: sensor.bedroom_temperature
+        name: Temperature
+        color: red
+      - entity_id: sensor.bedroom_humidity
+        name: Humidity
+        color: purple
+    room_lights:
+      - entity_id: light.bedroom_ceiling
+        name: Ceiling
+      - entity_id: light.bedroom_bedside
+        name: Bedside
+      - entity_id: light.bedroom_accent_monitor
+        name: Monitor
+      - entity_id: light.bedroom_accent_bed
+        name: Bed
+    room_media_players:
+      - entity_id: media_player.bedroom_speaker
+        shortcuts:
+          - name: Warm Piano
+            entity_id: script.bedroom_speaker_play_warm_piano
+          - name: Lo-Fi
+            entity_id: script.bedroom_speaker_play_lofi
+      - entity_id: media_player.bedroom_tv
+    room_scenes:
+      - entity_id: scene.bedroom_warm
+        name: "Warm"
+      - entity_id: scene.bedroom_sea
+        name: "Sea"
+      - entity_id: scene.bedroom_cotton_candy
+        name: "Candy"
+      - entity_id: scene.bedroom_rainbow
+        name: "Rainbow"
+    room_additional_buttons:
+      - entity_id: input_boolean.bedroom_sync_music_with_lights
+      - entity_id: input_boolean.bedroom_movie_lights
+    room_additional_switches:
+      - entity_id: switch.circadian_lighting_bedroom

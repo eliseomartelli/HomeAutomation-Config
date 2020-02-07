@@ -1,0 +1,109 @@
+# lovelace_gen
+
+title: {{ room_name }}
+visible: false
+path: {{ room_name | lower | replace(" ", "_") }}
+icon: {{ room_icon | default("mdi:home") }}
+cards:
+
+{% if room_sensors %}
+  - type: horizontal-stack
+    cards:
+    {% for sensor in room_sensors %}
+      - type: custom:decluttering-card
+        template: mini_graph
+        variables:
+          - entity_id: {{ sensor.entity_id }}
+          - color: {{ sensor.color }}
+          - name: {{ sensor.name }} 
+    {% endfor %}
+{% endif %}
+
+{% if room_lights %}
+  - type: vertical-stack
+    title: Lights
+    cards:
+      - type: custom:layout-card
+        layout: horizontal
+        column_width: 33.3333%
+        cards:
+        {% for light in room_lights %}
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: {{ light.entity_id }}
+              - name: {{ light.name }}
+        {% endfor %}
+{% endif %}
+
+{% if room_switches %}
+  - type: vertical-stack
+    title: Switches
+    cards:
+      - type: custom:layout-card
+        layout: horizontal
+        column_width: 33.3333%
+        cards:
+        {% for switch in room_switches %}
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: {{ switch.entity_id }}
+              - name: {{ switch.name }}
+        {% endfor %}
+{% endif %}
+
+{% if room_media_players %}
+  - type: vertical-stack
+    title: Media
+    cards:
+    {% for media_player in room_media_players %}
+      - type: custom:mini-media-player
+        artwork: cover
+        entity: {{ media_player.entity_id }}
+      {% if media_player.shortcuts %}
+        shortcuts:
+          buttons:
+          {% for shortcut in media_player.shortcuts %}
+            - name: {{ shortcut.name }}
+              type: script
+              id: {{ shortcut.entity_id }}
+          {% endfor %}
+      {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% if room_scenes %}
+  - type: vertical-stack
+    title: Scenes
+    cards:
+
+      - type: horizontal-stack
+        cards:
+        {% for scene in room_scenes %}
+          - type: custom:decluttering-card
+            template: "hk_trigger"
+            variables:
+              - entity_id: {{ scene.entity_id }}
+              - name: {{ scene.name }}
+        {% endfor %}
+{% endif %}
+
+{% if room_additional_buttons or room_additional_switches %}
+  - type: entities
+    entities:
+    {% if room_additional_buttons %}
+      - type: "custom:button-entity-row"
+        buttons:
+        {% for button in room_additional_buttons %}
+          - {{ button.entity_id }}
+        {% endfor %}
+    {% endif %}
+    {% if room_additional_buttons %}
+    {% for switch in room_additional_switches %}
+      - {{ switch.entity_id }}
+    {% endfor %}
+    {% endif %}
+{% endif %}
+
+      

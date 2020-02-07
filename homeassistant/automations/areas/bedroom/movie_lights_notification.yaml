@@ -1,0 +1,13 @@
+---
+alias: Bedroom Movie Lights Notification
+description: Send a notification when kodi starts up
+id: 7A8EB99A-D56B-49EE-A1ED-5E1E7A029147
+trigger:
+  - platform: state
+    entity_id: media_player.bedroom_tv
+    from: "off"
+    to: "idle"
+action:
+  - service: notify.notify
+    data:
+      title: Are you ready for some movies?

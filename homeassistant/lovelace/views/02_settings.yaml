@@ -1,6 +1,34 @@
 title: Settings
 icon: mdi:settings
+path: settings
 cards:
+  - type: vertical-stack
+    title: Transmission
+    cards:
+      - type: horizontal-stack
+        cards:
+
+          - type: custom:decluttering-card
+            template: mini_graph
+            variables:
+              - entity_id: sensor.transmission_up_speed
+              - color: purple
+              - name: Upload
+
+          - type: custom:decluttering-card
+            template: mini_graph
+            variables:
+              - entity_id: sensor.transmission_down_speed
+              - color: red
+              - name: Download
+
+      - type: entities
+        entities:
+          - entity: switch.transmission_switch
+            name: Enable
+          - entity: sensor.transmission_status
+            name: Status
+
   - type: entities
     entities:
       - sensor.city_next_tram
@@ -20,6 +48,7 @@ cards:
     filter:
       include:
         - entity_id: sensor.bedroom_printer_*
+
   - type: entities
     entities:
       - input_select.system_day_state

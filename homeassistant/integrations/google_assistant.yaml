@@ -5,7 +5,7 @@
 #
 google_assistant:
   project_id: !secret ga_pid
-  api_key: !secret ga_api
+  service_account: !include ../google_service_account.json
   expose_by_default: false
   entity_config:
     light.bedroom_ceiling:

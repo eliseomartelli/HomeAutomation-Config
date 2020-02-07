@@ -1,0 +1,4 @@
+transmission:
+  host: transmission
+  username: !secret transmission_username
+  password: !secret transmission_password

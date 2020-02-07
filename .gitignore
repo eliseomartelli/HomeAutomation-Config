@@ -27,3 +27,4 @@ google_calendars.yaml
 .homekit*
 
 .pip_progress
+google_service_account.json

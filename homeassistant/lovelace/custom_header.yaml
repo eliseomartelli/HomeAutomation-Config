@@ -3,3 +3,5 @@ background: var(--app-header-background-color)
 elements_color: var(--app-header-text-color)
 active_tab_color: var(--state-icon-active-color)
 tab_indicator_color: var(--state-icon-active-color)
+footer_mode: true
+indicator_top: true
