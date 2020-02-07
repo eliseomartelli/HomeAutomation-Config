@@ -39,17 +39,8 @@ cards:
           - type: custom:decluttering-card
             template: "hk_button"
             variables:
-              - entity_id: light.bedroom_desk
-              - name: "Desk"
-
-          - type: custom:decluttering-card
-            template: "hk_button"
-            variables:
               - entity_id: light.bedroom_bedside
               - name: "Bedside"
-
-      - type: horizontal-stack
-        cards:
 
           - type: custom:decluttering-card
             template: "hk_button"
@@ -57,18 +48,15 @@ cards:
               - entity_id: light.bedroom_accent_monitor
               - name: "Monitor"
 
+      - type: horizontal-stack
+        cards:
+
           - type: custom:decluttering-card
             template: "hk_button"
             variables:
               - entity_id: light.bedroom_accent_bed
               - name: "Bed"
-          
-          - type: custom:decluttering-card
-            template: "hk_button"
-            variables:
-              - entity_id: switch.bedroom_plug
-              - name: "Plug"
-
+ 
   - type: vertical-stack
     title: Media
     cards:
