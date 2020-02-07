@@ -1,0 +1,14 @@
+bedroom_wakeup:
+  alias: Bedroom Wakeup
+  sequence:
+    - service: light.turn_on
+      entity_id: light.bedroom_bedside
+      data:
+        transition: 10
+        brightness_pct: 100
+        color_temp: 153
+    - service: light.turn_on
+      entity_id: light.bedroom_ceiling
+      data:
+        transition: 10
+        brightness_pct: 100
