@@ -23,36 +23,38 @@ cards:
           - color: red
           - name: Temperature
 
-  - type: custom:layout-card
+  - type: vertical-stack
     title: Lights
-    layout: horizontal
-    column_width: 33.3333%
     cards:
+      - type: custom:layout-card
+        layout: horizontal
+        column_width: 33.3333%
+        cards:
 
-      - type: custom:decluttering-card
-        template: "hk_button"
-        variables:
-          - entity_id: light.bedroom_ceiling
-          - name: "Ceiling"
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: light.bedroom_ceiling
+              - name: "Ceiling"
 
-      - type: custom:decluttering-card
-        template: "hk_button"
-        variables:
-          - entity_id: light.bedroom_bedside
-          - name: "Bedside"
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: light.bedroom_bedside
+              - name: "Bedside"
 
-      - type: custom:decluttering-card
-        template: "hk_button"
-        variables:
-          - entity_id: light.bedroom_accent_monitor
-          - name: "Monitor"
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: light.bedroom_accent_monitor
+              - name: "Monitor"
 
-      - type: custom:decluttering-card
-        template: "hk_button"
-        variables:
-          - entity_id: light.bedroom_accent_bed
-          - name: "Bed"
- 
+          - type: custom:decluttering-card
+            template: "hk_button"
+            variables:
+              - entity_id: light.bedroom_accent_bed
+              - name: "Bed"
+    
   - type: vertical-stack
     title: Media
     cards:
