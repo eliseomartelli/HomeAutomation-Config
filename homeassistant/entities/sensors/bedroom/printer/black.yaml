@@ -1,0 +1,9 @@
+---
+# Show the status of the black cartridge. 
+# 
+# https://www.home-assistant.io/integrations/command_line
+#
+platform: command_line
+command: curl http://192.168.0.13/PRESENTATION/HTML/TOP/PRTINFO.HTML | awk -F"'" '/Ink_K.PNG/ && $6+0 == $6 { printf "%.0f\n", $6 / 50 * 100 }'
+name: Bedroom Printer Black
+unit_of_measurement: '%'

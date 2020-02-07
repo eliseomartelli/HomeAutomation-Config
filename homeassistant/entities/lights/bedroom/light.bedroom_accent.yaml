@@ -1,5 +1,0 @@
-platform: group
-name: Bedroom Accent
-entities:
-  - light.bedroom_accent_bed
-  - light.bedroom_accent_monitor

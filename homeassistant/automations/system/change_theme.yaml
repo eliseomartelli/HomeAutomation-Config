@@ -1,0 +1,18 @@
+---
+id: 88DF7D78-CC15-4443-B687-35001BFD2AC5
+alias: System Change Theme
+description: Changes the theme based on the state of the day.
+trigger:
+  - platform: state
+    entity_id: input_select.system_day_state
+  - platform: homeassistant
+    event: start
+action:
+  - service: frontend.set_theme
+    data_template:
+      name: >
+        {%- if states.input_select.system_day_state.state in ["Evening", "Bedtime", "Night"] -%}
+          Google Dark Theme
+        {%- else -%}
+          Google Light Theme
+        {%- endif -%}

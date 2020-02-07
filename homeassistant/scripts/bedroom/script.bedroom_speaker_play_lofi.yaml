@@ -6,4 +6,8 @@ bedroom_speaker_play_lofi:
         entity_id: media_player.bedroom_speaker
         uri: spotify:playlist:0vvXsWCC9xrXsKd4FyS8kM
     - service: scene.turn_on
-      entity_id: scene.bedroom_lofi_music
+      entity_id: scene.bedroom_rainbow
+    - service: media_player.volume_set
+      entity_id: media_player.bedroom_speaker
+      data:
+        volume_level: 0.3

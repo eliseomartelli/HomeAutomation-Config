@@ -1,0 +1,9 @@
+---
+# Ping sensor to get the status of the monitor in my bedroom.
+#
+# https://www.home-assistant.io/integrations/ping/#binary-sensor
+#
+platform: ping
+host: 192.168.0.21
+name: Bedroom Monitor Power
+scan_interval: 30

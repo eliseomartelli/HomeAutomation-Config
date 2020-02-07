@@ -1,9 +1,9 @@
-name: Bedroom Sea
+name: Bedroom Rainbow
 entities:
   light.bedroom_accent_bed:
     state: on
-    rgb_color: [0,190,255]
+    effect: 4
   light.bedroom_accent_monitor:
     state: on
-    rgb_color: [0,255,126]
-    effect: "Solid"
+    brightness: 170
+    effect: "Colorloop"

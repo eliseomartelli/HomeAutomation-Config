@@ -1,0 +1,13 @@
+---
+# Input Select to represent the state of the day.
+#
+# https://www.home-assistant.io/integrations/input_select
+#
+system_day_state:
+  name: System Day State
+  options:
+    - Morning
+    - Afternoon
+    - Evening
+    - Bedtime
+    - Night

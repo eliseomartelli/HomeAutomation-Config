@@ -1,2 +1,7 @@
+---
+# Configures the Lovelace interface.
+#
+# https://www.home-assistant.io/lovelace/
+#
 lovelace:
   mode: yaml

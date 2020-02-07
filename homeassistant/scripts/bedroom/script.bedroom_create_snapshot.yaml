@@ -1,0 +1,11 @@
+bedroom_create_snapshot:
+  sequence:
+    - service: scene.create
+      data:
+        scene_id: "bedroom_snapshot"
+        snapshot_entities:
+          - light.bedroom_ceiling
+          - light.bedroom_bedside
+          - light.bedroom_desk
+          - light.bedroom_accent_monitor
+          - light.bedroom_accent_bed

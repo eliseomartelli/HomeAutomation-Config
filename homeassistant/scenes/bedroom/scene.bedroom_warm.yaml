@@ -6,3 +6,4 @@ entities:
   light.bedroom_accent_monitor:
     state: on
     rgb_color: [255,126,0]
+    effect: "Solid"

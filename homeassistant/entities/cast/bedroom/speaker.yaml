@@ -1,0 +1,6 @@
+---
+# Integrates the Google Cast function of my Google Home Mini.
+#
+# https://www.home-assistant.io/integrations/cast
+#
+host: 192.168.0.12

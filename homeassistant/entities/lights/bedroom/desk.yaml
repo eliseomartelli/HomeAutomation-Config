@@ -1,0 +1,8 @@
+---
+# Switch to light converter for my desk lamp.
+#
+# https://www.home-assistant.io/integrations/light.switch/
+#
+platform: switch
+name: Bedroom Desk
+entity_id: switch.bedroom_desk

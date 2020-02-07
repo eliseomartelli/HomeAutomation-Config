@@ -1,3 +1,8 @@
+---
+# Configures the recorder.
+#
+# https://www.home-assistant.io/integrations/recorder/
+#
 recorder:
   include:
     entities:

@@ -1,0 +1,9 @@
+---
+# Input Boolean to control the sync of lights with the movie.
+#
+# https://www.home-assistant.io/integrations/input_boolean
+#
+bedroom_movie_lights:
+  name: Bedroom Movie Lights
+  initial: off
+  icon: mdi:movie

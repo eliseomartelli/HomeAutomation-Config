@@ -1,3 +1,8 @@
+---
+# Configures the Google Assistant
+#
+# https://www.home-assistant.io/integrations/google_assistant/
+#
 google_assistant:
   project_id: !secret ga_pid
   api_key: !secret ga_api

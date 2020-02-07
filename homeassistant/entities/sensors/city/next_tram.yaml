@@ -1,0 +1,9 @@
+---
+# Integrates the public transportation service.
+#
+# https://github.com/eliseomartelli/hass_gtt
+#
+platform: gtt
+stop: 381
+bus_name: 10
+name: City Next Tram

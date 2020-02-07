@@ -1,0 +1,8 @@
+---
+# Integration of my KODI media player.
+#
+# https://www.home-assistant.io/integrations/kodi
+#
+platform: kodi
+host: 192.168.0.1
+name: Bedroom TV

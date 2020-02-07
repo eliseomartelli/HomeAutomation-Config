@@ -1,8 +1,0 @@
-system_day_state:
-  name: System Day State
-  options:
-    - Morning
-    - Afternoon
-    - Evening
-    - Bedtime
-    - Night
