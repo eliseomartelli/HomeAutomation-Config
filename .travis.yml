@@ -5,6 +5,7 @@ python: "3.6.4"
 before_install:
   - touch fakekey.pem
   - mv homeassistant/fake_secrets.yaml homeassistant/secrets.yaml
+  - mv homeassistant/fake_google_service_account.json homeassistant/google_service_account.json
 
 install: pip3 install homeassistant
 
