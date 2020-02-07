@@ -1,0 +1,9 @@
+platform: circadian_lighting
+name: Bedroom
+lights_ct:
+  - light.bedroom_bedside
+lights_brightness:
+  - light.bedroom_ceiling
+lights_rgb:
+  - light.bedroom_accent_bed
+  - light.bedroom_accent_monitor

@@ -23,14 +23,5 @@ google_assistant:
         - Colorate
       room: Bedroom
       expose: true
-    light.bedroom_desk:
-      aliases:
-        - Scrivania
-      room: Bedroom
+    script.bedroom_wakeup:
       expose: true
-    switch.bedroom_plug:
-      aliases:
-        - Presa
-      room: Bedroom
-      expose: true
-

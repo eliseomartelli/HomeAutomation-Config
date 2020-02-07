@@ -14,6 +14,10 @@ condition:
     entity_id: input_boolean.bedroom_movie_lights
     state: 'on'
 action:
+  - service_template: >
+      {{- "switch.turn_off" if trigger.to_state.state in "playing" else "switch.turn_on" }}
+    entity_id: switch.circadian_lighting_bedroom
+
   - service: script.turn_on
     data_template:
       entity_id: >

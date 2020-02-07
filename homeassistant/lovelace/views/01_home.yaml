@@ -115,3 +115,4 @@ cards:
             buttons:
               - input_boolean.bedroom_sync_music_with_lights
               - input_boolean.bedroom_movie_lights
+          - switch.circadian_lighting_bedroom
