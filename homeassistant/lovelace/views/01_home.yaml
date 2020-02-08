@@ -1,8 +1,27 @@
 # lovelace_gen
 
-!include 
-  - ../view_templates/home.yaml
-  - rooms:
-      - name: Bedroom
-        icon: mdi:hotel
-        path: /lovelace/bedroom
+- title: Home
+  icon: mdi:home
+  path: home
+  cards:
+    - type: custom:simple-weather-card
+      entity: weather.home
+      name: " "
+      backdrop: true
+
+    - type: vertical-stack
+      title: Rooms
+      cards:
+        - type: custom:layout-card
+          layout: horizontal
+          column_width: 50%
+          justify_content: start
+          cards:
+          {% for room in _global.rooms %}
+            - type: custom:decluttering-card
+              template: "hk_link"
+              variables:
+                - path: {{ room.name | lower | replace(" ", "_") }}
+                - name: {{ room.name }}
+                - icon: {{ room.icon }}
+          {% endfor %}

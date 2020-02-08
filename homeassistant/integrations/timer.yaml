@@ -1,0 +1,3 @@
+timer:
+  bedroom_bedside_timer:
+    duration: '00:15:00'
