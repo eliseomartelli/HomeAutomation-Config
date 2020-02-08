@@ -7,7 +7,7 @@ trigger:
     entity_id: light.bedroom_bedside
     to: 'on'
     for:
-      minutes: 1
+      minutes: 15
 action:
   - service: homeassistant.turn_off
     entity_id:
