@@ -1,0 +1,2 @@
+shell_command:
+  bedroom_tv_start_kodi: ssh eliseomartelli@192.168.0.1 'open /Applications/Kodi.app'

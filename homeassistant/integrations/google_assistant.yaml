@@ -25,3 +25,11 @@ google_assistant:
       expose: true
     script.bedroom_wakeup:
       expose: true
+    script.bedroom_movie_time:
+      aliases:
+        - Modalità Film
+      room: Bedroom
+      expose: true
+    media_player.bedroom_tv:
+      room: Bedroom
+      expose: true
