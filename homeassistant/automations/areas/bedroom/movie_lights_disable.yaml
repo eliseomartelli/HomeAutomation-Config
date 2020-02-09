@@ -1,0 +1,11 @@
+---
+alias: Bedroom Movie Lights Disable
+description: Disable Bedroom Movie Lights
+id: 7A8EB99A-D56B-49EE-A1ED-5E1E7A029147
+trigger:
+  - platform: state
+    entity_id: media_player.bedroom_tv
+    to: "off"
+action:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.bedroom_movie_lights

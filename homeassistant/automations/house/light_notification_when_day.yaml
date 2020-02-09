@@ -1,0 +1,21 @@
+---
+id: 08ab89ff-c6a0-4029-93ae-2837a812e9f3
+alias: House Lights Notification When Day
+description: Notify with a blink when you turn on a light and it's day
+trigger:
+  - platform: state
+    entity_id:
+      - light.bedroom_ceiling
+      - light.bedroom_bedside
+    to: 'on'
+condition:
+  - condition: template
+    value_template: '{{ states.input_select.system_day_state.state in ["Afternoon"] }}'
+  - condition: template
+    value_template: '{{ states.weather.home.state in ["cloudy", "sunny", "partlycloudy"] }}'
+action:
+  - delay: '00:00:02'
+  - service: light.turn_on
+    data_template:
+      entity_id: "{{ trigger.entity_id }}"
+      flash: short
