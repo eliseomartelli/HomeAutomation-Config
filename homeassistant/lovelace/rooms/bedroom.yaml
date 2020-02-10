@@ -38,7 +38,7 @@ scenes:
     name: "Rainbow"
     icon: mdi:looks
   - entity_id: script.bedroom_movie_time
-    name: "Movie Time"
+    name: "Movie"
     icon: mdi:movie-roll
 additional_buttons:
   - entity_id: input_boolean.bedroom_sync_music_with_lights
