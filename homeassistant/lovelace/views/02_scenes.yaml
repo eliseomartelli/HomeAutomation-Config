@@ -4,10 +4,10 @@
   icon: mdi:filmstrip
   path: scenes
   cards:
-  - type: vertical-stack
-    title: Scenes
-    cards: []
-  
+  - !include 
+    - ../includes/header.yaml
+    - title: "Scenes"
+
 {% for room in _global.rooms %}
 {% if room.scenes %}
   - type: vertical-stack

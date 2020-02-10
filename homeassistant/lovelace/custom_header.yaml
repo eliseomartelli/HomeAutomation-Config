@@ -12,4 +12,6 @@ exceptions:
       indicator_top: true
       all_tabs_css: "width: calc(25vw - 3.6px) !important; padding: 0px !important;"
       header_css: 'padding-bottom: 20px !important; padding-left: 0px !important; padding-right: 0px !important;'
-      view_css: 'padding-top: 96px !important;' 
+      view_css: 'padding-top: 96px !important;
+                 padding-left: 8px !important;
+                 padding-right: 8px !important;' 

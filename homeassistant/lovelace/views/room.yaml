@@ -6,9 +6,10 @@
   path: {{ room.name | lower | replace(" ", "_") }}
   icon: {{ room.icon | default("mdi:home") }}
   cards:
-    - type: vertical-stack
-      cards: []
-      title: {{ room.name }}
+    - !include 
+      - ../includes/header.yaml
+      - title: "{{ room.name }}"
+        navigation_path: "home"
 
   {% if room.sensors %}
     - type: horizontal-stack

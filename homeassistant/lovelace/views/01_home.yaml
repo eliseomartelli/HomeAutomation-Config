@@ -4,6 +4,10 @@
   icon: mdi:home
   path: home
   cards:
+    - !include 
+      - ../includes/header.yaml
+      - title: "Home"
+    
     - type: custom:simple-weather-card
       entity: weather.home
       name: " "

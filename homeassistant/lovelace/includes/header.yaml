@@ -1,0 +1,27 @@
+# lovelace_gen
+
+type: markdown
+style: >
+  ha-card {
+    box-shadow: none;
+    background: none;
+    padding: 10px 0px;
+    color: var(--primary-text-color);
+    background-color: transparent;
+    margin-top: -4px;
+    border-radius: 0; 
+    font-weight: bold;
+    font-size: 14px;
+  }
+  ha-card a {
+    color: var(--primary-text-color) !important;
+  }
+  ha-card p {
+    margin-bottom: 0px;
+  }
+content: |
+  {% if navigation_path %}
+  [<ha-icon icon="mdi:arrow-left"></ha-icon>](/lovelace/{{ navigation_path }})
+  {% endif %}
+  <h3>{{ subtitle }}</h3>
+  <h1>{{ title }}</h1>

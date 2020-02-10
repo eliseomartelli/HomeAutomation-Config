@@ -2,6 +2,10 @@
   icon: mdi:settings
   path: settings
   cards:
+    - !include 
+      - ../includes/header.yaml
+      - title: "Settings"
+
     - type: vertical-stack
       title: Transmission
       cards:
