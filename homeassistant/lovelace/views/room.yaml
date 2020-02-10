@@ -74,22 +74,6 @@
       {% endfor %}
   {% endif %}
 
-  {% if room.scenes %}
-    - type: vertical-stack
-      title: Scenes
-      cards:
-
-        - type: horizontal-stack
-          cards:
-          {% for scene in room.scenes %}
-            - type: custom:decluttering-card
-              template: "hk_trigger"
-              variables:
-                - entity_id: {{ scene.entity_id }}
-                - name: {{ scene.name }}
-          {% endfor %}
-  {% endif %}
-
   {% if room.additional_buttons or room.additional_switches %}
     - type: entities
       entities:

@@ -27,12 +27,19 @@ media_players:
 scenes:
   - entity_id: scene.bedroom_warm
     name: "Warm"
+    icon: mdi:fire
   - entity_id: scene.bedroom_sea
     name: "Sea"
+    icon: mdi:waves
   - entity_id: scene.bedroom_cotton_candy
     name: "Candy"
+    icon: mdi:candycane
   - entity_id: scene.bedroom_rainbow
     name: "Rainbow"
+    icon: mdi:looks
+  - entity_id: script.bedroom_movie_time
+    name: "Movie Time"
+    icon: mdi:movie-roll
 additional_buttons:
   - entity_id: input_boolean.bedroom_sync_music_with_lights
   - entity_id: input_boolean.bedroom_movie_lights

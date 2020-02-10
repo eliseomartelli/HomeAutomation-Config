@@ -1,0 +1,37 @@
+# lovelace_gen
+
+- title: Scenes
+  icon: mdi:filmstrip
+  path: scenes
+  cards:
+  - type: vertical-stack
+    title: Scenes
+    cards: []
+  
+{% for room in _global.rooms %}
+{% if room.scenes %}
+  - type: vertical-stack
+    title: {{ room.name }}
+    cards:
+      - type: custom:layout-card
+        layout: horizontal
+        column_width: 50%
+        justify_content: start
+        cards:
+        {% for scene in room.scenes %}
+          - type: custom:decluttering-card
+            template: "hk_scene"
+            variables:
+              - entity_id: {{ scene.entity_id }}
+              - name: {{scene.name }}
+              - icon: {{ scene.icon }}
+        {% endfor %}
+{% endif %}
+{% endfor %}
+
+  - type: custom:layout-card
+    layout: horizontal
+    column_width: 50%
+    justify_content: start
+    cards:
+  
