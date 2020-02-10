@@ -3,3 +3,6 @@ bedroom_movie_time:
     - service: shell_command.bedroom_tv_start_kodi
     - service: input_boolean.turn_on
       entity_id: input_boolean.bedroom_movie_lights
+    - service: shell_command.bedroom_tv_set_output
+      data:
+        output: "HDMI"
