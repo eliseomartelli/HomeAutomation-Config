@@ -4,16 +4,27 @@ id: 0201A5ED-6CC8-4E2A-BFA6-6AAB7E52E55D
 alias: System Day State Changer
 description: Advances the state of the day.
 trigger:
+
+    # Morning
   - platform: sun
     event: sunrise
+
+    # Afternoon
   - platform: time
     at: '12:00:00'
+
+    # Evening
   - platform: sun
     event: sunset
+
+    # Bedtime
   - platform: time
     at: '23:00:00'
+
+    # Night
   - platform: time 
     at: '00:00:00'
+
 action:
   - service: input_select.select_next
     entity_id: input_select.system_day_state
