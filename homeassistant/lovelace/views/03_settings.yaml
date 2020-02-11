@@ -7,8 +7,10 @@
       - title: "Settings"
 
     - type: vertical-stack
-      title: Transmission
       cards:
+        - !include 
+          - ../includes/section.yaml
+          - title: "Transmission"
         - type: horizontal-stack
           cards:
 
@@ -32,27 +34,36 @@
               name: Enable
             - entity: sensor.transmission_status
               name: Status
-
+    - !include 
+          - ../includes/section.yaml
+          - title: "Transportation"
     - type: entities
       entities:
         - sensor.city_next_tram
 
+    - !include 
+      - ../includes/section.yaml
+      - title: "Automations"
     - type: custom:auto-entities
       card:
-        title: Automations
         type: entities
       filter:
         include:
           - entity_id: automation.*
 
+    - !include 
+      - ../includes/section.yaml
+      - title: "Printer"
     - type: custom:auto-entities
       card:
-        title: Bedroom Printer
         type: entities
       filter:
         include:
           - entity_id: sensor.bedroom_printer_*
 
+    - !include 
+      - ../includes/section.yaml
+      - title: "More"
     - type: entities
       entities:
         - input_select.system_day_state

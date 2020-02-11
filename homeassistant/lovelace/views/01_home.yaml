@@ -14,18 +14,26 @@
       backdrop: true
 
     - type: vertical-stack
-      title: Rooms
       cards:
-        - type: custom:layout-card
-          layout: horizontal
-          column_width: 50%
-          justify_content: start
-          cards:
-          {% for room in _global.rooms %}
-            - type: custom:decluttering-card
-              template: "hk_link"
-              variables:
-                - path: {{ room.name | lower | replace(" ", "_") }}
-                - name: {{ room.name }}
-                - icon: {{ room.icon }}
-          {% endfor %}
+        - !include 
+          - ../includes/section.yaml
+          - title: "Rooms"
+        - type: custom:mod-card
+          style: |
+            ha-card {
+              margin: -8px;
+            }
+          card:
+            type: custom:layout-card
+            layout: horizontal
+            column_width: 50%
+            justify_content: start
+            cards:
+            {% for room in _global.rooms %}
+              - type: custom:decluttering-card
+                template: "hk_link"
+                variables:
+                  - path: {{ room.name | lower | replace(" ", "_") }}
+                  - name: {{ room.name }}
+                  - icon: {{ room.icon }}
+            {% endfor %}

@@ -26,42 +26,60 @@
 
   {% if room.lights %}
     - type: vertical-stack
-      title: Lights
       cards:
-        - type: custom:layout-card
-          layout: horizontal
-          column_width: 33.3333%
-          cards:
-          {% for light in room.lights %}
-            - type: custom:decluttering-card
-              template: "hk_button"
-              variables:
-                - entity_id: {{ light.entity_id }}
-                - name: {{ light.name }}
-          {% endfor %}
+        - !include 
+            - ../includes/section.yaml
+            - title: Lights
+        - type: custom:mod-card
+          style: |
+            ha-card {
+              margin: -8px;
+            }
+          card:
+            type: custom:layout-card
+            layout: horizontal
+            column_width: 33.3333%
+            cards:
+            {% for light in room.lights %}
+              - type: custom:decluttering-card
+                template: "hk_button"
+                variables:
+                  - entity_id: {{ light.entity_id }}
+                  - name: {{ light.name }}
+            {% endfor %}
   {% endif %}
 
   {% if room.switches %}
     - type: vertical-stack
-      title: Switches
       cards:
-        - type: custom:layout-card
-          layout: horizontal
-          column_width: 33.3333%
-          cards:
-          {% for switch in room.switches %}
-            - type: custom:decluttering-card
-              template: "hk_button"
-              variables:
-                - entity_id: {{ switch.entity_id }}
-                - name: {{ switch.name }}
-          {% endfor %}
+        - !include 
+            - ../includes/section.yaml
+            - title: Switches
+        - type: custom:mod-card
+          style: |
+            ha-card {
+              margin: -8px;
+            }
+          card:
+            type: custom:layout-card
+            layout: horizontal
+            column_width: 33.3333%
+            cards:
+            {% for switch in room.switches %}
+              - type: custom:decluttering-card
+                template: "hk_button"
+                variables:
+                  - entity_id: {{ switch.entity_id }}
+                  - name: {{ switch.name }}
+            {% endfor %}
   {% endif %}
 
   {% if room.media_players %}
     - type: vertical-stack
-      title: Media
       cards:
+        - !include 
+          - ../includes/section.yaml
+          - title: Media
       {% for media_player in room.media_players %}
         - type: custom:mini-media-player
           artwork: cover
@@ -80,8 +98,10 @@
 
   {% if room.additional_buttons or room.additional_switches %}
     - type: vertical-stack
-      title: More
       cards:
+        - !include 
+          - ../includes/section.yaml
+          - title: More
         - type: entities
           entities:
           {% if room.additional_buttons %}
