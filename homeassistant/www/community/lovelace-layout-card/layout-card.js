@@ -11,7 +11,7 @@
       ${this._isPanel()?"panel":" "}
       "
       style="
-      ${this._config.justify_content?`justify-content: ${this._config.justify_content};`:""}
+      ${this._config.justify_content?`justify-content: ${this._config.justify_content}; margin: -8px !important;`:""}
       ">
         ${this.columns.map(t=>s`
           ${t}
@@ -30,6 +30,7 @@
         flex-direction: row;
         justify-content: center;
         margin-top: -8px;
+        margin: -8px !important;
       }
       #columns.panel {
         margin-top: 0;

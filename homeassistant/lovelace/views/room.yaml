@@ -79,19 +79,22 @@
   {% endif %}
 
   {% if room.additional_buttons or room.additional_switches %}
-    - type: entities
-      entities:
-      {% if room.additional_buttons %}
-        - type: "custom:button-entity-row"
-          buttons:
-          {% for button in room.additional_buttons %}
-            - {{ button.entity_id }}
+    - type: vertical-stack
+      title: More
+      cards:
+        - type: entities
+          entities:
+          {% if room.additional_buttons %}
+            - type: "custom:button-entity-row"
+              buttons:
+              {% for button in room.additional_buttons %}
+                - {{ button.entity_id }}
+              {% endfor %}
+          {% endif %}
+          {% if room.additional_buttons %}
+          {% for switch in room.additional_switches %}
+            - {{ switch.entity_id }}
           {% endfor %}
-      {% endif %}
-      {% if room.additional_buttons %}
-      {% for switch in room.additional_switches %}
-        - {{ switch.entity_id }}
-      {% endfor %}
-      {% endif %}
+          {% endif %}
   {% endif %}
 {% endfor %}

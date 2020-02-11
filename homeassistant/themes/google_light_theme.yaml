@@ -7,7 +7,7 @@
 #
 Google Light Theme:
   # Header:
-  app-header-background-color: "#F8F8F8"
+  app-header-background-color: "#808080"
   app-header-text-color: "#424242"
   # Main Interface Colors
   primary-color: "#5F9BEA"

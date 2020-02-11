@@ -18,6 +18,7 @@ style: >
   }
   ha-card p {
     margin-bottom: 0px;
+    padding-top: 16px;
   }
 content: |
   {% if navigation_path %}
