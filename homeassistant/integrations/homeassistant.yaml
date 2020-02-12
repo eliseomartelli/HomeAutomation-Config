@@ -5,3 +5,6 @@ homeassistant:
 
   customize: !include_dir_merge_named ../customizations/entities
   customize_glob: !include_dir_merge_named ../customizations/globs
+
+  auth_mfa_modules:
+    - type: totp
