@@ -1,0 +1,20 @@
+---
+id: 98951C85-F896-458F-8095-F52D8B4997C2
+alias: Bedroom Lights Off At Night
+description: Turn off the lights at night
+trigger:
+  - platform: state
+    entity_id: light.bedroom_bedside
+    to: 'off'
+condition:
+  - condition: template
+    value_template: '{{ states.input_select.system_day_state.state in ["Bedtime", "Night"] }}'
+action:
+  - service: homeassistant.turn_off
+    entity_id:
+      - light.bedroom_accent
+      - light.bedroom_desk
+  - delay: '00:00:05'
+  - service: homeassistant.turn_off
+    entity_id:
+      - light.bedroom_ceiling
