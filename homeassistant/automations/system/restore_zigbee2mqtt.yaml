@@ -1,0 +1,13 @@
+---
+id: E8AA787B-9307-4EA1-9928-D1A5537164F2
+alias: System Restore Zigbee2MQTT
+description: Restore Zigbee2MQTT
+trigger:
+  - platform: time_pattern
+    minutes: "/5"
+condition:
+  - condition: state
+    entity_id: sensor.zigbee2mqtt_bridge_state
+    state: "offline"
+action:
+  - service: shell_command.system_restart_zigbee2mqtt

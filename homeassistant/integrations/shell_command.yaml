@@ -1,3 +1,4 @@
 shell_command:
   bedroom_tv_start_kodi: ssh eliseomartelli@192.168.0.1 'open /Applications/Kodi.app'
   bedroom_tv_set_output: 'ssh eliseomartelli@192.168.0.1 /usr/local/bin/SwitchAudioSource -s "{{ output }}"'
+  system_restart_zigbee2mqtt: 'ssh pi@192.168.0.89 /home/pi/restartz2m.sh'
