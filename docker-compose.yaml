@@ -1,0 +1,39 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: home-assistant
+    image: homeassistant/home-assistant:latest
+    volumes:
+      - ./homeassistant:/config
+      - ./homeassistant_ssh/:/root/.ssh/
+    environment:
+      - TZ=Europe/Rome
+    ports:
+      - 8123:8123
+    restart: always
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - ./mosquitto/:/mosquitto/config/
+    restart: always
+
+  appdaemon:
+    image: acockburn/appdaemon:3.0.5
+    container_name: appdaemon
+    volumes:
+      - ./appdaemon:/conf
+    ports:
+      - 5050:5050
+    environment:
+      - DASH_URL="http://192.168.0.1:5050"
+    restart: always
+
+networks:
+  default:
+    external:
+      name: proxy_default

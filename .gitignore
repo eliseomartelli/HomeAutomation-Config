@@ -28,3 +28,6 @@ google_calendars.yaml
 
 .pip_progress
 google_service_account.json
+
+homeassistant_ssh
+mosquitto/passwd
