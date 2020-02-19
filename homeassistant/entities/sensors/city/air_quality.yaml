@@ -1,0 +1,5 @@
+platform: scrape
+resource: http://www.cittametropolitana.torino.it/cms/ambiente/qualita-aria/dati-qualita-aria/ipqa
+select: ".valori td"
+name: City Air Quality
+value_template: '{{ value.split("\n")[0] }}'
