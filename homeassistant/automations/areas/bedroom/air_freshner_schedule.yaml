@@ -1,6 +1,6 @@
 ---
 id: 17E8ADE1-4071-448D-974D-3C8F62B08556
-alias: Air Freshner Schedule
+alias: Bedroom Air Freshner Schedule
 description: Turn on Air Freshner every 4 hours
 trigger:
   - platform: time_pattern
