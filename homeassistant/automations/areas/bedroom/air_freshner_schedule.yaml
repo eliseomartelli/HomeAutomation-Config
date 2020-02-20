@@ -8,7 +8,7 @@ trigger:
 condition:
   - condition: template
     value_template: >
-      {{ states.input_select.system_day_state.state not in ["Night"] }}
+      {{ states.input_select.system_day_state.state not in ["Night", "Bedtime"] }}
 action:
   - service: switch.turn_on
     entity_id: switch.bedroom_air_freshner
