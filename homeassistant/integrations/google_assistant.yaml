@@ -11,6 +11,7 @@ google_assistant:
     light.bedroom_ceiling:
       aliases:
         - Principale
+        - Luce
       room: Bedroom
       expose: true
     light.bedroom_bedside:
@@ -23,6 +24,16 @@ google_assistant:
         - Colorate
       room: Bedroom
       expose: true
+    light.bedroom_desk:
+      aliases:
+        - Scrivania
+      expose: true
+      room: Bedroom
+    switch.bedroom_air_freshner:
+      aliases:
+        - Profumatore
+      expose: true
+      room: Bedroom
     script.bedroom_wakeup:
       expose: true
     script.bedroom_movie_time:
