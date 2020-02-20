@@ -12,16 +12,20 @@ google_assistant:
       aliases:
         - Principale
         - Luce
+        - Grande
+        - Plafoniera
       room: Bedroom
       expose: true
     light.bedroom_bedside:
       aliases:
         - Comodino
+        - Cupboard
       room: Bedroom
       expose: true
     light.bedroom_accent:
       aliases:
         - Colorate
+        - RGB
       room: Bedroom
       expose: true
     light.bedroom_desk:
@@ -32,6 +36,7 @@ google_assistant:
     switch.bedroom_air_freshner:
       aliases:
         - Profumatore
+        - Deodorante
       expose: true
       room: Bedroom
     script.bedroom_wakeup:
@@ -39,8 +44,6 @@ google_assistant:
     script.bedroom_movie_time:
       aliases:
         - Modalità Film
-      room: Bedroom
-      expose: true
-    media_player.bedroom_tv:
+        - Film Mode
       room: Bedroom
       expose: true
