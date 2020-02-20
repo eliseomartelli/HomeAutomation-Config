@@ -1,0 +1,14 @@
+---
+id: 17E8ADE1-4071-448D-974D-3C8F62B08556
+alias: Air Freshner Schedule
+description: Turn on Air Freshner every 4 hours
+trigger:
+  - platform: time_pattern
+    hours: '/4'
+condition:
+  - condition: template
+    value_template: >
+      {{ states.input_select.system_day_state.state not in ["Night"] }}
+action:
+  - service: switch.turn_on
+    entity_id: switch.bedroom_air_freshner

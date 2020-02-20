@@ -1,0 +1,13 @@
+---
+id: 4D87FDDB-E0BD-4F4E-81B8-3441FBD74FB5
+alias: Bedroom Air Freshner Off Timer
+description: Turn off air freshner after 15 minutes
+trigger:
+  - platform: state
+    entity_id: switch.bedroom_air_freshner
+    to: 'on'
+    for:
+      minutes: 15
+action:
+  - service: switch.turn_off
+    entity_id: switch.bedroom_air_freshner
