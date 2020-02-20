@@ -13,5 +13,5 @@ style: >
     font-weight: bold;
     font-size: 14px;
   }
-content: |
+content: | 
   <h2>{{ title }}</h2>

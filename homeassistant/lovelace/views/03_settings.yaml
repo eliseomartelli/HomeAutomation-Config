@@ -39,34 +39,14 @@
 
     - type: vertical-stack
       cards:
-        - !include 
-              - ../includes/section.yaml
-              - title: "Transportation"
-        - type: entities
-          entities:
-            - sensor.city_next_tram
-
-    - type: vertical-stack
-      cards:
-        - !include 
-          - ../includes/section.yaml
-          - title: "Automations"
-        - type: custom:auto-entities
-          card:
-            type: entities
-          filter:
-            include:
-              - entity_id: automation.*
-
-    - type: vertical-stack
-      cards:
 
         - !include 
           - ../includes/section.yaml
           - title: "Printer"
         - type: custom:auto-entities
           card:
-            type: entities
+            type: glance
+            show_icon: false
           filter:
             include:
               - entity_id: sensor.bedroom_printer_*

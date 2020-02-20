@@ -9,7 +9,7 @@
     - title: "Scenes"
 
 {% for room in _global.rooms %}
-{% if room.scenes %}
+  {% if room.scenes %}
   - type: vertical-stack
     cards:
       - !include 
@@ -34,7 +34,7 @@
                 - name: {{scene.name }}
                 - icon: {{ scene.icon }}
           {% endfor %}
-{% endif %}
+  {% endif %}
 {% endfor %}
 
   - type: custom:layout-card

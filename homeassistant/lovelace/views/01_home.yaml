@@ -8,11 +8,63 @@
       - ../includes/header.yaml
       - title: "Home"
     
+    # Home Header
     - type: custom:simple-weather-card
       entity: weather.home
       name: " "
       backdrop: true
 
+    - type: markdown
+      content: >
+        {% raw %}
+        <table>
+          <tr>
+            <td>
+              <ha-icon icon="mdi:numeric-{{states("sensor.city_air_quality") }}-box"></ha-icon>
+            </td>
+            <td>
+              <h3>Air Quality</h3>
+              {{ 
+                [
+                  "Good",
+                  "Fair",
+                  "Poor",
+                  "Harmful",
+                  "Extremely Harmful"
+                ][(states("sensor.city_air_quality") | int) - 1] 
+            }}
+            </td>
+          </tr>
+        {% endraw %}
+      style: >
+        {% raw %}
+        * {
+          padding: 0;
+          margin: 0;
+        }
+        ha-icon {
+          padding-right: 18px;
+          padding-left: 6px;
+        }
+        h3 {
+          padding-bottom: 4px;
+        }
+        ha-card {
+          {% set background = 
+            [
+              "#43a047",
+              "#fbc02d",
+              "#fb8c00",
+              "#f4511e",
+              "#d81b60"
+            ]
+          %}
+          background: {{ background[states("sensor.city_air_quality") | int - 1] }};
+          color: #fff;
+        }
+        {% endraw %}
+
+    # Rooms
     - type: vertical-stack
       cards:
         - !include 

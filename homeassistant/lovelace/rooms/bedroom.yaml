@@ -12,10 +12,15 @@ lights:
     name: Ceiling
   - entity_id: light.bedroom_bedside
     name: Bedside
+  - entity_id: light.bedroom_desk
+    name: Desk
   - entity_id: light.bedroom_accent_monitor
     name: Monitor
   - entity_id: light.bedroom_accent_bed
     name: Bed
+switches:
+  - entity_id: switch.bedroom_air_freshner
+    name: Freshner
 media_players:
   - entity_id: media_player.bedroom_speaker
     shortcuts:
