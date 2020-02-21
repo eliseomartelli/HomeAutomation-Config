@@ -18,9 +18,8 @@
 </p>
 
 ## Screenshots 
-| | | | |
-|---|---|---|---|
 |![](assets/ha1.png)|![](assets/ha2.png)|![](assets/ha3.png)|![](assets/ha4.png)|
+|---|---|---|---|
 
 ### HaDashboard  
 
