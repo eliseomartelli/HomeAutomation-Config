@@ -48,6 +48,9 @@ scenes:
   - entity_id: script.bedroom_movie_time
     name: "Movie"
     icon: mdi:movie-roll
+  - entity_id: scene.bedroom_sandy
+    name: "Sandy"
+    icon: mdi:fish
 additional_buttons:
   - entity_id: input_boolean.bedroom_sync_music_with_lights
   - entity_id: input_boolean.bedroom_movie_lights

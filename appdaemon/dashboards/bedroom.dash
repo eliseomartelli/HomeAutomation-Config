@@ -45,7 +45,7 @@ layout:
   -
   -
   -
-  - light.bedroom_ceiling, spacer(1x1), light.bedroom_bedside, spacer(1x1), switch.bedroom_desk, spacer(1x1), light.bedroom_accent, spacer(1x1), switch.bedroom_plug
+  - light.bedroom_ceiling, spacer(1x1), light.bedroom_bedside, spacer(1x1), switch.bedroom_desk, spacer(1x1), light.bedroom_accent, spacer(1x1), switch.bedroom_air_freshner
   -
   -
   -
