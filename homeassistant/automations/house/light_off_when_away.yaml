@@ -3,10 +3,15 @@ id: 4FBB8851-AEF3-4BBE-88F4-2A083FA13AF0
 alias: House Lights Off When Away
 description: Turns off the lights when I'm not at home.
 trigger:
+  - platform: homeassistant
+    event: start
   - platform: state
     entity_id:
       - person.eliseo_martelli
-    from: "home"
+condition:
+  - condition: state
+    entity_id: person.eliseo_martelli
+    state: "not_home"
 action:
   - service: light.turn_off
     entity_id: all
