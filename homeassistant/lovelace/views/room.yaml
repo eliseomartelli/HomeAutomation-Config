@@ -85,15 +85,13 @@
         - type: entities
           entities:
           {% if room.additional_buttons %}
-            - type: "custom:button-entity-row"
-              buttons:
-              {% for button in room.additional_buttons %}
-                - {{ button.entity_id }}
-              {% endfor %}
-          {% endif %}
-          {% if room.additional_buttons %}
           {% for switch in room.additional_switches %}
             - {{ switch.entity_id }}
+          {% endfor %}
+          {% endif %}
+          {% if room.additional_buttons %}
+          {% for button in room.additional_buttons %}
+            - {{ button.entity_id }}
           {% endfor %}
           {% endif %}
   {% endif %}
