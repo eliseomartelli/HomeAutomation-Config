@@ -20,6 +20,8 @@ ota:
 sensor:
   - platform: dht
     pin: D8
+    model: SI7021
+    update_interval: 15s
     temperature:
       name: "Bedroom Temperature"
     humidity:
@@ -28,9 +30,35 @@ sensor:
 light:
   - platform: rgb
     name: Bedroom Accent Bed
+    id: strip
     red: output_red
     green: output_green
     blue: output_blue
+    effects:
+      - random:
+      - strobe:
+      - flicker:
+      - lambda:
+          name: Fade
+          update_interval: 2s
+          lambda: |-
+            static int state = 0;
+            auto call = id(strip).turn_on();
+            // Transtion of 1000ms = 1s
+            call.set_transition_length(2000);
+            if (state == 0) {
+              call.set_rgb(1.0, 1.0, 1.0);
+            } else if (state == 1) {
+              call.set_rgb(1.0, 0.0, 1.0);
+            } else if (state == 2) {
+              call.set_rgb(0.0, 0.0, 1.0);
+            } else {
+              call.set_rgb(1.0, 0.0, 0.0);
+            }
+            call.perform();
+            state += 1;
+            if (state == 4)
+              state = 0;
 
 output:
   - platform: esp8266_pwm
