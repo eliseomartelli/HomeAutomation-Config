@@ -1,0 +1,44 @@
+esphome:
+  name: bedroom_accent_bed
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  manual_ip:
+    static_ip: 192.168.0.20
+    gateway: 192.168.1.254
+    subnet: 255.255.254.0
+
+api:
+
+logger:
+
+ota:
+
+sensor:
+  - platform: dht
+    pin: D8
+    temperature:
+      name: "Bedroom Temperature"
+    humidity:
+      name: "Bedroom Humidity"
+
+light:
+  - platform: rgb
+    name: Bedroom Accent Bed
+    red: output_red
+    green: output_green
+    blue: output_blue
+
+output:
+  - platform: esp8266_pwm
+    id: output_red
+    pin: D6
+  - platform: esp8266_pwm
+    id: output_green
+    pin: D5
+  - platform: esp8266_pwm
+    id: output_blue
+    pin: D7
