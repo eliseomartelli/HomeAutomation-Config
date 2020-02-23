@@ -1,0 +1,3 @@
+alarm_control_panel:
+  - platform: manual
+    name: Alarm

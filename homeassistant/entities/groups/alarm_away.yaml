@@ -1,0 +1,4 @@
+alarm_away:
+  entities:
+    - group.alarm_home
+    - binary_sensor.bedroom_motion
