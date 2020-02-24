@@ -1,0 +1,24 @@
+esphome:
+  name: kitchen_sensor
+  platform: ESP8266
+  board: esp01
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+api:
+
+logger:
+
+ota:
+
+sensor:
+  - platform: dht
+    pin: GPIO02
+    model: DHT11
+    update_interval: 15s
+    temperature:
+      name: "Kitchen Temperature"
+    humidity:
+      name: "Kitchen Humidity"

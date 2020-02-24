@@ -1,0 +1,9 @@
+name: Kitchen
+icon: mdi:stove
+sensors:
+  - entity_id: sensor.kitchen_temperature
+    name: Temperature
+    color: red
+  - entity_id: sensor.kitchen_humidity
+    name: Humidity
+    color: purple

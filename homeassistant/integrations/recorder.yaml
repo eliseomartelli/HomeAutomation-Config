@@ -8,5 +8,7 @@ recorder:
     entities:
       - sensor.bedroom_humidity
       - sensor.bedroom_temperature
+      - sensor.kitchen_humidity
+      - sensor.kitchen_temperature
       - sensor.transmission_up_speed
       - sensor.transmission_down_speed

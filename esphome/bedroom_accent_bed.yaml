@@ -20,7 +20,7 @@ ota:
 sensor:
   - platform: dht
     pin: D8
-    model: SI7021
+    model: AM2302
     update_interval: 15s
     temperature:
       name: "Bedroom Temperature"
