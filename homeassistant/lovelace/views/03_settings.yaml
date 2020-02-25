@@ -79,7 +79,7 @@
             justify_content: start
             cards:
               - type: custom:decluttering-card
-                template: "hk_link"
+                template: "hk_simple_link"
                 variables:
                   - path: zigbee2mqtt
                   - name: Zigbee

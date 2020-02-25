@@ -12,11 +12,25 @@ hk_link:
       navigation_path: "[[path]]"
     styles:
       grid:
-        - grid-template-areas: '"i n"'
-        - grid-template-columns: min-content min-content
-        - grid-template-rows: 1fr
+        - grid-template-areas: > 
+            "i n" 
+            "i room_temperature"
+        - grid-template-columns: min-content 1fr
+        - grid-template-rows: 2fr 1fr
       img_cell:
         - width: 76px
       name:
         - justify-self: start
         - font-weight: bold
+      custom_fields:
+        room_temperature:
+          - justify-self: start
+          - font-size: 12px
+    custom_fields:
+      room_temperature: >
+        [[[
+          return `<ha-icon
+          icon="mdi:thermometer"
+          style="width: 10px; height: 10px;">
+          </ha-icon><span>${states['[[temperature_sensor]]'].state}°C</span>`
+        ]]]
