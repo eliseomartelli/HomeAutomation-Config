@@ -26,6 +26,9 @@ sensor:
       name: "Bedroom Temperature"
     humidity:
       name: "Bedroom Humidity"
+  - platform: wifi_signal
+    name: bedroom_accent_bed_wifi_signal
+    update_interval: 10s
 
 light:
   - platform: rgb

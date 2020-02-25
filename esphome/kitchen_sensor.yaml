@@ -25,7 +25,7 @@ sensor:
             window_size: 5
             send_every: 5
             send_first_at: 1   
- 
+
     humidity:
       name: "Kitchen Humidity"
       filters:
@@ -34,3 +34,6 @@ sensor:
             send_every: 5
             send_first_at: 1   
  
+  - platform: wifi_signal
+    name: kitchen_sensor_wifi_signal
+    update_interval: 10s
