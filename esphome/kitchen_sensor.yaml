@@ -1,7 +1,7 @@
 esphome:
   name: kitchen_sensor
   platform: ESP8266
-  board: esp01
+  board: esp01_1m
 
 wifi:
   ssid: !secret wifi_ssid
@@ -20,5 +20,17 @@ sensor:
     update_interval: 15s
     temperature:
       name: "Kitchen Temperature"
+      filters:
+        - median:
+            window_size: 5
+            send_every: 5
+            send_first_at: 1   
+ 
     humidity:
       name: "Kitchen Humidity"
+      filters:
+        - median:
+            window_size: 5
+            send_every: 5
+            send_first_at: 1   
+ 
