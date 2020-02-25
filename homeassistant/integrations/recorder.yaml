@@ -12,3 +12,5 @@ recorder:
       - sensor.kitchen_temperature
       - sensor.transmission_up_speed
       - sensor.transmission_down_speed
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
