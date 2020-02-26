@@ -1,2 +1,2 @@
 lovelace_gen:
-  rooms: !include_dir_list ../lovelace/rooms
+  rooms: !include_dir_list ../ui/rooms
