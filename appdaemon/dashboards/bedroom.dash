@@ -19,14 +19,6 @@ clock:
     month: "long"
     day: "numeric"
 
-who_cleans:
-  widget_type: sensor
-  entity: sensor.who_cleans
-  widget_style: "background: transparent;"
-  title: "Who cleans?"
-  container_style: "font-size: 40%;"
-  title_style: "color: #fff"
-
 layout:
   -
   -
@@ -56,4 +48,23 @@ layout:
   -
   -
   -
-  - script.bedroom_speaker_play_lofi, spacer(1x1), script.bedroom_speaker_play_warm_piano, spacer(1x1), scene.bedroom_cotton_candy, spacer(1x1), scene.bedroom_sea
+  - media_player.bedroom_tv(14x12), spacer(1x1),media_player.bedroom_speaker(14x12)
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  - scene.bedroom_warm, spacer(1x1), scene.bedroom_sea, spacer(1x1), scene.bedroom_cotton_candy, spacer(1x1), scene.bedroom_rainbow, spacer(1x1), script.bedroom_movie_time
+  -
+  -
+  -
+  -
+  -
+  - scene.bedroom_sandy
