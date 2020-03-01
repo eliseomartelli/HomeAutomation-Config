@@ -1,0 +1,10 @@
+---
+id: 1B1FE5A9-B874-489F-AFB8-E95276893D40
+alias: System Bring Back Zigbee2MQTT
+description: Sends a command to bring back zigbee2mqtt.
+trigger:
+  - platform: homeassistant
+    event: start
+action:
+  - delay: '00:00:30'
+  - service: shell_command.system_restart_z2m
