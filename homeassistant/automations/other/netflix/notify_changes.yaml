@@ -1,0 +1,21 @@
+id: 7B85C215-2858-47F9-A64F-A8E23FEABC51
+alias: Other Netflix Notify Changes
+trigger:
+  - platform: event
+    event_type: NETFLIX_COUNTER_UPDATE
+action:
+  - service: notify.netflix_group
+    data_template:
+      message: >
+        ⚠️ Status:  
+
+        {{ states.counter.other_netflix_user_0.name }}: € {{ states.counter.other_netflix_user_0.state }}  
+
+        {{ states.counter.other_netflix_user_1.name }}: € {{ states.counter.other_netflix_user_1.state }}  
+        
+        {{ states.counter.other_netflix_user_2.name }}: € {{ states.counter.other_netflix_user_2.state }}
+      data:
+        inline_keyboard: 
+          - "User0:/dec0"
+          - "User1:/dec1"
+          - "User2:/dec2"

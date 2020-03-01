@@ -1,0 +1,15 @@
+id: ED44CC4F-BBA7-494A-9D72-FC685A8C03DB
+alias: Other Netflix Increment Counter
+trigger:
+  - platform: time
+    at: '10:00:00'
+condition:
+  - condition: template
+    value_template: "{{ now().day == 25 }}"
+action:
+  - service: counter.increment
+    entity_id: 
+      - counter.other_netflix_user_0
+      - counter.other_netflix_user_1
+      - counter.other_netflix_user_2
+  - event: NETFLIX_COUNTER_UPDATE
