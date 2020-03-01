@@ -1,0 +1,6 @@
+telegram_bot:
+  - platform: polling
+    api_key: !secret netflix_telegram_api_key
+    allowed_chat_ids:
+      - !secret eliseo_telegram_chat_id
+      - !secret netflix_telegram_chat_id

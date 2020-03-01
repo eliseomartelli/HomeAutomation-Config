@@ -1,0 +1,4 @@
+notify:
+  - name: "Netflix Group"
+    platform: telegram
+    chat_id: !secret netflix_telegram_chat_id
