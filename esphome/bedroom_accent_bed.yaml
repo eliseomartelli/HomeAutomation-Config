@@ -19,7 +19,9 @@ ota:
 
 sensor:
   - platform: dht
-    pin: D8
+    pin:
+      number: D8
+      mode: INPUT_PULLUP
     model: AM2302
     update_interval: 15s
     temperature:
