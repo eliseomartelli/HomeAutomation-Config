@@ -2,7 +2,7 @@ version: '3'
 services:
   homeassistant:
     container_name: home-assistant
-    image: homeassistant/home-assistant:rc
+    image: homeassistant/home-assistant:latest
     volumes:
       - ./homeassistant:/config
       - ./homeassistant_ssh/:/root/.ssh/
