@@ -1,0 +1,13 @@
+counter:
+  other_netflix_user_0:
+    initial: 0
+    step: 4
+    name: !secret name_netflix_user_0
+  other_netflix_user_1:
+    initial: 0
+    step: 4
+    name: !secret name_netflix_user_1
+  other_netflix_user_2:
+    initial: 0
+    step: 4
+    name: !secret name_netflix_user_2
